@@ -1,0 +1,55 @@
+.services {
+  &-list__item {
+    margin-bottom: 60px;
+
+    &:nth-last-child(1) {
+      margin-bottom: 0;
+    }
+  }
+
+  @include mq(desktop) {
+    --gap-left: 38px;
+
+    &-list__item {
+      flex-wrap: nowrap;
+
+      &:not(:first-child) {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+.services-textcont {
+  @include mq(notDesktop) {
+    &__title {
+      margin-top: 32px;
+    }
+  }
+
+  @include mq(desktop) {
+    --card-set-item: 4;
+    &__title {
+      margin-top: -8px;
+    }
+  }
+}
+
+.services-imagecont {
+  @include mq(desktop) {
+    --card-set-item: calc(12 / 9);
+  }
+}
+
+.services-img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.services-list__item:nth-child(even) {
+  @include mq(notDesktop) {
+    display: flex;
+    flex-direction: column;
+    flex-direction: column-reverse;
+  }
+}

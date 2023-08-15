@@ -1,0 +1,70 @@
+.workflow {
+  .title {
+    @include mq(tablet) {
+      margin-left: -3px;
+    }
+  }
+
+  video {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+  }
+
+  &__item-wrapper {
+    @include mq(desktop) {
+      display: flex;
+    }
+  }
+
+  &__title-wrapper {
+    margin-bottom: 32px;
+
+    @include mq(tablet) {
+      // padding-top: 60px;
+      margin-bottom: 40px;
+    }
+
+    @include mq(desktop) {
+      width: 25%;
+      position: relative;
+      // padding-top: 80px;
+      margin-bottom: 0;
+      --card-set-item: 4;
+    }
+  }
+
+  &__undertitle {
+    @include mq(tablet) {
+      margin-left: -1px;
+    }
+  }
+
+  &__video-wrapper {
+    @include mq(desktop) {
+      width: 75%;
+      --card-set-item: calc(12 / 9);
+    }
+  }
+}
+
+.btn-play {
+  position: relative;
+  border: none;
+  box-shadow: none;
+  background: transparent;
+  padding: 0;
+
+  &:hover .btn-play__icon,
+  &:focus .btn-play__icon {
+    opacity: 1;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.8;
+  }
+}

@@ -1,0 +1,65 @@
+<section class="section works" id="works">
+  <div class="container">
+    <div class="works-uppercont">
+      <h2 class="title works-title">Works</h2>
+      <div class="works-buttons filters">
+        <button type="button" class="works-buttons__btn is-checked" data-filter="*">All</button>
+        <button type="button" class="works-buttons__btn" data-filter=".interior">Interior</button>
+        <button type="button" class="works-buttons__btn works-buttons__exterior" data-filter=".exterior">
+          Exterior
+        </button>
+      </div>
+    </div>
+
+    <div class="gallery" id="gallery">
+      <div class="grid-sizer"></div>
+      {% for item in works.items %}
+      <div class="grid-item {% if item.class %}{{item.class}}{% endif %}"
+        data-src="./assets/images/gallery/1280@3x/0{{item.image}}-1280@3x.webp" data-sub-html="{{item.data_sub_html}}">
+        <figure class="gallery-overlay">
+          <picture class="gallery-overyal__picture">
+            <source srcset="
+                ./assets/images/gallery/1280@3x/0{{item.image}}-1280@3x.webp    1x,
+                ./assets/images/gallery/1280@3x/0{{item.image}}-1280@3x.webp 2x,
+                ./assets/images/gallery/1280@3x/0{{item.image}}-1280@3x.webp 3x
+              " media="(min-width: 1280px)" type="image/webp" />
+
+            <source srcset="
+                ./assets/images/gallery/1280@3x/0{{item.image}}-1280@3x.jpg    1x,
+                ./assets/images/gallery/1280@3x/0{{item.image}}-1280@3x.jpg 2x,
+                ./assets/images/gallery/1280@3x/0{{item.image}}-1280@3x.jpg 3x
+              " media="(min-width: 1280px)" type="image/jpg" />
+            <source srcset="
+                ./assets/images/gallery/768/0{{item.image}}-768.webp       1x,
+                ./assets/images/gallery/768@2x/0{{item.image}}-768@2x.webp 2x,
+                ./assets/images/gallery/768@3x/0{{item.image}}-768@3x.webp 3x
+              " media="(min-width: 768px)" type="image/webp" />
+
+            <source srcset="
+                ./assets/images/gallery/768/0{{item.image}}-768.jpg       1x,
+                ./assets/images/gallery/768@2x/0{{item.image}}-768@2x.jpg 2x,
+                ./assets/images/gallery/768@3x/0{{item.image}}-768@3x.jpg 3x
+              " media="(min-width: 768px)" type="image/jpg" />
+            <source srcset="
+                ./assets/images/gallery/480/0{{item.image}}-480.webp       1x,
+                ./assets/images/gallery/480@2x/0{{item.image}}-480@2x.webp 2x,
+                ./assets/images/gallery/480@3x/0{{item.image}}-480@3x.webp 3x
+              " media="(max-width: 767px)" type="image/webp" />
+            <source srcset="
+                ./assets/images/gallery/480/0{{item.image}}-480.jpg       1x,
+                ./assets/images/gallery/480@2x/0{{item.image}}-480@2x.jpg 2x,
+                ./assets/images/gallery/480@3x/0{{item.image}}-480@3x.jpg 3x
+              " media="(max-width: 767px)" type="image/jpg" />
+
+            <img class="grid-item__img" src="./assets/images/gallery/480/0{{item.image}}-480.webp" loading="lazy"
+              alt="{{item.image_alt}}" width="480" height="{{item.image_height}}" />
+          </picture>
+          <figcaption class="grid-item__text">{{item.figcaption}}</figcaption>
+        </figure>
+      </div>
+      {% endfor %}
+    </div>
+
+    <button class="loadmore-btn" id="showMore">Show more</button>
+  </div>
+</section>

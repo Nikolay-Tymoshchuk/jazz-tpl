@@ -1,0 +1,17 @@
+.contact-wrapper {
+  text-align: center;
+
+  &__title {
+    margin-bottom: rem(20);
+  }
+
+  &__text {
+    @include mq(tablet) {
+      display: block;
+    }
+  }
+
+  &__button {
+    margin: 0 auto;
+  }
+}

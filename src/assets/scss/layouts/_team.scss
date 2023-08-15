@@ -1,0 +1,54 @@
+.team-list {
+  @include mq(fullhd) {
+    --gap-left: 160px;
+  }
+  &__item {
+    @include mq(mobile-only) {
+      &:not(:last-child) {
+        margin-bottom: 60px;
+      }
+    }
+    @include mq(tablet-only) {
+      width: 68%;
+      margin-left: auto;
+      margin-right: auto;
+      &:not(:last-child) {
+        margin-bottom: 80px;
+      }
+    }
+    @include mq(desktop) {
+      --card-set-item: 3;
+    }
+
+    p:last-of-type {
+      margin-bottom: 24px;
+    }
+  }
+  &__image {
+    width: 100%;
+    margin-bottom: 24px;
+    transition: all 0.4s linear;
+
+    &:hover,
+    &:focus {
+      transform: translateY(-0.5%);
+      cursor: pointer;
+    }
+  }
+
+  &__item-label {
+    font-size: rem(14);
+    margin-bottom: 14px;
+  }
+
+  &__item-title {
+    margin-bottom: 14px;
+    color: var(--item-text-cl);
+  }
+}
+
+.team-list__item:nth-child(1) .team-list__item-title {
+  @include mq(desktop) {
+    margin-left: -2px;
+  }
+}

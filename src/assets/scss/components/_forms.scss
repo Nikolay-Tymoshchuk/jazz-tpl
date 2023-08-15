@@ -1,0 +1,14 @@
+.invalid-feedback {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  color: var(--warning-color);
+  font-size: 12px;
+}
+
+.form-msg-wrapper {
+  margin-top: 16px;
+}
+.form-msg-error {
+  color: var(--warning-color);
+}
