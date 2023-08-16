@@ -5,6 +5,8 @@ const requireDir = require('require-dir');
 const browserSync = require('browser-sync').create();
 const tasks = requireDir('./gulp/tasks', { recurse: true });
 const paths = require('./gulp/paths');
+var gulp = require('gulp');
+var ghPages = require('gulp-gh-pages');
 
 const serve = () => {
   return browserSync.init({
@@ -43,9 +45,6 @@ exports.build = series(
   tasks.clean,
   parallel(tasks.php, tasks.images, tasks.css, tasks.fonts, tasks.scripts, tasks.html.html),
 );
-
-var gulp = require('gulp');
-var ghPages = require('gulp-gh-pages');
 
 gulp.task('deploy', function () {
   return gulp.src('./build/**/*').pipe(ghPages());

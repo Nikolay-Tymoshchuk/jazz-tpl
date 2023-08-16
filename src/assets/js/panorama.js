@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', function () {
   const panContainer = document.querySelector('.panorama__image-container');
-  const img = '/assets/images/gallery/panorama/panorama-360.jpg';
+  const img = '/assets/images/gallery/panorama/panorama-360.jpeg';
 
   const panorama = new PANOLENS.ImagePanorama(img);
   const viewer = new PANOLENS.Viewer({

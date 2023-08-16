@@ -7,7 +7,7 @@
     "start": "cross-env PORT=1234 gulp start --development ",
     "build": "gulp build --production",
     "predeploy": "npm run build",
-    "deploy": "gulp build && gh-pages -d build",
+    "deploy": "gulp build && gulp deploy",
     "prettier": "prettier --write \".\""
   },
   "homepage": "https://jazzrender.com/",
