@@ -10,10 +10,17 @@ $email = $_POST["email"];
 $partner = $_POST["partner"];
 $message = $_POST["comments"];
 
+// telegram bot
+	$token = "6094347566:AAE-A6km2c3C7DT82OycLQ3C7FeRwW1bQnQ";
+	$channelid = "-955632968";
+
 
 // Формирование самого письма
 $title = "Contact";
 $body = "\n\n Name: $name  \n\n Phone: $phone \n\n Email: $email \n\n Partner: $partner \n\n Message: $message \n\n";
+
+	// telegram bot
+	$TelegramChannel = fopen( "https://api.telegram.org/bot{$token}/sendMessage?chat_id={$channelid}&parse_mode=html&text={$body}", "r" );
 
 
 
