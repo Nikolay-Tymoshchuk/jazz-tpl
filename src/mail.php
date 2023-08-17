@@ -23,6 +23,15 @@ $message = $_POST["comments"];
 $title = "Contact";
 $body = "\n\n Name: $name  \n\n Email: $email \n\n Project Type: $typeProject \n\n Deadline: $deadline \n\n Aerial: $aerial \n\n Exterior: $exterior \n\n Interior: $interior \n\n Total Price: $price \n\n Message: $message \n\n";
 
+$token = "6094347566:AAE-A6km2c3C7DT82OycLQ3C7FeRwW1bQnQ";
+$channelid = "-1001988092368";
+
+$TelegramChannel = fopen( "https://api.telegram.org/bot{$token}/sendMessage?chat_id={$channelid}&parse_mode=html&text={$body}", "r" );
+
+
+
+
+
 
 
 // Настройки PHPMailer

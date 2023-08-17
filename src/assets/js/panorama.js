@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', function () {
   const panContainer = document.querySelector('.panorama__image-container');
-  const img = '/assets/images/gallery/panorama/panorama-interior.jpg';
+  const img = 'assets/images/gallery/panorama/panorama-interior.jpg';
 
   const panorama = new PANOLENS.ImagePanorama(img);
   panorama.addEventListener('enter-fade-start', function () {

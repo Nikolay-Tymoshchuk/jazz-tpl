@@ -40,17 +40,13 @@ function hide(elem) {
 
 gsap.registerPlugin(ScrollTrigger);
 
-if (window.innerWidth >= 1280) {
-  gsap.registerPlugin(ScrollTrigger);
+gsap.utils.toArray('.gs_reveal').forEach(function (elem) {
+  hide(elem);
 
-  gsap.utils.toArray('.gs_reveal').forEach(function (elem) {
-    hide(elem);
-
-    ScrollTrigger.create({
-      trigger: elem,
-      onEnter: function () {
-        animateFrom(elem);
-      },
-    });
+  ScrollTrigger.create({
+    trigger: elem,
+    onEnter: function () {
+      animateFrom(elem);
+    },
   });
-}
+});
