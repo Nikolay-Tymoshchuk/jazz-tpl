@@ -6,17 +6,16 @@ require 'phpmailer/Exception.php';
 $uploads_dir = 'uploads';
 
 // Переменные, которые отправляет пользователь
-$name = $_POST["name"]; 
-$email = $_POST["email"];
-$typeProject = $_POST["typeProject"];
-$deadline = $_POST["date"];
-$aerial = $_POST["aerial"];
-$exterior = $_POST["exterior"];
-$interior = $_POST["interior"];
-$price = $_POST["price"];
-$images = json_decode($_POST['images']);
-
-$message = $_POST["comments"];
+$name = isset($_POST["name"]) ? $_POST["name"] : "";
+$email = isset($_POST["email"]) ? $_POST["email"] : "";
+$typeProject = isset($_POST["typeProject"]) ? $_POST["typeProject"] : "";
+$deadline = isset($_POST["date"]) ? $_POST["date"] : "";
+$aerial = isset($_POST["aerial"]) ? $_POST["aerial"] : "";
+$exterior = isset($_POST["exterior"]) ? $_POST["exterior"] : "";
+$interior = isset($_POST["interior"]) ? $_POST["interior"] : "";
+$price = isset($_POST["price"]) ? $_POST["price"] : "";
+$images = isset($_POST['images']) ? json_decode($_POST['images']) : array();
+$message = isset($_POST["comments"]) ? $_POST["comments"] : "";
 
 
 // Формирование самого письма
