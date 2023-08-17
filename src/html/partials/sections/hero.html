@@ -1,0 +1,151 @@
+<section class="hero">
+  <div class="container hero__container">
+    <div>
+      <h2 class="item-title hero__title">{{hero.title}}</h2>
+      <p class="hero__description">{{hero.description}}</p>
+    </div>
+    <section class="hero__image-slider" data-hero-image-slider>
+      {% for item in hero.items %}
+
+      <div class="hero__image-item">
+        <picture>
+          <source srcset="
+                  ./assets/images/hero/hero{{loop.index}}_large.webp 1x,
+                  ./assets/images/hero/hero{{loop.index}}_large@2x.webp 2x
+                " media="(min-width: 1536px)" type="image/webp" />
+          <source srcset="
+                  ./assets/images/hero/hero{{loop.index}}_large.jpg 1x,
+                  ./assets/images/hero/hero{{loop.index}}_large@2x.jpg 2x
+                " media="(min-width: 1536px)" type="image/jpeg" />
+          <source srcset="
+                  ./assets/images/hero/hero{{loop.index}}_small@2x.webp 1x,
+                  ./assets/images/hero/hero{{loop.index}}_large.webp 2x
+                " media="(min-width: 1280px)" type="image/webp" />
+          <source srcset="
+                  ./assets/images/hero/hero{{loop.index}}_small@2x.jpg 1x,
+                  ./assets/images/hero/hero{{loop.index}}_large.jpg 2x
+                " media="(min-width: 1280px)" type="image/jpeg" />
+          <source srcset="
+                  ./assets/images/hero/hero{{loop.index}}_small.webp 1x,
+                  ./assets/images/hero/hero{{loop.index}}_small@2x.webp 2x
+                " type="image/webp" />
+          <source srcset="
+                  ./assets/images/hero/hero{{loop.index}}_small.jpg 1x,
+                  ./assets/images/hero/hero{{loop.index}}_small@2x.jpg 2x
+                " type="image/jpeg" />
+          <img class="hero__image" src="./assets/images/hero/hero{{loop.index}}_small.jpg" alt="some building"
+            width="648" height="389" />
+        </picture>
+      </div>
+
+      {% endfor %}
+    </section>
+    <section class="hero__description-slider">
+      <div class="hero__item-content" data-hero-text-slider>
+        {% for item in hero.items %}
+        <div class="hero__title-wrapper">
+          <p class="item-title hero__item-title typewriter-text-js" data-text="{{item.title}}">
+            {{item.title}}
+          </p>
+          <p class="hero__item-text typewriter-text-js" data-text="{{item.text}}">
+            {{item.text}}
+          </p>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="hero__pagination" data-hero-pagin>
+        {% for item in hero.pagination %}
+        <div class="hero__pagination-item">
+          <p class="hero__pagination-text">{{item}}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+  </div>
+</section>
+<script>
+  const textSlider = document.querySelector('[data-hero-text-slider]');
+  const imageSlider = document.querySelector('[data-hero-image-slider]');
+  const paginationItems = document.querySelectorAll('[data-hero-pagin] .hero__pagination-item');
+  const isNotDesktop = window.matchMedia('(max-width: 1279px)').matches;
+
+  let currentIndex = 0;
+  let intervalId = null;
+
+  // Автоматична прокрутка слайдера
+  function startSlider() {
+    intervalId = setInterval(() => {
+      showSlide((currentIndex + 1) % paginationItems.length);
+    }, 4000);
+  }
+
+  // Зупинка слайдера
+  function stopSlider() {
+    clearInterval(intervalId);
+  }
+
+  // Функція для поступової появи тексту
+  // function animateText(element, text, speed) {
+  //   const characters = text.split(''); // Розбиваємо текст на окремі символи
+  //   let i = 0;
+  //   const intervalId = setInterval(() => {
+  //     element.textContent += characters[i];
+  //     i++;
+  //     if (i >= characters.length) {
+  //       clearInterval(intervalId);
+  //     }
+  //   }, speed);
+  // }
+
+  // Поточний слайд
+  function showSlide(index) {
+    stopSlider();
+
+    const textSlides = textSlider.querySelectorAll('.hero__title-wrapper');
+    const imageSlides = imageSlider.querySelectorAll('.hero__image-item');
+    textSlides.forEach(slide => slide.classList.remove('active-slider'));
+    imageSlides.forEach(slide => slide.classList.remove('active-slider'));
+
+    textSlides[index].classList.add('active-slider');
+    imageSlides[index].classList.add('active-slider');
+
+    // Елементи для анімації тексту
+    const activeTextSlide = textSlides[index];
+    const animatedText = activeTextSlide.querySelectorAll('.typewriter-text-js');
+
+    animatedText.forEach(text => {
+      // Зберігаємо висоту елемента перед очищенням тексту
+      // const elementHeight = text.offsetHeight;
+      // text.style.height = `${elementHeight}px`;
+      // Запускаємо анімацію тексту
+      text.textContent = text.getAttribute('data-text');
+      // if (isNotDesktop) {
+      //   text.textContent = text.getAttribute('data-text');
+      //   return;
+      // }
+      // setTimeout(() => {
+      //   animateText(text, text.getAttribute('data-text'), 40);
+      // }, 500);
+    });
+
+    paginationItems.forEach(item => item.classList.remove('active-slider'));
+    paginationItems[index].classList.add('active-slider');
+
+    currentIndex = index;
+
+    startSlider();
+  }
+
+  // Зупинка слайдера при наведенні курсору
+  imageSlider.addEventListener('mouseover', stopSlider);
+  imageSlider.addEventListener('mouseout', startSlider);
+
+  // Перехід при кліку на пагінацію
+  paginationItems.forEach((item, index) => {
+    item.addEventListener('click', () => {
+      showSlide(index);
+    });
+  });
+
+  showSlide(0);
+</script>

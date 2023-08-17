@@ -1,0 +1,33 @@
+<div class="backdrop is-hidden" data-team-modal>
+  <div class="modal">
+    <div class="modal-content">
+      <button class="btn-close" type="button" data-team-modal-close aria-label="Modal close button"></button>
+
+      <p class="modal-title" id="modal-title">Hello!HAVE ANY QUESTIONS?</p>
+      <form class="contact-form" id="team-form" novalidate data-form>
+        <div class="contact-form__group">
+          <input class="contact-form__input" type="text" name="name" id="team-name" data-required="name" data-team
+            data-invalid-message="&#42; Enter your name!" />
+          <label class="contact-form__label"> Your Name&#42; </label>
+        </div>
+        <div class="contact-form__group">
+          <input class="contact-form__input" type="tel" name="phone" id="team-phone" data-team
+            data-invalid-message="&#42; Enter your correct phone number!" />
+          <label class="contact-form__label"> Telephone&#42; </label>
+        </div>
+        <div class="contact-form__group">
+          <input class="contact-form__input" type="email" name="email" id="team-email" data-required="email" data-team
+            data-invalid-message="&#42; Enter your correct email!" />
+          <label class="contact-form__label"> E-mail&#42; </label>
+        </div>
+        <div class="contact-form__group">
+          <p>Your question</p>
+          <textarea class="contact-form__question" rows="3" name="comments" id="team-question"></textarea>
+        </div>
+      </form>
+      <button class="btn btn--accent contact-form__button" form="team-form" type="submit">
+        contact me
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,188 @@
+<section class="section contact-sec" id="contact-sec">
+  <div class="container">
+    <h2 class="title">Contact</h2>
+    <div class="title-wrap">
+      <p class="contact-sec__descript">
+        Make request using form below or send e-mail to
+        <a href="mailto:info@jazzrender.com">info@jazzrender.com</a>
+      </p>
+    </div>
+    <form class="form-list" id="contact-sec-form" novalidate>
+      <div class="desk-wrapper">
+        <div class="desk-wrapper__item">
+          <div class="form-list__item get-name">
+            <!-- <input class="form-list__text" type="text" name="name" id="get-name" data-required="name"
+              placeholder="Your Name&#42;" data-invalid-message="* Enter your name!" autocomplete="off" /> -->
+            <input class="form-list__text" type="text" name="name" id="get-name" placeholder="Your Name"
+              autocomplete="off" />
+            <label class="label-absolute" for="get-name">Your Name</label>
+          </div>
+
+          <div class="form-list__item get-email">
+            <input class="form-list__text" type="email" name="email" id="get-email" data-required="email"
+              placeholder="Your E-mail&#42;" data-invalid-message="* Enter your correct email!" />
+            <label class="label-absolute" for="get-email">Your E-mail&#42;</label>
+          </div>
+        </div>
+
+        <div class="form-list__item desk-wrapper__item get-type">
+          <p>Choose Project Type</p>
+          <div class="get-type__wrapper">
+            <div class="get-type__item">
+              <input class="form-list__radio" type="radio" name="typeProject" value="villa" id="villa" checked />
+              <label for="villa"> Villa</label>
+            </div>
+
+            <div class="get-type__item">
+              <input class="form-list__radio" type="radio" name="typeProject" value="residential" id="residential" />
+              <label for="residential">Residential</label>
+            </div>
+            <div class="get-type__item">
+              <input class="form-list__radio" type="radio" name="typeProject" value="office" id="office" />
+              <label for="office">Office</label>
+            </div>
+            <div class="get-type__item">
+              <input class="form-list__radio" type="radio" name="typeProject" value="other" id="other" />
+              <label for="other">Other</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="desk-wrapper reverse">
+        <div class="desk-wrapper__item">
+          <div class="form-list__item date">
+            <input class="form-list__text" type="text" id="get-date" name="date" placeholder="Deadline"
+              autocomplete="off" />
+            <label class="label-absolute" for="get-date">Deadline</label>
+          </div>
+
+          <div class="form-list__item quantity">
+            <p>Image Quantity:</p>
+            <div class="quantity__wrapper" id="number-quantity">
+              <div class="quantity__number">
+                <label class="quantity__label" for="number-aerial">Aerial <span>Image Quantity</span></label>
+                <div class="quantity__number--wrapper">
+                  <button class="quantity__number--btn minus" data-minus type="button"
+                    aria-label="Quantity minus"></button>
+                  <input class="form-list__numb" id="number-aerial" data-quantity="aerial" name="aerial" type="text"
+                    value="0" />
+                  <button class="quantity__number--btn plus" data-plus type="button"
+                    aria-label="Quantity plus"></button>
+                </div>
+              </div>
+              <div class="quantity__number">
+                <label class="quantity__label" for="number-exterior">3D Exterior <span>Image Quantity</span></label>
+                <div class="quantity__number--wrapper">
+                  <button class="quantity__number--btn minus" data-minus type="button"
+                    aria-label="Quantity minus"></button>
+                  <input class="form-list__numb" id="number-exterior" data-quantity="exterior" name="exterior"
+                    type="text" value="1" />
+                  <button class="quantity__number--btn plus" data-plus type="button"
+                    aria-label="Quantity plus"></button>
+                </div>
+              </div>
+              <div class="quantity__number">
+                <label class="quantity__label" for="number-interior">3D Interior <span>Image Quantity</span></label>
+                <div class="quantity__number--wrapper">
+                  <button class="quantity__number--btn minus" data-minus type="button"
+                    aria-label="Quantity minus"></button>
+                  <input class="form-list__numb" id="number-interior" data-quantity="interior" name="interior"
+                    type="text" value="0" />
+                  <button class="quantity__number--btn plus" data-plus type="button"
+                    aria-label="Quantity plus"></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="quantity__wrapper" id="range-quantity">
+              <div class="quantity__range">
+                <label class="quantity__label" for="range-aerial">Aerial <span>Image Quantity</span></label>
+                <input class="form-list__range" id="range-aerial" data-range name="rangeAerial" type="range" step="1"
+                  min="0" max="10" value="0" />
+                <output for="range-aerial" id="aerial-value" data-quantity="aerial">1</output>
+                <div data-range-list="aerial">
+                  <span class="range__start">0</span>
+                  <span class="range__end">10</span>
+                </div>
+              </div>
+              <div class="quantity__range">
+                <label class="quantity__label" for="range-exterior">3D Exterior <span>Image Quantity</span></label>
+                <input class="form-list__range" id="range-exterior" data-range name="rangeExterior" type="range"
+                  step="1" min="0" max="10" value="1" />
+                <output for="range-exterior" id="exterior-value" data-quantity="exterior">0</output>
+                <div data-range-list="exterior">
+                  <span class="range__start">0</span>
+                  <span class="range__end">10</span>
+                </div>
+              </div>
+              <div class="quantity__range">
+                <label class="quantity__label" for="range-interior">3D Interior <span>Image Quantity</span></label>
+                <input class="form-list__range" id="range-interior" name="rangeInterior" data-range type="range"
+                  step="1" min="0" max="10" value="0" />
+                <output for="range-interior" id="interior-value" data-quantity="interior">0</output>
+                <div data-range-list="interior">
+                  <span class="range__start">0</span>
+                  <span class="range__end">10</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-list__item total">
+            <div class="total__item price visually-hidden">
+              Total Price <span id="total-price">1000.00$</span>
+            </div>
+            <div class="total__item image">
+              Total Image Quantity <span id="total-images">1</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="desk-wrapper__item">
+          <div class="form-list__item get-comments">
+            <p>Feel free to leave your comments</p>
+            <label for="form-comments__text" class="form-list__commentslabel">Enter Comment</label>
+            <!-- <textarea id="form-comments__text" class="form-list__comments" rows="10" name="comments"
+              data-required="comments"></textarea> -->
+            <textarea id="form-comments__text" class="form-list__comments" rows="10" name="comments"></textarea>
+          </div>
+
+          <div class="form-list__item drag-files" id="drop-area">
+            <input class="form-list__file" type="file" name="file[]" id="fileElem" multiple="multiple"
+              accept="image/*" />
+
+            <label class="drag-files__label" for="fileElem">
+              <span class="drag-files__label--warning visually-hidden warning-size-js">
+                &#9888; Allowed files size reached
+              </span>
+              <span class="drag-files__label--warning visually-hidden warning-name-js">
+                &#9888; This file exists
+              </span>
+              <span class="drag-files__label-add"></span>
+              <span class="drag-files__label-text">Drag and drop or add your files here
+                <br />
+                <span class="drag-files__label-total">&#42;Total files size - max 25 Mb !</span></span>
+            </label>
+
+            <ul class="drag-files__gallery" id="contact-gallery">
+              <!-- <li class='drag-files__gallery-item'>
+                <img src="" alt="user uploaded image">
+                <div class="drag-files__gallery-wrapper">
+                  <p class="drag-files__gallery-file"><span class="drag-files__gallery-name"></span> <span
+                      class="drag-files__gallery-size"></span></p>
+                  <progress data-progress-bar max=100 value=0></progress>
+                  <p class="drag-files__gallery-progress">100</p>
+                </div>
+                <button class="drag-files__gallery-close" type="button">X</button>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <button class="btn btn--accent" form="contact-sec-form" data-contact-btn type="submit">
+      send
+    </button>
+  </div>
+</section>

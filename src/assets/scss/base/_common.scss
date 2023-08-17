@@ -1,0 +1,179 @@
+html {
+  box-sizing: border-box;
+  // scroll-behavior: smooth;
+}
+
+html,
+body {
+  font-size: 14px;
+
+  @include mq(desktop) {
+    font-size: 16px;
+  }
+
+  @include mq(fullhd) {
+    font-size: 18px;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: var(--main-font);
+  line-height: 1.45;
+  font-weight: 400;
+  color: var(--main-text-cl);
+}
+
+address {
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+}
+
+figure {
+  margin: 0;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+p {
+  margin-bottom: 24px;
+
+  @include mq(desktop) {
+    margin-bottom: 32px;
+  }
+}
+
+a {
+  color: var(--dark-text-cl);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+.section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @include mq(tablet) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  @include mq(desktop) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.title {
+  margin-bottom: 32px;
+  @include fonts(30px, 700, 1.2);
+  color: var(--dark-text-cl);
+
+  @include mq(tablet) {
+    // margin-bottom: 76px;
+    font-size: 34px;
+  }
+  @include mq(desktop) {
+    // margin-bottom: 76px;
+    @include fonts(54px, 700, 1.2);
+  }
+}
+
+.item-title {
+  margin-bottom: 16px;
+  @include fonts(20px, 700, 1.3);
+  color: var(--dark-text-cl);
+  // color: var(--item-text-cl);
+  letter-spacing: -0.025em;
+
+  @include mq(tablet) {
+    @include fonts(24px, 700, 1.3);
+  }
+
+  @include mq(desktop) {
+    margin-bottom: 24px;
+    @include fonts(28px, 700, 1.3);
+  }
+}
+
+.logo {
+  width: 40px;
+  height: 24px;
+
+  @include mq(tablet) {
+    width: 50px;
+    height: 30px;
+  }
+
+  @include mq(desktop) {
+    width: 80px;
+    height: 48px;
+  }
+}
+
+.invalid-feedback {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  color: var(--warning-color);
+  font-size: 12px;
+}
+
+.main {
+  padding-top: 50px;
+
+  @include mq(tablet) {
+    padding-top: 103px;
+  }
+  @include mq(desktop) {
+    padding-top: 109px;
+  }
+}
