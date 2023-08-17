@@ -76,7 +76,7 @@
   function startSlider() {
     intervalId = setInterval(() => {
       showSlide((currentIndex + 1) % paginationItems.length);
-    }, 8000);
+    }, 4000);
   }
 
   // Зупинка слайдера
@@ -85,17 +85,17 @@
   }
 
   // Функція для поступової появи тексту
-  function animateText(element, text, speed) {
-    const characters = text.split(''); // Розбиваємо текст на окремі символи
-    let i = 0;
-    const intervalId = setInterval(() => {
-      element.textContent += characters[i];
-      i++;
-      if (i >= characters.length) {
-        clearInterval(intervalId);
-      }
-    }, speed);
-  }
+  // function animateText(element, text, speed) {
+  //   const characters = text.split(''); // Розбиваємо текст на окремі символи
+  //   let i = 0;
+  //   const intervalId = setInterval(() => {
+  //     element.textContent += characters[i];
+  //     i++;
+  //     if (i >= characters.length) {
+  //       clearInterval(intervalId);
+  //     }
+  //   }, speed);
+  // }
 
   // Поточний слайд
   function showSlide(index) {
@@ -115,17 +115,17 @@
 
     animatedText.forEach(text => {
       // Зберігаємо висоту елемента перед очищенням тексту
-      const elementHeight = text.offsetHeight;
-      text.style.height = `${elementHeight}px`;
-      text.textContent = '';
+      // const elementHeight = text.offsetHeight;
+      // text.style.height = `${elementHeight}px`;
       // Запускаємо анімацію тексту
-      if (isNotDesktop) {
-        text.textContent = text.getAttribute('data-text');
-        return;
-      }
-      setTimeout(() => {
-        animateText(text, text.getAttribute('data-text'), 40);
-      }, 500);
+      text.textContent = text.getAttribute('data-text');
+      // if (isNotDesktop) {
+      //   text.textContent = text.getAttribute('data-text');
+      //   return;
+      // }
+      // setTimeout(() => {
+      //   animateText(text, text.getAttribute('data-text'), 40);
+      // }, 500);
     });
 
     paginationItems.forEach(item => item.classList.remove('active-slider'));

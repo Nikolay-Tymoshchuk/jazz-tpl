@@ -58,6 +58,8 @@ const onHandleSubmit = e => {
 
   if (e.target.id === 'contact-form') {
     const isValidForm = validationForm(refs.contactInputs);
+    console.log('isValidForm', isValidForm);
+    console.log('refs.contactInputs', refs.contactInputs);
     if (!isValidForm) return;
     mailHandler(e);
   }
