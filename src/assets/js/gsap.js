@@ -3,6 +3,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import $ from 'jquery';
 
 function animateFrom(elem, direction = 1) {
+  const isDesktop = window.matchMedia('(min-width: 1280px)').matches;
+  if (!isDesktop) return;
   direction = direction || 1;
 
   var x = 0,
@@ -40,17 +42,13 @@ function hide(elem) {
 
 gsap.registerPlugin(ScrollTrigger);
 
-if (window.innerWidth >= 1280) {
-  gsap.registerPlugin(ScrollTrigger);
+gsap.utils.toArray('.gs_reveal').forEach(function (elem) {
+  // hide(elem);
 
-  gsap.utils.toArray('.gs_reveal').forEach(function (elem) {
-    hide(elem);
-
-    ScrollTrigger.create({
-      trigger: elem,
-      onEnter: function () {
-        animateFrom(elem);
-      },
-    });
+  ScrollTrigger.create({
+    trigger: elem,
+    onEnter: function () {
+      animateFrom(elem);
+    },
   });
-}
+});

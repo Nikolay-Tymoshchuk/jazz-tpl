@@ -58,7 +58,7 @@
     ]
   },
   "works": {
-    "items": [
+    "list": [
       {
         "class": "exterior",
         "data_sub_html": "Colombes, France",

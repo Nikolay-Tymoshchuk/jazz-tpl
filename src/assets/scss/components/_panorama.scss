@@ -1,5 +1,15 @@
 //=======================
 .panorama {
+  &__wrapper {
+    overflow-x: hidden;
+    position: relative;
+    @include mq(desktop) {
+      max-width: 65vw;
+    }
+    @include mq(fullhd) {
+      max-width: 60vw;
+    }
+  }
   &__modal {
     position: absolute;
     top: 50%;
@@ -43,7 +53,6 @@
     }
   }
   &__image-container {
-    // height: 80vh;
     height: 30vh;
     overflow: hidden;
     position: relative;

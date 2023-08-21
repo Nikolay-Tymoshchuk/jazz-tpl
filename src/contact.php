@@ -4,11 +4,11 @@ require 'phpmailer/PHPMailer.php';
 require 'phpmailer/Exception.php';
 
 // Переменные, которые отправляет пользователь
-$name = $_POST["name"];
-$phone = $_POST["phone"];
-$email = $_POST["email"];
-$partner = $_POST["partner"];
-$message = $_POST["comments"];
+$name = isset($_POST["name"]) ? $_POST["name"] : "";
+$phone = isset($_POST["phone"]) ? $_POST["phone"] : "";
+$email = isset($_POST["email"]) ? $_POST["email"] : "";
+$partner = isset($_POST["partner"]) ? $_POST["partner"] : "";
+$message = isset($_POST["message"]) ? $_POST["message"] : "";
 
 // telegram bot
 	$token = "6094347566:AAE-A6km2c3C7DT82OycLQ3C7FeRwW1bQnQ";
@@ -39,7 +39,7 @@ $mail->isHTML(false);
 $mail->Subject = $title;
 $mail->Body = $body;    
 
-// Проверяем отравленность сообщения
+// Проверяем, отправилось ли сообщения
 if ($mail->send()) {$result = "success";} 
 else {$result = "error";}
 

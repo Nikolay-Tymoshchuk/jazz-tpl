@@ -13,7 +13,7 @@ window.addEventListener('DOMContentLoaded', function () {
   const viewer = new PANOLENS.Viewer({
     container: panContainer,
     autoRotate: true,
-    autoRotateSpeed: 0.15,
+    autoRotateSpeed: 0.2,
     controlBar: true,
     viewIndicator: true,
   });
