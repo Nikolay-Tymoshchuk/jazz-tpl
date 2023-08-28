@@ -57,6 +57,7 @@
   },
   "dependencies": {
     "dot-prop": "^6.0.1",
+    "gulp-gh-pages": "^0.5.4",
     "node-gyp": "^8.1.0"
   }
 }
