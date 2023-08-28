@@ -61,21 +61,21 @@
     background-repeat: no-repeat;
     transition: all 300ms linear;
     &:hover,
-    &:focus{
+    &:focus {
       background-image: linear-gradient(
         180deg,
         rgba(14, 14, 14, 0.95) 0%,
         rgba(14, 14, 14, 0.95) 100%
-      )
+      );
     }
-    
+
     &--1 {
       background-image: linear-gradient(
           180deg,
           rgba(14, 14, 14, 0.95) 0%,
           rgba(14, 14, 14, 0.04) 100%
         ),
-        url(../images/cases/formwork-case/f3-sm.jpeg);
+        url(./images/cases/formwork-case/f3-sm.jpeg);
     }
     &--2 {
       background-image: linear-gradient(
@@ -83,7 +83,7 @@
           rgba(14, 14, 14, 0.95) 0%,
           rgba(14, 14, 14, 0.04) 100%
         ),
-        url(../images/cases/suspended-ceiling-case/c5-sm.jpeg);
+        url(./images/cases/suspended-ceiling-case/c5-sm.jpeg);
     }
     &--3 {
       background-image: linear-gradient(
@@ -91,7 +91,7 @@
           rgba(14, 14, 14, 0.95) 0%,
           rgba(14, 14, 14, 0.04) 100%
         ),
-        url(../images/cases/floor-assembly-case/fa3-sm.jpeg);
+        url(./images/cases/floor-assembly-case/fa3-sm.jpeg);
     }
     &--4 {
       background-image: linear-gradient(
@@ -99,9 +99,9 @@
           rgba(14, 14, 14, 0.95) 0%,
           rgba(14, 14, 14, 0.04) 100%
         ),
-        url(../images/cases/wall-framing-case/w3-sm.jpeg);
+        url(./images/cases/wall-framing-case/w3-sm.jpeg);
     }
-   
+
     p {
       color: inherit;
     }
