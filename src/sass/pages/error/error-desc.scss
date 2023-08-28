@@ -1,0 +1,44 @@
+.banner_hero {
+  padding-top: 64px;
+}
+
+.banner__title {
+  margin-bottom: 58px;
+
+  font-family: $secondary-font;
+  @include font(120px, 700, 134px);
+  color: $main-color;
+  text-align: center;
+}
+
+.banner__text {
+  margin-bottom: 44px;
+}
+
+.link {
+  width: max-content;
+
+  &::before {
+    width: 37%;
+  }
+}
+
+@include mq('tablet') {
+  .banner_hero {
+    padding-top: 62px;
+  }
+
+  .banner__title {
+    margin-bottom: 20px;
+
+    text-align: start;
+  }
+
+  .banner__text {
+    margin-bottom: 46px;
+  }
+
+  .banner::after {
+    width: 42px;
+  }
+}

@@ -1,0 +1,35 @@
+{% set page = articles[10] %} {% set service = services[1]%} {% extends
+"layout.html" %} {% block content %} {% include 'blog/hero.html' %}
+
+<div class="container">
+  <div class="blog__content-wrapper">
+    <aside class="sidebar blog-section">
+      <div class="sidebar__wrapper">
+        {% include 'blog/components/social-aside.html' %}
+      </div>
+    </aside>
+
+    <div class="blog__content">
+      {% include 'blog/construction-rfi/contents.html' %} {% include
+      'blog/construction-rfi/introduction.html' %} {% include
+      'blog/construction-rfi/what-is-rfi-in-construction.html' %} {% include
+      'blog/components/modeling-services.html' %} {% include
+      'blog/construction-rfi/how-to-write-a-construction-rfi.html' %} {% include
+      'blog/components/case-studies.html' %} {% include
+      'blog/construction-rfi/rfi-template-example.html' %} {% include
+      'blog/construction-rfi/how-to-respond-to-construction-rfi.html' %} {%
+      include 'blog/components/subscription.html' %} {% include
+      'blog/construction-rfi/conclusion.html' %} {% include
+      'blog/blog-footer.html' %}
+    </div>
+    <aside class="sidebar blog-section">
+      {% include 'blog/components/author.html' %}
+      <div class="sidebar__wrapper">
+        {% include 'blog/components/bim-aside-content.html' %}
+      </div>
+    </aside>
+  </div>
+</div>
+
+{% include 'sections/faq-contact.html' %} {% include
+'blog/components/cards-article.html' %} {% endblock %}

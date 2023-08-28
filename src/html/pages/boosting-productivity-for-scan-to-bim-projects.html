@@ -1,0 +1,29 @@
+{% set page = articles[1] %} {% set service = services[3]%} {% extends
+"layout.html" %} {% block content %} {% include 'blog/hero.html' %}
+
+<div class="container">
+  <div class="blog__content-wrapper">
+    <aside class="sidebar blog-section">
+      <div class="sidebar__wrapper">
+        {% include 'blog/components/social-aside.html' %}
+      </div>
+    </aside>
+
+    <div class="blog__content">
+      {% include 'blog/scan-to-beam-boosting-productivity/contents.html' %} {%
+      include 'blog/scan-to-beam-boosting-productivity/main-content.html' %} {%
+      include 'blog/blog-footer.html' %}
+    </div>
+    <aside class="sidebar blog-section">
+      {% for id in page.author_id %} {% set author = authors[id] %} {% include
+      'blog/components/author.html' %} {% endfor %}
+
+      <div class="sidebar__wrapper">
+        {% include 'blog/components/bim-aside-content.html' %}
+      </div>
+    </aside>
+  </div>
+</div>
+
+{% include 'sections/faq-contact.html' %} {% include
+'blog/components/cards-article.html' %} {% endblock %}

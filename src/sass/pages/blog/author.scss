@@ -1,0 +1,22 @@
+.author {
+  &__image {
+    margin-bottom: 8px;
+    filter: grayscale(1) brightness(1.2);
+  }
+  &__title {
+    margin-bottom: 5px;
+  }
+  &__description {
+    margin-bottom: 19px;
+  }
+  &__social-list {
+    display: flex;
+    margin-left: -13px;
+    margin-top: -13px;
+  }
+
+  &__social-item {
+    margin-left: 13px;
+    margin-top: 13px;
+  }
+}

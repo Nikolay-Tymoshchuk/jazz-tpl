@@ -1,0 +1,21 @@
+.contact-btn {
+  min-width: 115px;
+  height: max-content;
+  padding: 15px 15px 13px;
+
+  border: none;
+  background-color: $main-color;
+  cursor: pointer;
+
+  font-family: $secondary-font;
+  @include font(14px, 700, 16px);
+  color: $text-color-white;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  transition: background-color 250ms cubic-bezier(0.66, 0.29, 0.46, 0.54);
+
+  &:hover {
+    background-color: rgba($main-color, 0.7);
+  }
+}

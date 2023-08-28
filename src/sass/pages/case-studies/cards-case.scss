@@ -1,0 +1,61 @@
+.wrapper {
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  user-select: none;
+}
+
+.cards-case {
+  padding-bottom: 32px;
+
+  &__chackbox {
+    display: none;
+  }
+}
+
+.more-btn {
+  display: none;
+  width: 134px;
+  margin: 0 auto;
+
+  position: relative;
+
+  font-family: $secondary-font;
+  @include font(16px, 700, 18px);
+  color: $main-color;
+
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &::before {
+    display: block;
+    width: 73%;
+    height: 2px;
+
+    content: "";
+
+    position: absolute;
+    bottom: -10%;
+    right: 0;
+
+    background-color: #000000;
+    transform: scaleX(0);
+    transition: transform 250ms linear;
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      transform: scaleX(1);
+    }
+  }
+
+  &--icon {
+    width: 18px;
+    height: 14px;
+    margin-right: 10px;
+  }
+}

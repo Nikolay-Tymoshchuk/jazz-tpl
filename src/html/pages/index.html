@@ -1,17 +1,70 @@
-{% extends "layout.html" %} {% block content %}
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico" />
 
-<main class="main">
-  {% include 'header.html' %}
-  {% include 'sections/hero.html' %}
-  {% include 'sections/services.html' %}
-  {% include 'sections/workflow.html' %}
-  {% include 'sections/works.html' %}
-  {% include
-  'sections/why.html' %}{% include 'sections/contact.html' %} {% include 'sections/clients.html' %}
-  {% include 'sections/team.html' %} {% include
-  'sections/contact-form.html' %} {% include 'sections/career.html' %} {% include 'footer.html' %}
-  {% include 'modal.html' %} {% include 'team-modal.html' %} {% include 'sections/menu-burger.html'
-  %}
-</main>
+    <link rel="canonical" href="https://www.powerkh.com" />
+    <meta
+      name="description"
+      content="Powerkh - a trusted BIM solution provider. 10+ highly qualified BIM/VDC experts. Experience in 3D BIM Modeling (structural, architectural, MEP), Coordination, Revit Clash Detection, Point Cloud to BIM, and Automation Solutions. Contact Us!"
+    />
 
-{% endblock %}
+    <!-- OGP -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.powerkh.com" />
+    <meta
+      property="og:image"
+      content="./images/video-poster/video-poster-sm.jpeg"
+    />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="380" />
+    <meta property="og:image:height" content="253" />
+    <meta
+      property="og:site_name"
+      content="Powerkh - a trusted BIM for Prefabrication and Fabrication service provider."
+    />
+    <meta
+      property="og:title"
+      content="BIM Services &ndash; Powerkh BIM &amp; VDC Outsourcing Company"
+    />
+    <meta
+      property="og:description"
+      content="Powerkh - a trusted BIM solution provider. 10+ highly qualified BIM/VDC experts. Experience in 3D BIM Modeling (structural, architectural, MEP), Coordination, Revit Clash Detection, Point Cloud to BIM, and Automation Solutions. Contact Us!"
+    />
+    <!-- /OGP -->
+
+    <link rel=" stylesheet" href="css/main.css" />
+    <title>
+      BIM Services &ndash; Powerkh BIM &amp; VDC Outsourcing Company
+    </title>
+
+    {% include 'google-tag-manager-head.html' %}
+  </head>
+
+  <body>
+    {% include 'google-noscript-body.html' %} {% include 'header.html' %}
+    <main>
+      {% include 'contact-modal.html' %} {% block content %} {% include
+      'sections/story-modal.html' %} {% include
+      'single-page-content/start/hero.html' %} {% include
+      'single-page-content/start/bim-vdc.html' %} {% include
+      'single-page-content/start/how-works.html' %} {% include
+      'single-page-content/start/projects.html' %} {% include
+      'single-page-content/start/customers.html' %} {% include
+      'single-page-content/start/outsourcing.html' %} {% include
+      'single-page-content/start/cases.html' %} {% include
+      'single-page-content/start/expertise.html' %} {% endblock %}
+    </main>
+    {% include 'footer.html' %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/menu.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/form-validation.js"></script>
+    <script src="./js/mail.js"></script>
+    <script src="./js/activeLink.js"></script>
+    <script src="./js/hideCase.js"></script>
+  </body>
+</html>

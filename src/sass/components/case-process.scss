@@ -1,0 +1,105 @@
+.process {
+  padding: 30px 0;
+
+  @include font(14px, 400, 20px);
+  color: $main-color;
+
+  &__title,
+  &__caption {
+    margin-bottom: 40px;
+
+    font-family: $secondary-font;
+    @include font(20px, 700, 22px);
+  }
+
+  &__caption {
+    margin-bottom: 10px;
+
+    @include font(20px, 700, 22px);
+
+    &::before {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      margin-right: 17px;
+
+      content: "";
+      vertical-align: bottom;
+
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.audit-icon::before {
+  background-image: url("../images/case/audit.svg");
+}
+
+.design-icon::before {
+  background-image: url("../images/case/design.svg");
+}
+
+.test-icon::before {
+  background-image: url("../images/case/test.svg");
+}
+
+.refine-icon::before {
+  background-image: url("../images/case/refine.svg");
+}
+
+.maintain-icon::before {
+  background-image: url("../images/case/maintain.svg");
+}
+
+@include mq("desktop", max) {
+  .process {
+    &__item:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &__item:not(:last-child)::after {
+      display: inline-block;
+      width: 22px;
+      height: 27px;
+      margin-top: 20px;
+
+      content: "";
+
+      background-image: url("../images/case/arrow-down.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+@include mq("desktop") {
+  .process {
+    &__list {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__item {
+      width: 166px;
+
+      position: relative;
+    }
+
+    &__item:not(:last-child)::after {
+      display: block;
+      width: 104px;
+      height: 15px;
+
+      content: "";
+
+      position: absolute;
+      top: 4px;
+      left: 120px;
+
+      background-image: url("../images/case/arrow-right.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+}

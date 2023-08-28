@@ -1,0 +1,16 @@
+.blog-slider__img {
+  img {
+    cursor: pointer;
+    object-fit: cover;
+    object-position: top 50% left 60%;
+    filter: grayscale(100%);
+
+    &:hover {
+      filter: none;
+    }
+    @include mq(tablet) {
+      width: 516px;
+      height: 322px;
+    }
+  }
+}

@@ -1,0 +1,120 @@
+.service-include {
+  height: 100%;
+
+  @include mq('tablet', max) {
+    & > .container {
+      height: 100%;
+      padding: 50px 20px;
+    }
+  }
+
+  @include mq('tablet') {
+    & > .container {
+      height: 100%;
+      padding: 50px 0;
+    }
+  }
+
+  @include mq('desktop') {
+    & > .container {
+      height: 100%;
+      padding: 120px 20px;
+    }
+  }
+
+  &__wrapper {
+    display: block;
+    // min-width: 320px;
+    height: max-content;
+    padding: 50px 20px;
+
+    @include font(14px, 400, 20px);
+    color: $main-color;
+    background-color: $bg-color-white;
+
+    @include mq('tablet') {
+      padding: 50px;
+    }
+
+    @include mq('desktop') {
+      padding: 100px 80px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 25px;
+
+    font-family: $secondary-font;
+    @include font(20px, 700, 22px);
+  }
+
+  &__desc {
+    margin-bottom: 40px;
+
+    @include mq('desktop') {
+      max-width: 820px;
+    }
+  }
+
+  &__list-title {
+    margin-bottom: 60px;
+
+    @include font(14px, 400, 20px);
+  }
+
+  &__list {
+    @include mq('desktop') {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    display: block;
+    min-height: 40px;
+    padding-left: 60px;
+
+    @include font(14px, 400, 20px);
+
+    @include mq('tablet') {
+      max-width: 500px;
+    }
+
+    @include mq('desktop') {
+      width: 460px;
+    }
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      top: -10px;
+      left: 0;
+
+      display: block;
+      width: 40px;
+      height: 40px;
+
+      background-image: url('../images/services/grey-arrow-right.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+
+      // filter: brightness(0.8);
+    }
+
+    @include mq('desktop', max) {
+      &:not(:last-of-type) {
+        margin-bottom: 30px;
+      }
+    }
+
+    @include mq('desktop') {
+      &:not(:nth-last-of-type(-n + 2)) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

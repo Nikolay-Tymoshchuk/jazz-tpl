@@ -1,0 +1,19 @@
+@import './utils/modern-normalize.min';
+@import './utils/slick';
+@import './utils/photoswipe.min';
+@import './utils/fonts';
+@import './utils/mixins';
+@import './utils/variables';
+
+@import './base/common';
+@import './base/container';
+
+@import './components/header';
+@import './components/logo';
+@import './components/banner';
+@import './components/modal-window';
+@import './components/story-modal';
+@import './components/footer';
+
+@import './pages/about-us/about-us';
+@import './pages/about-us/team';

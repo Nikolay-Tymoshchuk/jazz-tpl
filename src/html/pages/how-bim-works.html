@@ -1,0 +1,36 @@
+{% set page = articles[3] %} {% set service = services[0] %} {% extends
+"layout.html" %} {% block content %} {% include 'blog/hero.html' %}
+
+<div class="container">
+  <div class="blog__content-wrapper ">
+    <aside class=" sidebar blog-section">
+      <div class="sidebar__wrapper">
+        {% include 'blog/components/social-aside.html' %}
+      </div>
+    </aside>
+    <div class="blog__content">
+      {% include 'blog/how-bim-works/contents.html' %} {% include
+      'blog/how-bim-works/introduction.html' %} {% include
+      'blog/how-bim-works/what.html' %} {% include
+      'blog/how-bim-works/dimensions.html' %} {% include
+      'blog/components/modeling-services.html' %} {% include
+      'blog/how-bim-works/pros-cons.html' %} {% include
+      'blog/how-bim-works/usage.html' %} 
+      {% include 'blog/how-bim-works/explained.html' %} {% include
+      'blog/how-bim-works/how.html' %} {% include
+      'blog/components/subscription.html' %} {% include
+      'blog/how-bim-works/conclusion.html' %} {% include 'blog/blog-footer.html'
+      %} {% include 'blog/components/bim-aside-content.html' %}
+    </div>
+
+    <aside class="sidebar blog-section ">
+      {% include 'blog/components/author.html' %}
+      <div class="sidebar__wrapper ">
+        {% include 'blog/components/bim-aside-content.html' %}
+      </div>
+    </aside>
+  </div>
+</div>
+
+{% include 'sections/faq-contact.html' %} {% include
+'blog/components/cards-article.html' %} {% endblock %}

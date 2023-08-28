@@ -1,0 +1,265 @@
+@import './contact-btn';
+@import './burger';
+
+.header {
+  width: 100%;
+  padding: 9px 0;
+  margin: 0 auto;
+
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+
+  font-family: $secondary-font;
+  background-color: $bg-color-white;
+
+  .container {
+    display: flex;
+    align-items: center;
+  }
+
+  @media screen and (min-width: 720px) and (max-width: 1199px) {
+    padding: 10px 20px 8px;
+  }
+
+  @include mq('tablet') {
+    max-width: 680px;
+  }
+
+  @include mq('desktop') {
+    max-width: 1160px;
+  }
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  margin-right: 16px;
+
+  @include mq('tablet', max) {
+    &__submenu {
+      display: none;
+    }
+  }
+
+  @include mq('tablet') {
+    &__submenu {
+      width: 268px;
+      padding: 34px 18px;
+      visibility: hidden;
+
+      position: absolute;
+      top: 100%;
+      left: -20%;
+
+      background-color: $secondary-color;
+      border-top: 20px solid $text-color-white;
+
+      transform: scaleY(0);
+      transform-origin: right top;
+      transition: all 250ms linear;
+      pointer-events: none;
+
+      & > .navigation__list-item:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  @include mq('desktop') {
+    margin-right: 46px;
+
+    &__submenu {
+      width: 306px;
+
+      border-top: 23px solid $text-color-white;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  &__list-item {
+    @include mq('tablet') {
+      position: relative;
+    }
+
+    &--contacts {
+      @include mq('desktop', max) {
+        display: none;
+      }
+    }
+
+    &--services,
+    &--about,
+    &--blog {
+      @include mq('tablet', max) {
+        display: none;
+      }
+    }
+
+    &--services {
+      cursor: pointer;
+
+      @include mq('tablet') {
+        display: flex;
+        align-items: center;
+
+        &:hover,
+        &:focus {
+          > .navigation__submenu {
+            visibility: visible;
+            transform: scaleY(1);
+            pointer-events: auto;
+          }
+        }
+      }
+
+      &:hover,
+      &:focus {
+        & > .navigation__list-link {
+          &::after {
+            transform: scaleX(1);
+          }
+        }
+      }
+
+      &:after {
+        margin-left: 7px;
+        content: '';
+        border-color: #000 transparent transparent;
+        border-style: solid;
+        border-width: 7px 5px 0;
+      }
+    }
+
+    &--blog {
+      cursor: pointer;
+
+      @include mq('desktop') {
+        display: flex;
+        align-items: center;
+
+        &:hover,
+        &:focus {
+          > .navigation__submenu {
+            visibility: visible;
+            transform: scaleY(1);
+            pointer-events: auto;
+          }
+        }
+      }
+
+      &:hover,
+      &:focus {
+        & > .navigation__list-link {
+          &::after {
+            transform: scaleX(1);
+          }
+        }
+      }
+    }
+  }
+
+  &__list > &__list-item:not(:last-child) {
+    @include mq('tablet') {
+      margin-right: 52px;
+    }
+  }
+
+  &__list-link {
+    @include font(14px, 700, 16px);
+    color: $main-color;
+
+    &::after {
+      display: block;
+      width: 100%;
+      height: 2px;
+      content: '';
+
+      background-color: #000000;
+      transform: scaleX(0);
+      transition: transform 250ms linear;
+    }
+
+    &:hover,
+    &:focus {
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+  &__list-button {
+    background-color: transparent;
+    border: none;
+  }
+}
+
+.modal-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background-color: $secondary-color;
+  overflow: hidden;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 250ms linear;
+
+  @include mq('tablet') {
+    max-width: 390px;
+    left: unset;
+    right: 20px;
+  }
+
+  &.is-open {
+    visibility: visible;
+    pointer-events: auto;
+    padding: 36px 0;
+    height: calc(100vh - 61px);
+    overflow: auto;
+
+    @include mq('tablet') {
+      padding: 100px 0;
+    }
+  }
+
+  &__submenu {
+    padding: 10px 0;
+    padding-left: 26px;
+  }
+
+  &__navigation {
+    max-width: 360px;
+    padding: 0 20px;
+    margin: 0 auto;
+
+    &-item:not(:last-child) {
+      margin-bottom: 6px;
+    }
+
+    & > .modal-menu__navigation-item--services,
+    & > .modal-menu__navigation-item--blog {
+      margin-bottom: 0;
+    }
+
+    &-link {
+      font-family: inherit;
+      @include font(16px, 700, 18px);
+      color: $main-color;
+
+      &--services,
+      &--blog {
+        color: #828282;
+        cursor: default;
+      }
+    }
+  }
+}

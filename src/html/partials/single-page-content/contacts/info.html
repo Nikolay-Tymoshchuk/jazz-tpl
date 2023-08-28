@@ -1,0 +1,38 @@
+<section class="info hero">
+  <div class="container">
+    <div class="banner banner--hero">
+
+      <h1 class="info__title">Contacts</h1>
+
+      <form class="contact-form" name="contact" data-form novalidate>
+        <div class="contact-form__content">
+
+          <div class="contact-form__group info__input-underline">
+            <input class="contact-form__input contact-form__form-input" type="text" name="name" required>
+            <label class="contact-form__modal-label">How can we call you?</label>
+          </div>
+
+          <div class="contact-form__group info__input-underline">
+            <input class="contact-form__input contact-form__form-input" type="text" name="email-or-phone" data-required
+              required>
+            <label class="contact-form__modal-label">Phone or E-mail&ast;</label>
+          </div>
+          <span class="error" aria-live="polite"></span>
+
+
+          <label class="contact-form__label">Message
+            <textarea class="contact-form__form-input message-input" placeholder="Leave your message"
+              name="message"></textarea>
+          </label>
+        </div>
+
+        <button class="contact-form__btn banner__button" type="submit" value="Submit" id="sub">Send
+          <svg width="34" height="34">
+            <use href="./images/sprite.svg#right-arrow"></use>
+          </svg>
+        </button>
+      </form>
+
+    </div>
+  </div>
+</section>

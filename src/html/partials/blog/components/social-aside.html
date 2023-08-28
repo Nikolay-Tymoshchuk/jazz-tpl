@@ -1,0 +1,53 @@
+{% set pageTitle = page.title | lower | replace(" ", "-") | replace(":", "" ) |
+replace("’", "" ) %} {% set pageUrl = 'https://www.powerkh.com/' + pageTitle +
+'.html' %}
+<!-- Load Facebook SDK for JavaScript -->
+<script>
+  (function(d, s, id) {
+    var js,
+      fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0';
+    fjs.parentNode.insertBefore(js, fjs);
+  })(document, 'script', 'facebook-jssdk');
+</script>
+
+<div class="social-aside">
+  <h2 class="blog__figure-title social-aside__title">Share:</h2>
+  <ul class="social-aside__list">
+    <li class="social-aside__item">
+      <div class="fb-share-button" data-href="{{ pageUrl }}" data-size="large">
+        <a
+          class="fb-xfbml-parse-ignore social-aside__link"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Link to Facebook"
+          href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.powerkh.com%2F{{
+            pageTitle
+          }}.html&amp;src=sdkpreparse"
+        >
+          <svg class="social-aside__icon" width="30" height="30">
+            <use href="./images/sprite.svg#facebook"></use>
+          </svg>
+        </a>
+      </div>
+    </li>
+    <li class="social-aside__item">
+      <a
+        href="https://www.linkedin.com/sharing/share-offsite/?&url={{
+          pageUrl
+        }}"
+        class="social-aside__link"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Link to Linkedin"
+      >
+        <svg class="social-aside__icon" width="25" height="25">
+          <use href="./images/sprite.svg#linkedin"></use>
+        </svg>
+      </a>
+    </li>
+  </ul>
+</div>

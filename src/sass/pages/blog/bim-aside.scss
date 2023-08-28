@@ -1,0 +1,92 @@
+.bim-aside {
+  margin: 0 auto;
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+
+  @include mq(tablet) {
+    width: 262px;
+  }
+
+  &__title,
+  &__wrapper {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  &__title {
+    height: 183px;
+    padding-left: 23px;
+    padding-right: 23px;
+    color: $text-color-white;
+    background-color: $main-color;
+  }
+  &__wrapper {
+    height: 317px;
+  }
+
+  &--bg-1 {
+    background-image: url('../images/blog/bim-aside/modeling.jpg');
+    @include retina-image(
+      none,
+      '../images/blog/bim-aside/modeling@2x.jpg',
+      cover
+    );
+  }
+  &--bg-2 {
+    background-image: url('../images/blog/bim-aside/coordination.jpg');
+    @include retina-image(
+      none,
+      '../images/blog/bim-aside/coordination@2x.jpg',
+      cover
+    );
+  }
+  &--bg-3 {
+    background-image: url('../images/blog/bim-aside/content.jpg');
+    @include retina-image(
+      none,
+      '../images/blog/bim-aside/content@2x.jpg',
+      cover
+    );
+  }
+  &--bg-4 {
+    background-image: url('../images/blog/bim-aside/scan.jpg');
+    @include retina-image(none, '../images/blog/bim-aside/scan@2x.jpg', cover);
+  }
+  &--bg-5 {
+    background-image: url('../images/blog/bim-aside/automation.jpg');
+    @include retina-image(
+      none,
+      '../images/blog/bim-aside/automation@2x.jpg',
+      cover
+    );
+  }
+  &--bg-6 {
+    background-image: url('../images/blog/bim-aside/prefabrication.jpg');
+    @include retina-image(
+      none,
+      '../images/blog/bim-aside/prefabrication@2x.jpg',
+      cover
+    );
+  }
+  &--bg-7 {
+    background-image: url('../images/blog/bim-aside/structural.jpg');
+    @include retina-image(
+      none,
+      '../images/blog/bim-aside/structural@2x.jpg',
+      cover
+    );
+  }
+  &--bg-8 {
+    background-image: url('../images/blog/bim-aside/colombes.jpg');
+    filter: grayscale(100%);
+
+    @include retina-image(
+      none,
+      '../images/blog/bim-aside/colombes@2x.jpg',
+      cover
+    );
+  }
+}

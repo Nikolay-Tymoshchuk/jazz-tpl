@@ -1,0 +1,139 @@
+.blog-hero {
+  // display: flex;
+  // min-width: 360px;
+  height: 350px;
+  padding-top: 157px;
+  padding-bottom: 105px;
+  // align-items: center;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include mq(tablet) {
+    height: 307px;
+    padding-top: 171px;
+    padding-bottom: 92px;
+    // background-position: right bottom;
+  }
+  @include mq(desktop) {
+    height: 450px;
+    padding-top: 260px;
+    padding-bottom: 168px;
+  }
+
+  &__title {
+    text-align: center;
+    font-family: $secondary-font;
+    color: $text-color-white;
+    @include font(20px, 750, 22px);
+  }
+
+  &-1 {
+    background-image: url('../images/blog/hero/hero1-bg_md.jpg');
+    @include retina-image(none, '../images/blog/hero/hero1-bg_md.webp', cover);
+
+    @include mq(tablet) {
+      background-image: url('../images/blog/hero/hero1-bg.jpg');
+      @include retina-image(none, '../images/blog/hero/hero1-bg.webp', cover);
+    }
+  }
+  &-2 {
+    background-image: url('../images/blog/hero/hero2-bg_md.jpg');
+    @include retina-image(none, '../images/blog/hero/hero2-bg_md.webp', cover);
+
+    @include mq(tablet) {
+      background-image: url('../images/blog/hero/hero2-bg.jpg');
+      @include retina-image(none, '../images/blog/hero/hero2-bg.webp', cover);
+    }
+  }
+  &-3 {
+    background-image: url('../images/blog/hero/hero3-bg_md.jpg');
+    @include retina-image(none, '../images/blog/hero/hero3-bg_md.webp', cover);
+
+    @include mq(tablet) {
+      background-image: url('../images/blog/hero/hero3-bg.jpg');
+      @include retina-image(none, '../images/blog/hero/hero3-bg.webp', cover);
+    }
+  }
+  &-4 {
+    background-image: url('../images/blog/hero/hero4-bg_md.jpg');
+    @include retina-image(none, '../images/blog/hero/hero4-bg_md.webp', cover);
+
+    @include mq(tablet) {
+      background-image: url('../images/blog/hero/hero4-bg.jpg');
+      @include retina-image(none, '../images/blog/hero/hero4-bg.webp', cover);
+    }
+  }
+  &-5 {
+    background-image: url('../images/blog/hero/hero5-bg_md.jpg');
+    @include retina-image(none, '../images/blog/hero/hero5-bg_md.webp', cover);
+
+    @include mq(tablet) {
+      background-image: url('../images/blog/hero/hero5-bg.jpg');
+      @include retina-image(none, '../images/blog/hero/hero5-bg.webp', cover);
+    }
+  }
+  &-6 {
+    background-image: url('../images/blog/hero/hero6-bg_md.jpg');
+    @include retina-image(none, '../images/blog/hero/hero6-bg_md.webp', cover);
+
+    @include mq(tablet) {
+      background-image: url('../images/blog/hero/hero6-bg.jpg');
+      @include retina-image(none, '../images/blog/hero/hero6-bg.webp', cover);
+    }
+  }
+  &-7 {
+    background-image: url('../images/blog/hero/hero7-bg_md.jpg');
+    @include retina-image(none, '../images/blog/hero/hero7-bg_md.webp', cover);
+
+    @include mq(tablet) {
+      background-image: url('../images/blog/hero/hero7-bg.jpg');
+      @include retina-image(none, '../images/blog/hero/hero7-bg.webp', cover);
+    }
+  }
+  &-8 {
+    background-image: url('../images/blog/hero/hero8-bg_md.jpg');
+    @include retina-image(none, '../images/blog/hero/hero8-bg_md.webp', cover);
+
+    @include mq(tablet) {
+      background-image: url('../images/blog/hero/hero8-bg.jpg');
+      @include retina-image(none, '../images/blog/hero/hero8-bg.webp', cover);
+    }
+  }
+  &-9 {
+    background-image: url('../images/blog/hero/hero9-bg_md.jpg');
+    @include retina-image(none, '../images/blog/hero/hero9-bg_md.webp', cover);
+
+    @include mq(tablet) {
+      background-image: url('../images/blog/hero/hero9-bg.jpg');
+      @include retina-image(none, '../images/blog/hero/hero9-bg.webp', cover);
+    }
+  }
+  &-10 {
+    background-image: url('../images/blog/hero/hero10-bg_md.jpg');
+    @include retina-image(none, '../images/blog/hero/hero10-bg_md.webp', cover);
+
+    @include mq(tablet) {
+      background-image: url('../images/blog/hero/hero10-bg.jpg');
+      @include retina-image(none, '../images/blog/hero/hero10-bg.webp', cover);
+    }
+  }
+  &-11 {
+    background-image: url('../images/blog/hero/hero11-bg_md.jpg');
+    @include retina-image(none, '../images/blog/hero/hero11-bg_md.webp', cover);
+
+    @include mq(tablet) {
+      background-image: url('../images/blog/hero/hero11-bg.jpg');
+      @include retina-image(none, '../images/blog/hero/hero11-bg.webp', cover);
+    }
+  }
+  &-12 {
+    background-image: url('../images/blog/hero/hero12-bg_md.jpg');
+    @include retina-image(none, '../images/blog/hero/hero12-bg_md.webp', cover);
+
+    @include mq(tablet) {
+      background-image: url('../images/blog/hero/hero12-bg.jpg');
+      @include retina-image(none, '../images/blog/hero/hero12-bg.webp', cover);
+    }
+  }
+}

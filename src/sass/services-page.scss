@@ -1,0 +1,29 @@
+@import './utils/modern-normalize.min';
+@import './utils/slick';
+@import './utils/photoswipe.min';
+@import './utils/fonts';
+@import './utils/mixins';
+@import './utils/variables';
+
+@import './base/common';
+@import './base/container';
+
+@import './components/header';
+@import './components/logo';
+@import './components/banner';
+@import './components/modal-window';
+@import './components/hero';
+@import './components/slider-points';
+@import './components/services-contact-block';
+@import './components/faq';
+@import './components/faq-contact';
+@import './components/cases';
+@import './components/footer';
+
+@import './pages/services/revit';
+@import './pages/services/benefits';
+@import './pages/services/service-description';
+@import './pages/services/service-process';
+@import './pages/services/service-include';
+@import './pages/services/service-expectations';
+@import './pages/services/service-projects';

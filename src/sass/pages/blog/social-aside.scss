@@ -1,0 +1,11 @@
+.social-aside {
+  text-align: center;
+  &__title {
+    margin-bottom: 9px;
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+}

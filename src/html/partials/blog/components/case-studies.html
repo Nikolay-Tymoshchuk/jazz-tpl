@@ -1,0 +1,36 @@
+{% set items = cases %}
+
+<div class="blog__case-studies">
+  <h2 class="blog__figure-title blog__figure-title--mb25">Our Case Studies</h2>
+  <div class="blog__case-studies-thumb">
+    <button class="blog__arrow blog__arrow--prev" type="button" aria-label="Arrow Prev">
+      <svg class="blog__arrow--svg" width="24" height="24">
+        <use href="./images/sprite.svg#arrow-prev"></use>
+      </svg>
+    </button>
+
+    <div class="blog__case-studies-wrapper" id="js-blog-slider">
+      {% for name, item in items %}
+      <div class="slider__item">
+        <a class="cases__list-item-link cases__list-item-link--{{ item.bgclass }}" 
+        href="./{{item.linkTo}}" target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Link to {{ item.title }}">
+          <p class="cases__list-title">{{item.title}}</p>
+          <p class="cases__list-text">
+            Our client from <br>
+           {{item.client_from}}
+          </p>
+        </a>
+      </div>
+      {% endfor %}
+
+    </div>
+
+    <button class="blog__arrow blog__arrow--next" type="button" aria-label="Arrow next">
+      <svg class="blog__arrow--svg" width="24" height="24">
+        <use href="./images/sprite.svg#arrow-next"></use>
+      </svg>
+    </button>
+  </div>
+</div>

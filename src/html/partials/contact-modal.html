@@ -1,0 +1,65 @@
+<div class="modal" id="contact-modal">
+  <div class="container">
+    <div class="modal__content modal-js">
+      <button class="close modal__btn">
+        <svg class="modal__btn--svg" width="20" height="20">
+          <use href="./images/sprite.svg#cancel"></use>
+        </svg>
+      </button>
+
+      <p class="modal__title">Have any questions? Contact us!</p>
+
+      <form
+        class="contact-form"
+        id="contactForm"
+        name="modal-contact"
+        data-form
+        novalidate
+      >
+        <div class="contact-form__content">
+          <div class="contact-form__group modal__input-underline">
+            <input
+              class="contact-form__input contact-form__form-input"
+              type="text"
+              name="name"
+              required
+            />
+            <label class="contact-form__modal-label"
+              >How can we call you?</label
+            >
+          </div>
+
+          <div class="contact-form__group modal__input-underline">
+            <input
+              class="contact-form__input contact-form__form-input"
+              type="text"
+              name="email-or-phone"
+              data-required
+              required
+            />
+            <label class="contact-form__modal-label"
+              >Phone or E-mail&ast;</label
+            >
+          </div>
+
+          <input class="hidden" type="text" name="Career" hidden />
+
+          <span class="error" aria-live="polite"></span>
+        </div>
+
+        <button
+          class="contact-form__btn banner__button"
+          type="submit"
+          value="Submit"
+          aria-label="Submit"
+          id="submit"
+        >
+          Send
+          <svg width="34" height="34">
+            <use href="./images/sprite.svg#right-arrow"></use>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

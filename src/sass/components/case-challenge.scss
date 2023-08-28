@@ -1,0 +1,148 @@
+.case {
+  padding: 87px 0 35px;
+
+  @include font(14px, 400, 20px);
+  color: $main-color;
+
+  &__headline {
+    margin-bottom: 36px;
+
+    font-family: $secondary-font;
+    @include font(20px, 700, 22px);
+    color: $secondary-color;
+
+    cursor: pointer;
+
+    &-icon {
+      width: 15px;
+      height: 15px;
+    }
+
+    &:hover {
+      color: $main-color;
+    }
+  }
+
+  &__title {
+    padding-right: 40px;
+    margin-bottom: 28px;
+
+    font-family: $secondary-font;
+    @include font(24px, 700, 22px);
+    text-transform: uppercase;
+  }
+
+  .challenge {
+    &__wrapper {
+      display: block;
+
+      @include mq('desktop') {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      p.challenge__desc:first-of-type {
+        margin-bottom: 30px;
+      }
+    }
+
+    &__desc--formwork {
+      margin-bottom: 20px;
+    }
+
+    &__list {
+      margin-left: 15px;
+    }
+
+    &__item {
+      margin-top: 5px;
+    }
+
+    &__image-wrapper {
+      display: flex;
+    }
+
+    &__image {
+      margin: 0 auto;
+    }
+
+    &__title {
+      margin-bottom: 24px;
+
+      font-family: $secondary-font;
+      @include font(20px, 700, 22px);
+    }
+  }
+}
+
+.challenge-img,
+.challenge-img__item {
+  display: block;
+  max-width: 320px;
+  height: 195px;
+  margin: 0 auto;
+  overflow: hidden;
+
+  @include mq('tablet') {
+    max-width: 550px;
+    min-height: 320px;
+  }
+}
+
+.challenge-img .slick-dots {
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  //   // width: 40px;
+
+  //   left: 50%;
+  //   transform: translateX(-50%);
+
+  //   @include mq('desktop') {
+  //     // width: 40px;
+  //     transform: translateX(-50%);
+  //   }
+}
+
+.challenge-img--ceiling {
+  @include mq('desktop') {
+    min-height: 370px;
+    margin: 0 auto;
+    // margin-top: 18px;
+  }
+}
+
+.challenge-img--ceiling .slick-dots li:not(:last-child) {
+  margin-right: 10px;
+}
+
+@include mq('desktop', max) {
+  .challenge__content {
+    margin-bottom: 46px;
+  }
+}
+
+@include mq('desktop') {
+  .case {
+    padding: 120px 0 64px;
+
+    &__title {
+      padding-right: 0;
+      margin-bottom: 46px;
+    }
+  }
+
+  .challenge {
+    display: flex;
+    justify-content: space-between;
+
+    &__content {
+      width: 560px;
+    }
+
+    &__image-wrapper {
+      width: 420px;
+      margin: 0 auto;
+    }
+  }
+}

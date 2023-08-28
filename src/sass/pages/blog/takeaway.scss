@@ -1,0 +1,7 @@
+.takeaway {
+  p {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}

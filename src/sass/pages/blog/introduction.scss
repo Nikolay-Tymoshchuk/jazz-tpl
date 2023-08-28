@@ -1,0 +1,38 @@
+.introduction {
+  @include mq(tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 38px;
+  }
+  @include mq(desktop) {
+    grid-template-columns: 1fr;
+  }
+
+  .author {
+    margin-bottom: 38px;
+    @include mq(tablet) {
+      margin-bottom: 0;
+    }
+    @include mq(desktop) {
+      display: none;
+    }
+  }
+
+  &__picture {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  
+  &__image {
+    margin-bottom: 0;
+  }
+  
+  &__description {
+    margin-bottom: 38px;
+    @include mq(tablet) {
+      margin-bottom: 0;
+    }
+  }
+}

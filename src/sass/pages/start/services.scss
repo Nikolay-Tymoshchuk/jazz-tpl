@@ -1,0 +1,80 @@
+.services {
+  padding-top: 20px;
+  padding-bottom: 34px;
+
+  &__title {
+    font-family: $secondary-font;
+    @include font(24px, 700, 27px);
+    text-transform: uppercase;
+    color: $main-color;
+  }
+
+  &__text {
+    @include font(14px, 400, 20px);
+    color: $main-color;
+
+    &:not(:last-child) {
+      margin-bottom: 26px;
+    }
+  }
+}
+
+@include mq('tablet') {
+  .services {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@include mq('desktop', max) {
+  .services {
+    &__left-side {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@include mq('desktop') {
+  .services {
+    padding-top: 86px;
+    padding-bottom: 46px;
+
+    .container {
+      display: flex;
+    }
+
+    &__left-side {
+      width: 290px;
+      flex-shrink: 0;
+    }
+
+    &__right-side {
+      flex-grow: 1;
+    }
+  }
+}
+
+.home-page {
+  .service-include__item:not(:last-of-type) {
+    margin-bottom: 20px;
+  }
+
+  @include mq('tablet') {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-height: 220px;
+
+    .service-include__item:nth-child(4) {
+      margin-bottom: 0;
+    }
+  }
+
+  @include mq('desktop') {
+    max-height: 280px;
+
+    .service-include__item:not(:last-of-type) {
+      margin-bottom: 30px;
+    }
+  }
+}

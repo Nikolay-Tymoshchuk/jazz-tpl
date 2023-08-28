@@ -1,0 +1,48 @@
+@import './utils/modern-normalize.min';
+@import './utils/slick';
+@import './utils/photoswipe.min';
+@import './utils/fonts';
+@import './utils/mixins';
+@import './utils/variables';
+
+@import './base/common';
+@import './base/container';
+
+@import './components/header';
+@import './components/logo';
+@import './components/banner';
+@import './components/modal-window';
+@import './components/hero';
+@import './components/footer';
+
+@import './pages/blog/blog-common';
+@import './pages/blog/sidebar';
+@import './pages/blog/bim-aside';
+@import './pages/blog/social-aside';
+@import './pages/blog/blog-hero';
+@import './pages/blog/contents';
+@import './pages/blog/author';
+@import './pages/blog/introduction';
+@import './pages/blog/in-house';
+@import './pages/blog/blog-case-studies';
+@import './pages/blog/why';
+@import './pages/blog/takeaway';
+@import './pages/blog/blog-footer';
+@import './pages/blog/blog-table';
+
+/*vdc-blog */
+/*F.A.Q. & Modeling-services section styles*/
+@import './components/services-contact-block';
+@import './components/faq';
+@import './components/faq-contact';
+@import './components/slider-points';
+@import './pages/blog/subscription';
+
+/*Cards-article section styles*/
+@import './components/cases';
+@import './pages/case-studies/studies';
+@import './pages/case-studies/cards-case';
+@import './pages/blog/cards-article';
+
+/* Blog page styles*/
+@import './pages/blog/blog-slider';

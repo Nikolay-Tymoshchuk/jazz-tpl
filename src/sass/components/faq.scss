@@ -1,0 +1,143 @@
+.faq {
+  padding: 25px 0;
+
+  &__wrapper {
+    display: block;
+    width: 100%;
+  }
+
+  &__title {
+    min-width: 230px;
+    margin-bottom: 50px;
+  }
+
+  &__title,
+  &__contact-title,
+  &__item-question {
+    font-family: $secondary-font;
+    color: $main-color;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  &__title,
+  &__contact-title {
+    @include font(20px, 700, 22px);
+  }
+
+  &__item {
+    &-input {
+      width: 0;
+      height: 0;
+
+      -webkit-appearance: none;
+      appearance: none;
+
+      position: absolute;
+    }
+
+    &-input:checked ~ &-text {
+      display: block;
+    }
+
+    &-question {
+      display: block;
+      padding-left: 30px;
+
+      @include font(14px, 700, 16px);
+      cursor: pointer;
+
+      position: relative;
+    }
+
+    &-input:checked ~ &-question {
+      margin-bottom: 22px;
+    }
+
+    &-question::after {
+      content: '';
+      display: block;
+
+      border-style: solid;
+      border-width: 6px 5px 0 5px;
+      border-color: #000000 transparent transparent transparent;
+
+      position: absolute;
+      top: 45%;
+      left: 0;
+
+      transform: translateY(-50%);
+    }
+
+    &-input:checked ~ &-question::after {
+      border-style: solid;
+      border-width: 0 5px 6px 5px;
+      border-color: transparent transparent #000000 transparent;
+    }
+
+    &-text {
+      display: none;
+    }
+
+    &-answer {
+      @include font(14px, 400, 20px);
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  &__list-answer {
+    padding-top: 10px;
+  }
+
+  &__item-answer-arrow {
+    @include font(14px, 400, 25px);
+
+    svg {
+      width: 14px;
+      height: 14px;
+      margin-right: 10px;
+    }
+  }
+}
+
+// .services-contact,
+.case-contact {
+  padding: 50px 0;
+}
+
+@include mq('desktop') {
+  .faq {
+    padding: 40px 0;
+
+    &__wrapper {
+      display: flex;
+    }
+
+    &__title {
+      min-width: 274px;
+    }
+  }
+}
+
+// .services-contact__title,
+.case-contact__title {
+  margin: 0 auto 40px;
+
+  line-height: 1.3;
+  text-transform: unset;
+}
+
+.case-contact__title {
+  max-width: 560px;
+}
+
+// .services-contact__title {
+//   max-width: 828px;
+// }
+
+// .services-contact__btn {
+//   margin-bottom: 40px;
+// }

@@ -1,0 +1,129 @@
+.pswp__caption__center {
+  text-align: center;
+  @include font(14px, 400, 20px);
+}
+
+.benefits {
+  padding: 30px 0;
+
+  @include font(14px, 400, 20px);
+  color: $main-color;
+
+  &__title {
+    margin-bottom: 28px;
+
+    font-family: $secondary-font;
+    @include font(20px, 700, 22px);
+  }
+
+  .item-revit,
+  .item-drafting {
+    list-style: none;
+  }
+
+  &__figure {
+    position: relative;
+    margin-bottom: 50px;
+  }
+
+  &__figcaption {
+    padding-top: 20px;
+
+    text-align: center;
+    @include font(14px, 400, 20px);
+  }
+
+  &__list-drafting {
+    margin-bottom: 55px;
+  }
+
+  &__text-drafting {
+    margin-bottom: 20px;
+  }
+
+  &__list {
+    padding-left: 20px;
+  }
+
+  &__item {
+    list-style-type: square;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  &__text-question {
+    margin-bottom: 30px;
+
+    text-align: center;
+  }
+
+  &__contact-us {
+    font-family: $secondary-font;
+    @include font(14px, 700, 16px);
+    text-align: center;
+  }
+
+  .zoom-btn svg {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+
+    position: absolute;
+    bottom: 54px;
+    left: 10px;
+
+    background-color: $bg-color-white;
+    border: 3px solid $bg-color-white;
+    cursor: pointer;
+  }
+}
+
+@include mq('desktop', max) {
+  .benefits {
+    &__item-text:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+    &__text-inner {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+@include mq('desktop') {
+  .benefits {
+    padding: 40px 0;
+
+    &__list-revit {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    &__item {
+      width: 550px;
+    }
+
+    &__figure {
+      width: 750px;
+      margin: 0 auto 50px;
+    }
+
+    &__text-inner {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 70px;
+    }
+
+    &__list-drafting {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .services-item {
+      margin-bottom: 0;
+    }
+  }
+}

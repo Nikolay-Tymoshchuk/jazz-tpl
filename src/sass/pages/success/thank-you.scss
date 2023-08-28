@@ -1,0 +1,40 @@
+.thank-you {
+  &__title {
+    margin-bottom: 16px;
+
+    font-family: $secondary-font;
+    @include font(16px, 700, 80px);
+    color: $main-color;
+    text-align: start;
+
+    @include mq('tablet') {
+      margin-bottom: 16px;
+
+      @include font(32px, 700, 80px);
+    }
+
+    @include mq('desktop') {
+      margin-bottom: 44px;
+
+      @include font(30px, 700, 80px);
+    }
+  }
+
+  &__text {
+    &:first-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  .banner::after {
+    width: 32px;
+
+    @include mq('tablet') {
+      width: 34px;
+    }
+
+    @include mq('desktop') {
+      width: 37px;
+    }
+  }
+}

@@ -1,0 +1,109 @@
+.blog__case-studies {
+  margin-bottom: 60px;
+
+  @include mq(tablet) {
+    margin-bottom: 76px;
+  }
+}
+
+.blog__case-studies-thumb {
+  position: relative;
+
+  padding: 28px 38px;
+  background-color: $bg-color-grey;
+
+  .blog__arrow,
+  .blog__arrow {
+    position: absolute;
+    content: '';
+    display: block;
+
+    width: 24px;
+    height: 24px;
+
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: transparent;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    &--svg {
+      fill: #919191;
+      transition: fill 250ms linear;
+
+      .blog__arrow:hover &,
+      .blog__arrow:focus & {
+        fill: darken(#919191, 0.1);
+      }
+    }
+
+    &--prev {
+      left: 9px;
+    }
+    &--next {
+      right: 9px;
+    }
+  }
+}
+
+.blog__case-studies-wrapper {
+  .cases__list-item-link {
+    width: 200px;
+    min-height: 132px;
+    padding: 20px 15px;
+    margin: 0 auto;
+    color: $text-color-white;
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all 300ms linear;
+    &:hover,
+    &:focus{
+      background-image: linear-gradient(
+        180deg,
+        rgba(14, 14, 14, 0.95) 0%,
+        rgba(14, 14, 14, 0.95) 100%
+      )
+    }
+    
+    &--1 {
+      background-image: linear-gradient(
+          180deg,
+          rgba(14, 14, 14, 0.95) 0%,
+          rgba(14, 14, 14, 0.04) 100%
+        ),
+        url(../images/cases/formwork-case/f3-sm.jpeg);
+    }
+    &--2 {
+      background-image: linear-gradient(
+          180deg,
+          rgba(14, 14, 14, 0.95) 0%,
+          rgba(14, 14, 14, 0.04) 100%
+        ),
+        url(../images/cases/suspended-ceiling-case/c5-sm.jpeg);
+    }
+    &--3 {
+      background-image: linear-gradient(
+          180deg,
+          rgba(14, 14, 14, 0.95) 0%,
+          rgba(14, 14, 14, 0.04) 100%
+        ),
+        url(../images/cases/floor-assembly-case/fa3-sm.jpeg);
+    }
+    &--4 {
+      background-image: linear-gradient(
+          180deg,
+          rgba(14, 14, 14, 0.95) 0%,
+          rgba(14, 14, 14, 0.04) 100%
+        ),
+        url(../images/cases/wall-framing-case/w3-sm.jpeg);
+    }
+   
+    p {
+      color: inherit;
+    }
+  }
+}

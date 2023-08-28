@@ -1,0 +1,215 @@
+.contact-form {
+  &__content div:first-child {
+    margin-bottom: 36px;
+  }
+
+  &__group {
+    position: relative;
+  }
+
+  &__input {
+    display: block;
+    padding: 10px 10px 5px;
+
+    border: none;
+    border-bottom: 1px solid $main-color;
+
+    @include font(14px, 400, 20px);
+    color: $main-color;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus ~ .contact-form__modal-label,
+    &:valid ~ .contact-form__modal-label {
+      top: -20px;
+
+      @include font(12px, 400, 20px);
+      color: $main-color;
+    }
+  }
+
+  &__modal-label {
+    @include font(14px, 400, 20px);
+    color: $main-color;
+
+    position: absolute;
+    left: 5px;
+    top: 10px;
+
+    transition: 0.2s ease all;
+    pointer-events: none;
+  }
+}
+
+.modal__input-underline,
+.info__input-underline {
+  position: relative;
+
+  &::before {
+    content: '';
+    height: 1px;
+
+    position: absolute;
+    top: 38px;
+    left: 0;
+
+    background: $main-color;
+
+    transform: scaleX(0);
+    transition: transform 200ms linear;
+  }
+}
+
+.bar,
+.bar-info {
+  position: relative;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.modal__input-underline {
+  &::before {
+    width: 280px;
+
+    @include mq('tablet') {
+      width: 468px;
+    }
+
+    @include mq('desktop') {
+      width: 464px;
+    }
+  }
+}
+
+.info__input-underline {
+  &::before {
+    width: 240px;
+
+    @include mq('tablet') {
+      width: 540px;
+    }
+
+    @include mq('desktop') {
+      width: 522px;
+    }
+  }
+}
+
+.modal__input-underline:hover::before,
+.info__input-underline:hover::before {
+  transform: scaleX(1);
+}
+
+.modal__title {
+  padding-top: 35px;
+  margin-bottom: 30px;
+
+  font-family: $secondary-font;
+  @include font(24px, 700, 27px);
+  text-transform: uppercase;
+}
+
+.contact-form {
+  @include font(14px, 400, 20px);
+  color: $main-color;
+
+  &__form-input {
+    display: block;
+    width: 100%;
+    height: 40px;
+  }
+
+  &.hidden {
+    display: none;
+  }
+
+  &__label {
+    margin-bottom: 10px;
+  }
+
+  .message-input {
+    min-height: 134px;
+    padding: 10px;
+    margin: 10px 0 20px;
+
+    resize: none;
+  }
+
+  .message-input::placeholder {
+    color: $secondary-color;
+    @include font(14px, 400, 20px);
+  }
+
+  .name-input,
+  .email-input {
+    padding-left: 5px;
+
+    border: none;
+    border-bottom: 1px solid $main-color;
+  }
+
+  .name-input {
+    margin-bottom: 20px;
+  }
+
+  // &__content {
+  //   margin-bottom: 30px;
+  // }
+
+  &__btn::before {
+    width: 38%;
+  }
+}
+
+// Form error styling
+.error {
+  display: block;
+  width: 100%;
+  height: 18px;
+  padding: 0;
+  margin-left: 5px;
+  margin-top: 5px;
+
+  @include font(14px, 400, 20px);
+  color: $accent-color;
+  // line-height: 2;
+
+  background-color: transparent;
+  border-radius: 0 0 5px 5px;
+}
+
+.error.active {
+  padding: 0 20px;
+  margin-top: 10px;
+
+  background-repeat: no-repeat;
+  background-position: 0 center;
+  background-image: url('../images/worning.svg');
+}
+
+.subscribe-form {
+  // display: flex;
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.subscribe-form__field {
+  width: 100%;
+  flex-grow: 1;
+  padding-left: 15px;
+  padding-bottom: 5px;
+  margin-bottom: 40px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #0e0e0e;
+  background: transparent;
+  outline: none;
+
+  &::placeholder {
+    color: #c4c4c4;
+  }
+}

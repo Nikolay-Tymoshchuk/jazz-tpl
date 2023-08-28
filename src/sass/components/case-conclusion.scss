@@ -1,0 +1,74 @@
+.conclusion {
+  padding: 30px 0;
+
+  @include font(14px, 400, 20px);
+  color: $main-color;
+
+  &__title {
+    margin-bottom: 40px;
+
+    font-family: $secondary-font;
+    @include font(20px, 700, 22px);
+  }
+
+  &__text {
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    margin-bottom: 5px;
+  }
+}
+
+.progress {
+  display: flex;
+
+  &__numbers {
+    display: flex;
+    flex-direction: column;
+
+    font-family: $secondary-font;
+    @include font(20px, 700, 22px);
+  }
+
+  &__numbers,
+  &__desk {
+    padding-left: 26px;
+  }
+
+  &__index {
+    display: flex;
+    justify-content: flex-end;
+    // display: contents;
+    min-width: 48px;
+  }
+}
+
+@include mq("desktop", max) {
+  .progress__index:not(:last-child),
+  .progress__text:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+@include mq("desktop") {
+  .conclusion {
+    &__content {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__text {
+      width: 560px;
+    }
+
+    .progress {
+      width: 430px;
+
+      &__index:not(:last-child),
+      &__text:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

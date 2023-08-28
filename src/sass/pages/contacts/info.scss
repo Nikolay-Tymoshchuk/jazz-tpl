@@ -1,0 +1,110 @@
+.hero .container {
+  min-height: 700px;
+}
+
+.info {
+  padding-top: 64px;
+  @include font(14px, 400, 20px);
+  color: $main-color;
+
+  &__title {
+    padding-top: 20px;
+    margin-bottom: 30px;
+
+    font-family: $secondary-font;
+    @include font(24px, 700, 22px);
+    text-transform: uppercase;
+  }
+
+  &__text {
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    padding: 0 0 20px 30px;
+  }
+
+  &__icon {
+    position: relative;
+    padding-left: 18px;
+  }
+
+  &__icon:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &__icon::before {
+    width: 20px;
+    height: 20px;
+    padding-right: 20px;
+
+    content: '';
+
+    position: absolute;
+    top: 0;
+    left: -25px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .banner {
+    padding: 10px 24px;
+
+    &::before {
+      width: 63px;
+    }
+
+    &::after {
+      width: 52px;
+    }
+  }
+}
+
+.icon--phone::before {
+  background-image: url('../images/contacts/phone.svg');
+}
+
+.icon--mail::before {
+  background-image: url('../images/contacts/mail.svg');
+}
+
+.icon--location::before {
+  background-image: url('../images/contacts/location.svg');
+}
+
+.icon--time::before {
+  background-image: url('../images/contacts/time.svg');
+}
+
+@include mq('tablet', max) {
+  .info__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+@include mq('tablet') {
+  .info {
+    &__title {
+      padding-top: 30px;
+    }
+
+    &__text {
+      margin-bottom: 60px;
+    }
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      width: 254px;
+      min-height: 65px;
+    }
+
+    .banner {
+      padding: 0 55px 20px;
+    }
+  }
+}

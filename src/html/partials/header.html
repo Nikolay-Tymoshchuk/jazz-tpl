@@ -1,24 +1,142 @@
+{% set blog_pages = articles %}
+<div id="scroll-point"></div>
+
 <header class="header" id="header">
-  <div class="container header-cont">
-    <div class="header-logocont">
-      <a class="nav-link" href="#header">
-        <img class="logo" src="./assets/images/header/logo.svg" alt="Site logo" width="80" height="48" />
+  <div class="container">
+    <nav class="navigation">
+      <a href="/" class="logo" aria-label="logotype">
+        <svg class="logo-svg" width="54" height="43">
+          <use href="./images/sprite.svg#logo"></use>
+        </svg>
       </a>
-      <h1 class="header-logocont__title">3D Architectural Rendering Studio</h1>
-    </div>
-    <div class="nav-cont">
-      <nav class="header-nav" id="nav">
-        <a class="nav-link header-nav__item service-link" href="#services">Services</a>
-        <a class="nav-link header-nav__item service-workflow" href="#workflow">Workflow</a>
-        <a class="nav-link header-nav__item service-works" href="#works">Works</a>
-        <a class="nav-link header-nav__item service-why" href="#why-choose">About</a>
-        <a class="nav-link header-nav__item service-contact" href="#contact-sec">Contact</a>
-        <a class="nav-link header-nav__item service-career" href="#career">Career</a>
-      </nav>
-      <button class="btn btn--accent header-nav__btn btn-modal">CONTACT US</button>
-    </div>
-    <button class="btn-burger" type="button" data-menu-btn aria-label="mobile menu button">
-      <img class="btn-burger__img" src="./assets/images/header/burger.svg" alt="Burger menu" width="35" height="18" />
+
+      <ul class="navigation__list">
+        <li class="navigation__list-item navigation__list-item--services">
+          <button type="button" class="navigation__list-link navigation__list-button">
+            Services
+          </button>
+          <ul class="navigation__submenu">
+            <li class="navigation__list-item">
+              <a href="./bim-modeling.html" class="navigation__list-link">BIM Modeling</a>
+            </li>
+            <li class="navigation__list-item">
+              <a href="./bim-coordination.html" class="navigation__list-link">BIM Coordination</a>
+            </li>
+            <li class="navigation__list-item">
+              <a href="./bim-content-creation.html" class="navigation__list-link">BIM Content</a>
+            </li>
+            <li class="navigation__list-item">
+              <a href="./scan-to-bim.html" class="navigation__list-link">Scan to BIM</a>
+            </li>
+            <li class="navigation__list-item">
+              <a href="./bim-automation.html" class="navigation__list-link">BIM Automation</a>
+            </li>
+            <li class="navigation__list-item">
+              <a href="./bim-prefabrication.html" class="navigation__list-link">Prefabrication & Fabrication</a>
+            </li>
+            <li class="navigation__list-item">
+              <a href="./structural-detailing.html" class="navigation__list-link">Structural detailing</a>
+            </li>
+            <!-- <li class="navigation__list-item">
+              <a href="./architectural-rendering.html" class="navigation__list-link">Architectural Rendering</a>
+            </li> -->
+          </ul>
+        </li>
+
+        <li class="navigation__list-item">
+          <a href="./case-studies.html" class="navigation__list-link">Case Studies</a>
+        </li>
+
+        <li class="navigation__list-item navigation__list-item--blog">
+          <a href="./blog.html" class="navigation__list-link navigation__list-button">
+            Blog
+          </a>
+        </li>
+
+        <li class="navigation__list-item navigation__list-item--about">
+          <a href="./about-us.html" class="navigation__list-link">About</a>
+        </li>
+
+        <li class="navigation__list-item navigation__list-item--contacts">
+          <button class="contact-btn" type="button" data-modal="contact-modal">
+            Contact Us
+          </button>
+        </li>
+      </ul>
+    </nav>
+
+    <button class="burger" type="button" aria-expanded="false" data-menu-button>
+      <span class="burger__item">Open navigation</span>
     </button>
+  </div>
+
+  <div class="modal-menu" data-menu>
+    <ul class="modal-menu__navigation">
+      <li class="modal-menu__navigation-item">
+        <a href="/" class="modal-menu__navigation-link">Home</a>
+      </li>
+
+      <li class="modal-menu__navigation-item modal-menu__navigation-item--services">
+        <p class="modal-menu__navigation-link modal-menu__navigation-link--services">
+          Services
+        </p>
+        <ul class="modal-menu__submenu">
+          <li class="modal-menu__navigation-item">
+            <a href="./bim-modeling.html" class="modal-menu__navigation-link navigation__list-link">BIM Modeling</a>
+          </li>
+          <li class="modal-menu__navigation-item">
+            <a href="./bim-coordination.html" class="modal-menu__navigation-link navigation__list-link">BIM
+              Coordination</a>
+          </li>
+          <li class="modal-menu__navigation-item">
+            <a href="./bim-content-creation.html" class="modal-menu__navigation-link navigation__list-link">BIM
+              Content</a>
+          </li>
+          <li class="modal-menu__navigation-item">
+            <a href="./scan-to-bim.html" class="modal-menu__navigation-link navigation__list-link">Scan to BIM</a>
+          </li>
+          <li class="modal-menu__navigation-item">
+            <a href="./bim-automation.html" class="modal-menu__navigation-link navigation__list-link">BIM Automation</a>
+          </li>
+          <li class="modal-menu__navigation-item">
+            <a href="./bim-prefabrication.html" class="modal-menu__navigation-link navigation__list-link">Prefabrication
+              & Fabrication</a>
+          </li>
+          <li class="modal-menu__navigation-item">
+            <a href="./structural-detailing.html" class="modal-menu__navigation-link navigation__list-link">Structural
+              detailing</a>
+          </li>
+          <!-- <li class="modal-menu__navigation-item">
+            <a
+              href="./architectural-rendering.html"
+              class="modal-menu__navigation-link navigation__list-link"
+              >Architectural Rendering</a
+            >
+          </li> -->
+        </ul>
+      </li>
+
+      <li class="modal-menu__navigation-item">
+        <a href="./case-studies.html" class="modal-menu__navigation-link navigation__list-link">Case Studies</a>
+      </li>
+
+      <li class="modal-menu__navigation-item">
+        <a href="./blog.html" class="modal-menu__navigation-link navigation__list-link">
+          Blog
+        </a>
+      </li>
+
+      <li class="modal-menu__navigation-item">
+        <a href="./about-us.html" class="modal-menu__navigation-link navigation__list-link">About</a>
+      </li>
+
+      <li class="modal-menu__navigation-item">
+        <a href="./career.html" class="modal-menu__navigation-link navigation__list-link">Career</a>
+      </li>
+
+      <li class="modal-menu__navigation-item">
+        <a href="./contacts.html" class="modal-menu__navigation-link navigation__list-link">Contacts</a>
+      </li>
+    </ul>
   </div>
 </header>

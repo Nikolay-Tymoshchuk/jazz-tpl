@@ -1,79 +1,59 @@
 <?php
-// Файлы phpmailer
-require 'phpmailer/PHPMailer.php';
-require 'phpmailer/Exception.php';
+if ($_POST) { 
+	$name = htmlspecialchars($_POST["name"]); 
+	$phone = htmlspecialchars($_POST["email-or-phone"]);
+	$message = htmlspecialchars($_POST["message"]);
+	$career = htmlspecialchars($_POST["Career"]);
+	$subject = "powerkh.com";
+	$body = "\n\n Career: $career \n\n Name: $name \n\n Contact info: $phone \n\n Message: $message  ";
+	$json = array(); 
 
-$uploads_dir = 'uploads';
+	
+	function mime_header_encode($str, $data_charset, $send_charset) { 
+		if($data_charset != $send_charset)
+		$str=iconv($data_charset,$send_charset.'//IGNORE',$str);
+		return ('=?'.$send_charset.'?B?'.base64_encode($str).'?=');
+	}
 
-// Переменные, которые отправляет пользователь
-$name = isset($_POST["name"]) ? $_POST["name"] : "";
-$email = isset($_POST["email"]) ? $_POST["email"] : "";
-$typeProject = isset($_POST["typeProject"]) ? $_POST["typeProject"] : "";
-$deadline = isset($_POST["date"]) ? $_POST["date"] : "";
-$aerial = isset($_POST["aerial"]) ? $_POST["aerial"] : "";
-$exterior = isset($_POST["exterior"]) ? $_POST["exterior"] : "";
-$interior = isset($_POST["interior"]) ? $_POST["interior"] : "";
-$price = isset($_POST["price"]) ? $_POST["price"] : "";
-$images = isset($_POST['images']) ? json_decode($_POST['images']) : array();
-$message = isset($_POST["comments"]) ? $_POST["comments"] : "";
+	class TEmail {
+	public $from_email;
+	public $from_name;
+	public $to_email;
+	public $subject='text/plain';
+	public $data_charset='UTF-8';
+	public $send_charset='windows-1251';
+	public $body='';
+	public $type='text/plain';
 
+	function send(){
+		$dc=$this->data_charset;
+		$sc=$this->send_charset;
+		$enc_to=mime_header_encode($this->to_name,$dc,$sc).' <'.$this->to_email.'>';
+		$enc_subject=mime_header_encode($this->subject,$dc,$sc);
+		$enc_from=mime_header_encode($this->from_name,$dc,$sc).' <'.$this->from_email.'>';
+		$enc_body=$dc==$sc?$this->body:iconv($dc,$sc.'//IGNORE',$this->body);
+		$headers='';
+		$headers.="Mime-Version: 1.0\r\n";
+		$headers.="Content-type: ".$this->type."; charset=".$sc."\r\n";
+		$headers.="From: ".$enc_from."\r\n";
+		return mail($enc_to,$enc_subject,$enc_body,$headers);
+	}
 
-// Формирование самого письма
-$title = "Contact";
-$body = "\n\n Name: $name  \n\n Email: $email \n\n Project Type: $typeProject \n\n Deadline: $deadline \n\n Aerial: $aerial \n\n Exterior: $exterior \n\n Interior: $interior \n\n Total Price: $price \n\n Message: $message \n\n";
+	}
 
-$token = "6094347566:AAE-A6km2c3C7DT82OycLQ3C7FeRwW1bQnQ";
-$channelid = "-1001988092368";
+	$emailgo= new TEmail; 
+	$emailgo->from_email= $phone;
+	$emailgo->from_name= $name;
+	
+	$emailgo->to_email= 'krp@powerkh.com';
+	$emailgo->subject= $subject;
+	$emailgo->body= $body; 
+	$emailgo->send(); 
 
-$TelegramChannel = fopen( "https://api.telegram.org/bot{$token}/sendMessage?chat_id={$channelid}&parse_mode=html&text={$body}", "r" );
+	$json['error'] = 0; 
 
-
-
-
-
-
-
-// Настройки PHPMailer
-$mail = new PHPMailer\PHPMailer\PHPMailer();
-$mail->CharSet = "UTF-8";
-try {
-    $mail->From = $email;
-    $mail->FromName = $name;
-    // Получатель письма
-    // $mail->addAddress('info@jazzrender.com'); 
-    $mail->addAddress('info@jazzrender.com'); 
-
-// Прикрипление файлов к письму
-    foreach ($images as $img) {
-    $target = $uploads_dir.DIRECTORY_SEPARATOR.$img;
-	$mail->AddAttachment( $target );
+	echo json_encode($json); 
+} else { 
+	echo 'GET LOST!'; 
 }
-
-// Отправка сообщения
-$mail->isHTML(false);
-$mail->Subject = $title;
-$mail->Body = $body;    
-
-// Проверяем отравленность сообщения
-if ($mail->send()) {
-$result = "success";
-
-//Deletes images from dir
-foreach ($images as $img) {
-    $target = $uploads_dir.DIRECTORY_SEPARATOR.$img;
-	unlink($target);
-}
-
-} 
-else {$result = "error";}
-
-} catch (Exception $e) {
-    $result = "error";
-    $status = "The message was not sent. The reason for the error: {$mail->ErrorInfo}";
-}
-
-$mail->ClearAddresses();
-$mail->clearAttachments();
-
-// Отображение результата
-echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);
+?>

@@ -1,0 +1,67 @@
+.video__wrapper, 
+.modal__video-wrapper {
+  display: none;
+
+  &.show {
+    display: block;
+  }
+}
+
+@include mq("desktop") {
+  .video {
+    &__wrapper {
+      display: block;
+      width: 1120px;
+      height: 100%;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    &__content {
+      display: block;
+      width: 100%;
+      height: 56.25%;
+    }
+
+    &__btn-visible {
+      display: block;
+
+      font-size: 0;
+      color: transparent;
+    }
+
+    &__btn-hidden {
+      display: none;
+    }
+
+  }
+
+  .modal__video-wrapper {
+    display: block;
+    width: 1120px;
+    height: max-content;
+    margin: 100px auto 0;
+    position: relative;
+  }
+
+  #play-btn {
+    width: 114px;
+    height: auto;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -50%);
+
+    border-style: solid;
+    border-width: 57px 0 57px 98.7px;
+    border-color: transparent transparent transparent #ffffff;
+
+    transition: border-color 250ms linear;
+    cursor: pointer;
+
+    &:hover {
+      border-color: transparent transparent transparent rgba(255, 255, 255, 0.8);
+    }
+  }
+}

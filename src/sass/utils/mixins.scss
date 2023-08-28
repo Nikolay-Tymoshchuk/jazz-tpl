@@ -1,0 +1,42 @@
+$breakpoints: (
+  'phone': 320px,
+  'tablet': 720px,
+  'desktop': 1200px,
+);
+
+@mixin mq($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+    @if $type == max {
+      $width: $width - 1px;
+    }
+    @media screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+
+@mixin font($fs: false, $fw: false, $lh: false) {
+  @if $fs {
+    font-size: $fs;
+  }
+  @if $fw {
+    font-weight: $fw;
+  }
+  @if $lh {
+    line-height: $lh / $fs;
+  }
+}
+
+@mixin retina-image($gradient, $image, $width) {
+  @media (-moz-min-device-pixel-ratio: 2),
+    (-o-min-device-pixel-ratio: 2/1),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    & {
+      background-image: $gradient, url($image);
+      background-size: $width;
+    }
+  }
+}

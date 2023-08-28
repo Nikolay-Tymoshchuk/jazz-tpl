@@ -1,0 +1,526 @@
+.revit {
+  width: 100%;
+  height: 100vh;
+
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: grayscale(1);
+
+  @include mq('tablet', max) {
+    // min-width: 360px;
+  }
+
+  @include mq('tablet', min) {
+    background-attachment: fixed;
+  }
+
+  .container {
+    position: relative;
+    height: 100%;
+  }
+
+  @include font(14px, 400, 20px);
+  color: $main-color;
+
+  &__title {
+    margin-bottom: 30px;
+
+    font-family: $secondary-font;
+    @include font(24px, 700, 27px);
+    text-transform: uppercase;
+
+    @include mq('desktop') {
+      padding-top: 20px;
+      margin-bottom: 32px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 20px;
+
+    @include mq('desktop') {
+      margin-bottom: 30px;
+    }
+  }
+
+  &--modeling {
+    @include mq('tablet', max) {
+      background-image: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(0, 0, 0, 0) 70%
+        ),
+        url('../images/services/01-modeling/bg-modeling-sm.jpeg');
+
+      @include retina-image(
+        linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 70%),
+        '../images/services/01-modeling/bg-modeling-md.jpeg',
+        cover
+      );
+
+      .banner::before,
+      .banner::after {
+        width: 30px;
+      }
+    }
+
+    @media (min-width: 720px) and (max-width: 1199px) {
+      background-image: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(0, 0, 0, 0) 70%
+        ),
+        url('../images/services/01-modeling/bg-modeling-md.jpeg');
+
+      @include retina-image(
+        linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 70%),
+        '../images/services/01-modeling/bg-modeling-lg.jpeg',
+        cover
+      );
+
+      .banner::after {
+        width: 27px;
+      }
+    }
+
+    @include mq('desktop', min) {
+      background-image: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(0, 0, 0, 0) 70%
+        ),
+        url('../images/services/01-modeling/bg-modeling-lg.jpeg');
+
+      @include retina-image(
+        linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 70%),
+        '../images/services/01-modeling/bg-modeling-lg@2x.jpeg',
+        cover
+      );
+
+      .banner::after {
+        width: 30px;
+      }
+    }
+  }
+
+  &--coordination {
+    @include mq('tablet', max) {
+      background-image: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(0, 0, 0, 0) 70%
+        ),
+        url('../images/services/02-coordination/bg-coordination-sm.jpeg');
+
+      @include retina-image(
+        linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 70%),
+        '../images/services/02-coordination/bg-coordination-md.jpeg',
+        cover
+      );
+
+      .banner::before,
+      .banner::after {
+        width: 38px;
+      }
+    }
+
+    @media (min-width: 720px) and (max-width: 1199px) {
+      background-image: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(0, 0, 0, 0) 70%
+        ),
+        url('../images/services/02-coordination/bg-coordination-md.jpeg');
+
+      @include retina-image(
+        linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 70%),
+        '../images/services/02-coordination/bg-coordination-lg.jpeg',
+        cover
+      );
+
+      .banner::after {
+        width: 31px;
+      }
+    }
+
+    @include mq('desktop', min) {
+      background-image: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(0, 0, 0, 0) 70%
+        ),
+        url('../images/services/02-coordination/bg-coordination-lg.jpeg');
+
+      @include retina-image(
+        linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 70%),
+        '../images/services/02-coordination/bg-coordination-lg@2x.jpeg',
+        cover
+      );
+
+      .banner::after {
+        width: 34px;
+      }
+    }
+  }
+
+  &--content {
+    @include mq('tablet', max) {
+      background-image: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(0, 0, 0, 0) 70%
+        ),
+        url('../images/services/03-content/bg-content-sm.jpeg');
+
+      @include retina-image(
+        linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 70%),
+        '../images/services/03-content/bg-content-md.jpeg',
+        cover
+      );
+
+      .banner::before,
+      .banner::after {
+        width: 36px;
+      }
+    }
+
+    @media (min-width: 720px) and (max-width: 1199px) {
+      background-image: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(0, 0, 0, 0) 70%
+        ),
+        url('../images/services/03-content/bg-content-md.jpeg');
+
+      @include retina-image(
+        linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 70%),
+        '../images/services/03-content/bg-content-lg.jpeg',
+        cover
+      );
+
+      .banner::after {
+        width: 29px;
+      }
+    }
+
+    @include mq('desktop', min) {
+      background-image: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(0, 0, 0, 0) 70%
+        ),
+        url('../images/services/03-content/bg-content-lg.jpeg');
+
+      @include retina-image(
+        linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 70%),
+        '../images/services/03-content/bg-content-lg@2x.jpeg',
+        cover
+      );
+
+      .banner::after {
+        width: 32px;
+      }
+    }
+  }
+
+  &--scan {
+    @include mq('tablet', max) {
+      background-image: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(0, 0, 0, 0) 70%
+        ),
+        url('../images/services/04-scan/bg-scan-sm.jpeg');
+
+      @include retina-image(
+        linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 70%),
+        '../images/services/04-scan/bg-scan-md.jpeg',
+        cover
+      );
+
+      .banner::before,
+      .banner::after {
+        width: 30px;
+      }
+    }
+
+    @media (min-width: 720px) and (max-width: 1199px) {
+      background-image: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(0, 0, 0, 0) 70%
+        ),
+        url('../images/services/04-scan/bg-scan-md.jpeg');
+
+      @include retina-image(
+        linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 70%),
+        '../images/services/04-scan/bg-scan-lg.jpeg',
+        cover
+      );
+
+      .banner::after {
+        width: 27px;
+      }
+    }
+
+    @include mq('desktop', min) {
+      background-image: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(0, 0, 0, 0) 70%
+        ),
+        url('../images/services/04-scan/bg-scan-lg.jpeg');
+
+      @include retina-image(
+        linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 70%),
+        '../images/services/04-scan/bg-scan-lg@2x.jpeg',
+        cover
+      );
+
+      .banner::after {
+        width: 30px;
+      }
+    }
+  }
+
+  &--automation {
+    @include mq('tablet', max) {
+      background-image: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(0, 0, 0, 0) 70%
+        ),
+        url('../images/services/05-design/bg-automation-sm.jpeg');
+
+      @include retina-image(
+        linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 70%),
+        '../images/services/05-design/bg-automation-md.jpeg',
+        cover
+      );
+
+      .banner::before,
+      .banner::after {
+        width: 38px;
+      }
+    }
+
+    @media (min-width: 720px) and (max-width: 1199px) {
+      background-image: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(0, 0, 0, 0) 70%
+        ),
+        url('../images/services/05-design/bg-automation-md.jpeg');
+
+      @include retina-image(
+        linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 70%),
+        '../images/services/05-design/bg-automation-lg.jpeg',
+        cover
+      );
+
+      .banner::after {
+        width: 31px;
+      }
+    }
+
+    @include mq('desktop', min) {
+      background-image: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(0, 0, 0, 0) 70%
+        ),
+        url('../images/services/05-design/bg-automation-lg.jpeg');
+
+      @include retina-image(
+        linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 70%),
+        '../images/services/05-design/bg-automation-lg@2x.jpeg',
+        cover
+      );
+
+      .banner::after {
+        width: 34px;
+      }
+    }
+  }
+
+  &--prefabrication {
+    @include mq('tablet', max) {
+      background-image: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(0, 0, 0, 0) 70%
+        ),
+        url('../images/services/06-prefabrication/bg-prefabrication-sm.jpeg');
+
+      @include retina-image(
+        linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 70%),
+        '../images/services/06-prefabrication/bg-prefabrication-md.jpeg',
+        cover
+      );
+
+      .banner::before,
+      .banner::after {
+        width: 43px;
+      }
+    }
+
+    @media (min-width: 720px) and (max-width: 1199px) {
+      background-image: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(0, 0, 0, 0) 70%
+        ),
+        url('../images/services/06-prefabrication/bg-prefabrication-md.jpeg');
+
+      @include retina-image(
+        linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 70%),
+        '../images/services/06-prefabrication/bg-prefabrication-lg.jpeg',
+        cover
+      );
+
+      .banner::after {
+        width: 31px;
+      }
+    }
+
+    @include mq('desktop', min) {
+      background-image: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(0, 0, 0, 0) 70%
+        ),
+        url('../images/services/06-prefabrication/bg-prefabrication-lg.jpeg');
+
+      @include retina-image(
+        linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 70%),
+        '../images/services/06-prefabrication/bg-prefabrication-lg@2x.jpeg',
+        cover
+      );
+
+      .banner::after {
+        width: 34px;
+      }
+    }
+  }
+
+  &--detailing {
+    @include mq('tablet', max) {
+      background-image: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(0, 0, 0, 0) 70%
+        ),
+        url('../images/services/07-detailing/bg-detailing-md.jpeg');
+
+      @include retina-image(
+        linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 70%),
+        '../images/services/07-detailing/bg-detailing-md.jpeg',
+        cover
+      );
+
+      .banner::before,
+      .banner::after {
+        width: 39px;
+      }
+    }
+
+    @media (min-width: 720px) and (max-width: 1199px) {
+      background-image: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(0, 0, 0, 0) 70%
+        ),
+        url('../images/services/07-detailing/bg-detailing-md.jpeg');
+
+      @include retina-image(
+        linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 70%),
+        '../images/services/07-detailing/bg-detailing-lg.jpeg',
+        cover
+      );
+
+      .banner::after {
+        width: 31px;
+      }
+    }
+
+    @include mq('desktop', min) {
+      background-image: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(0, 0, 0, 0) 70%
+        ),
+        url('../images/services/07-detailing/bg-detailing-lg.jpeg');
+
+      @include retina-image(
+        linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 70%),
+        '../images/services/07-detailing/bg-detailing-lg@2x.jpeg',
+        cover
+      );
+
+      .banner::after {
+        width: 34px;
+      }
+    }
+  }
+
+  &--rendering {
+    @include mq('tablet', max) {
+      background-image: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(0, 0, 0, 0) 70%
+        ),
+        url('../images/services/08-rendering/bg-rendering-sm.jpeg');
+
+      @include retina-image(
+        linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 70%),
+        '../images/services/08-rendering/bg-rendering-sm@2x.jpeg',
+        cover
+      );
+
+      .banner::before,
+      .banner::after {
+        width: 39px;
+      }
+    }
+
+    @media (min-width: 720px) and (max-width: 1199px) {
+      background-image: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(0, 0, 0, 0) 70%
+        ),
+        url('../images/services/08-rendering/bg-rendering-md.jpeg');
+
+      @include retina-image(
+        linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 70%),
+        '../images/services/08-rendering/bg-rendering-md@2x.jpeg',
+        cover
+      );
+
+      .banner::after {
+        width: 31px;
+      }
+    }
+
+    @include mq('desktop', min) {
+      background-image: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(0, 0, 0, 0) 70%
+        ),
+        url('../images/services/08-rendering/bg-rendering-lg.jpeg');
+
+      @include retina-image(
+        linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 70%),
+        '../images/services/08-rendering/bg-rendering-lg@2x.jpeg',
+        cover
+      );
+
+      .banner::after {
+        width: 34px;
+      }
+    }
+  }
+}

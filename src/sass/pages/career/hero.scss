@@ -1,0 +1,29 @@
+.page-career .banner {
+  top: 70%;
+
+  @include mq('tablet') {
+    top: 75%;
+  }
+}
+
+.revit {
+  &--modeling {
+    @include mq('tablet', max) {
+      background-image: url('../images/career/bg-sm.jpg');
+
+      @include retina-image(none, '../images/career/bg-sm@2x.jpg', cover);
+    }
+
+    @media (min-width: 720px) and (max-width: 1199px) {
+      background-image: url('../images/career/bg-md.jpg');
+
+      @include retina-image(none, '../images/career/bg-md@2x.jpg', cover);
+    }
+
+    @include mq('desktop', min) {
+      background-image: url('../images/career/bg-lg.jpg');
+
+      @include retina-image(none, '../images/career/bg-lg@2x.jpg', cover);
+    }
+  }
+}

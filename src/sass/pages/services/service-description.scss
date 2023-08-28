@@ -1,0 +1,122 @@
+.service-description {
+  padding-top: 60px;
+  padding-bottom: 30px;
+  color: $main-color;
+
+  &__title {
+    margin-bottom: 60px;
+
+    font-family: $secondary-font;
+    @include font(20px, 700, 22px);
+  }
+
+  &__text-inner {
+    @include mq('desktop') {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  &__text {
+    @include font(14px, 400, 20px);
+
+    @include mq('desktop') {
+      max-width: 545px;
+
+      &:nth-of-type(2) {
+        order: 1;
+      }
+    }
+  }
+
+  &__text:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &__list-title {
+    padding-top: 60px;
+    margin-bottom: 50px;
+
+    @include font(14px, 400, 20px);
+
+    @include mq('desktop') {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__desc {
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    @include font(14px, 400, 20px);
+
+    @include mq('tablet') {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 60px;
+    min-height: 40px;
+
+    @include mq('tablet', max) {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+
+    @include mq('tablet') {
+      max-width: 335px;
+      margin-bottom: 30px;
+
+      &:nth-of-type(1) {
+        order: 1;
+      }
+
+      &:nth-of-type(2) {
+        order: 3;
+      }
+
+      &:nth-of-type(3) {
+        order: 2;
+      }
+
+      &:nth-of-type(4) {
+        order: 5;
+      }
+
+      &:nth-of-type(5) {
+        order: 4;
+      }
+    }
+
+    @include mq('desktop') {
+      min-width: 545px;
+
+      // &:not(:nth-child(2n)) {
+      //   margin-bottom: 30px;
+      // }
+    }
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      top: -10px;
+      left: 0;
+
+      display: block;
+      width: 40px;
+      height: 40px;
+
+      background-image: url('../images/services/grey-arrow-right.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+}

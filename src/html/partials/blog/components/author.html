@@ -1,0 +1,53 @@
+{% set author = authors[page.author_id] %}
+<div class="author">
+  <picture>
+    <source
+      srcset="{{author.img_sm_webp}} 1x, {{author.img_md_webp}} 2x"
+      media="(min-width: 280px)"
+      type="image/webp"
+    />
+    <source
+      srcset="{{author.img_md}}"
+      media="(min-width: 280px)"
+      type="image/jpeg"
+    />
+    <img
+      class="blog__image author__image"
+      src="{{author.img_sm}}"
+      loading="lazy"
+      alt="Photo of {{ author.name | safe }}"
+      width="360"
+      height="475"
+    />
+  </picture>
+  <div class="author__info">
+    <h2 class="blog__figure-title author__title">{{ author.name | safe }}</h2>
+    <p class="author__description">{{ author.position | safe }}</p>
+    <ul class="author__social-list">
+      <li class="author__social-item">
+        <a
+          href="https://www.linkedin.com/in/{{ author.linkedin | safe }}"
+          class="author__social-link"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Link to Linkedin"
+        >
+          <svg class="author__social-icon" width="24" height="24">
+            <use href="./images/sprite.svg#linkedin"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="author__social-item">
+        <a
+          href="mailto:{{ author.email | safe }}"
+          class="author__social-link"
+          aria-label="Send e-mail"
+        >
+          <svg class="author__social-icon" width="31" height="24">
+            <use href="./images/sprite.svg#email"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

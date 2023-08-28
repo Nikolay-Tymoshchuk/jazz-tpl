@@ -1,0 +1,74 @@
+.cases {
+  @media screen and (min-width: 320px) and (max-width: 719px) {
+    .cases__list-item {
+      max-width: 375px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .cases__list-image {
+      width: 100%;
+    }
+  }
+}
+// .link {
+//   &__bg-1 {
+//     @include mq(tablet) {
+//       background-size: contain;
+//       background-image: url('../images/blog/hero/hero1-sm.jpg');
+
+//       @include retina-image(
+//         none,
+//         '../images/blog/hero/hero1-sm@2x.jpg',
+//         contain
+//       );
+//     }
+//   }
+//   &__bg-2 {
+//     @include mq(tablet) {
+//       background-size: contain;
+//       background-image: url('../images/blog/hero/hero2-sm.jpg');
+//       @include retina-image(
+//         none,
+//         '../images/blog/hero/hero2-sm@2x.jpg',
+//         contain
+//       );
+
+//     }
+//   }
+//   &__bg-3 {
+//     @include mq(tablet) {
+//       background-size: contain;
+//       background-image: url('../images/blog/hero/hero3-sm.jpg');
+//       @include retina-image(
+//         none,
+//         '../images/blog/hero/hero3-sm@2x.jpg',
+//         contain
+//       );
+
+//     }
+//   }
+//   &__bg-4 {
+//     @include mq(tablet) {
+//       background-size: contain;
+//       background-image: url('../images/blog/hero/hero4-sm.jpg');
+//       @include retina-image(
+//         none,
+//         '../images/blog/hero/hero4-sm@2x.jpg',
+//         contain
+//       );
+
+//     }
+//   }
+//   &__bg-5 {
+//     @include mq(tablet) {
+//       background-size: contain;
+//       background-image: url('../images/blog/hero/hero5-sm.jpg');
+//       @include retina-image(
+//         none,
+//         '../images/blog/hero/hero5-sm@2x.jpg',
+//         contain
+//       );
+
+//     }
+//   }
+// }

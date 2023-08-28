@@ -1,0 +1,38 @@
+{% set page = articles[5] %}
+{% set service = services[7]%}
+{% extends "layout.html" %}
+{% block content %}
+{% include 'blog/hero.html' %}
+
+<div class="container">
+  <div class="blog__content-wrapper">
+    <aside class="sidebar blog-section">
+      <div class="sidebar__wrapper">
+        {% include 'blog/components/social-aside.html' %}
+      </div>
+    </aside>
+
+    <div class="blog__content">
+      {% include 'blog/top-30-architectural-rendering-companies/contents.html' %}
+      {% include 'blog/top-30-architectural-rendering-companies/introduction.html' %}
+      {% include 'blog/components/modeling-services.html' %}
+      {% include 'blog/top-30-architectural-rendering-companies/companies.html' %}
+      {% include 'blog/components/case-studies.html' %}
+      {% include 'blog/top-30-architectural-rendering-companies/other.html' %}
+      {% include 'blog/components/subscription.html' %}
+      {% include 'blog/top-30-architectural-rendering-companies/thoughts.html' %}
+      {% include 'blog/blog-footer.html' %}
+    </div>
+    <aside class="sidebar blog-section">
+      {% include 'blog/components/author.html' %}
+      <div class="sidebar__wrapper">
+        {% include 'blog/components/bim-aside-content.html' %}
+      </div>
+    </aside>
+  </div>
+</div>
+
+{% include 'sections/faq-contact.html' %}
+{% include
+'blog/components/cards-article.html' %}
+{% endblock %}

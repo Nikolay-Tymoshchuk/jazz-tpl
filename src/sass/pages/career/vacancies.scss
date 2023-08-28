@@ -1,0 +1,132 @@
+.vacancies {
+  padding-top: 38px;
+  padding-bottom: 38px;
+  width: 100%;
+  height: auto;
+
+  @include mq(desktop) {
+    padding-top: 80px;
+    padding-bottom: 100px;
+  }
+
+  &__title {
+    margin-bottom: 32px;
+
+    font-family: $secondary-font;
+    @include font(24px, 700, 27px);
+    text-transform: uppercase;
+
+    @include mq(desktop) {
+      padding-top: 20px;
+      margin-bottom: 41px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 25px;
+
+    @include mq(desktop) {
+      margin-bottom: 33px;
+    }
+  }
+
+  &__description {
+    max-width: 475px;
+    margin-bottom: 76px;
+
+    @include mq(desktop) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include mq(desktop) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      margin-top: -30px;
+      margin-left: -95px;
+      padding-left: 75px;
+    }
+
+    ul {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__item {
+    max-width: 400px;
+    &:not(:last-child) {
+      margin-bottom: 76px;
+
+      @include mq(desktop) {
+        margin-bottom: 0;
+      }
+    }
+    @include mq(desktop) {
+      width: calc(100% / 2 - 95px);
+      margin-top: 30px;
+      margin-left: 95px;
+    }
+
+    .banner__button::before {
+      bottom: 2px;
+      @include mq(tablet) {
+        bottom: 10px;
+      }
+    }
+
+    .banner__button svg {
+      width: 24px;
+      height: 24px;
+
+      @include mq(tablet) {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    h3 {
+      font-family: $secondary-font;
+      @include font(20px, 750, 22.4px);
+      text-transform: uppercase;
+    }
+
+    h4,
+    span {
+      margin-bottom: 20px;
+
+      font-family: $secondary-font;
+      @include font(14px, 750, 15.68px);
+    }
+
+    span {
+      display: inline-block;
+      margin-bottom: 10px;
+
+      font-weight: 550;
+      color: #909090;
+    }
+
+    li {
+      position: relative;
+      padding-left: 30px;
+
+      &:before {
+        display: inline-block;
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 4px;
+        width: 10px;
+        height: 9px;
+        background-repeat: no-repeat;
+        background-image: url(../images/career/arrow-right.svg);
+      }
+    }
+  }
+}

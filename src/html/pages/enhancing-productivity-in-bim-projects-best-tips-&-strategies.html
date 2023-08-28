@@ -1,0 +1,37 @@
+{% set page = articles[0] %} {% set service = services[4]%} {% extends
+"layout.html" %} {% block content %} {% include 'blog/hero.html' %}
+
+<div class="container">
+  <div class="blog__content-wrapper">
+    <aside class="sidebar blog-section">
+      <div class="sidebar__wrapper">
+        {% include 'blog/components/social-aside.html' %}
+      </div>
+    </aside>
+
+    <div class="blog__content">
+      {% include 'blog/enhancing-revit-productivity-in-bim/contents.html' %} {%
+      include 'blog/enhancing-revit-productivity-in-bim/introduction.html' %} {%
+      include 'blog/enhancing-revit-productivity-in-bim/bim-execution-plan.html'
+      %} {% include 'blog/components/modeling-services.html' %}{% include
+      'blog/enhancing-revit-productivity-in-bim/revit-templates-and-modeling-standards.html'
+      %} {% include
+      'blog/enhancing-revit-productivity-in-bim/computational-and-generative-design.html'
+      %} {% include 'blog/components/case-studies.html' %}{% include
+      'blog/enhancing-revit-productivity-in-bim/how-powerkh-helps.html' %} {%
+      include 'blog/components/subscription.html' %} {% include
+      'blog/enhancing-revit-productivity-in-bim/conclusion.html' %} {% include
+      'blog/blog-footer.html' %}
+    </div>
+    <aside class="sidebar blog-section">
+      {% for id in page.author_id %} {% set author = authors[id] %} {% include
+      'blog/components/author.html' %} {% endfor %}
+      <div class="sidebar__wrapper">
+        {% include 'blog/components/bim-aside-content.html' %}
+      </div>
+    </aside>
+  </div>
+</div>
+
+{% include 'sections/faq-contact.html' %} {% include
+'blog/components/cards-article.html' %} {% endblock %}

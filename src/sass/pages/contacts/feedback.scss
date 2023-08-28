@@ -1,0 +1,40 @@
+.feedback {
+  padding: 50px 0 30px;
+
+  @include font(14px, 400, 20px);
+  color: $main-color;
+
+  &__title {
+    margin-bottom: 10px;
+
+    font-family: $secondary-font;
+    @include font(14px, 700, 20px);
+  }
+
+  .footer__social-list {
+    margin-bottom: 20px;
+  }
+}
+
+@include mq("desktop") {
+  .feedback {
+    &__inner {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    &__form-wrapper {
+      width: 630px;
+      padding-top: 80px;
+    }
+
+    &__social-wrapper {
+      width: 456px;
+      padding: 0;
+    }
+
+    &__text {
+      padding-top: 20px;
+    }
+  }
+}

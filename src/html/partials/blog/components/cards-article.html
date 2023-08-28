@@ -1,0 +1,45 @@
+{% set items = articles %} {% set currentAuthor = authors %}
+<section class="cards-case cases">
+  <div class="container">
+    <ul class="cases__list">
+      {% for item in items %}
+      <li class="cases__list-item">
+        <a
+          href="./{{ item.title | lower | replace(' ', '-') | replace(':', '') | replace('’', '') | replace(',', '') }}.html"
+          class="cases__list-item-link item-link"
+        >
+          <div class="cases__list-content blog__list-content">
+            <h3 class="cases__list-title">{{ item.title }}</h3>
+
+            {% for id in item.author_id %}
+            <p class="cases__list-text">
+              {{ currentAuthor[id].name }}
+              <svg width="58" height="56" {% if item.author_id.length>
+                1 %}class="blog-arrow"{% endif %}>
+                <use href="./images/sprite.svg#right-arrow"></use>
+              </svg>
+            </p>
+            {% endfor %}
+          </div>
+          <div class="cases__list-imagecont">
+            <img
+              class="cases__list-image"
+              src="{{item.preview_image}}"
+              alt="{{item.title}}"
+              width="360"
+              height="218"
+            />
+          </div>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+
+    <button class="more-btn">
+      <svg class="more-btn--icon">
+        <use href="./images/sprite.svg#load-more"></use>
+      </svg>
+      More cases
+    </button>
+  </div>
+</section>

@@ -1,0 +1,119 @@
+.service-process {
+  padding-top: 30px;
+  padding-bottom: 100px;
+  color: $main-color;
+
+  @include mq('tablet') {
+    padding-top: 50px;
+    padding-bottom: 80px;
+  }
+
+  &__title {
+    margin-bottom: 60px;
+
+    font-family: $secondary-font;
+    @include font(20px, 700, 22px);
+  }
+
+  &__list {
+    list-style: none;
+    counter-reset: li;
+  }
+
+  &__item {
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 109px;
+
+    min-height: 294px;
+
+    font-family: $main-font;
+
+    border-top: 1px solid $main-color;
+
+    @include mq('tablet') {
+      padding: 30px 95px;
+      min-height: 160px;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+
+      position: absolute;
+
+      display: block;
+
+      background-position: center;
+      background-repeat: no-repeat;
+
+      @include mq('tablet') {
+        top: 50%;
+
+        transform: translateY(-50%);
+      }
+    }
+
+    &::before {
+      left: 0;
+      bottom: 40px;
+
+      width: 40px;
+      height: 40px;
+
+      background-image: url('../images/services/big-arrow-down.svg');
+    }
+
+    &::after {
+      counter-increment: li;
+      content: '0' counter(li);
+
+      right: 0;
+      bottom: 15px;
+
+      width: 84px;
+      height: 80px;
+
+      font-family: $secondary-font;
+      @include font(70px, 700, 78px);
+    }
+
+    &:last-child {
+      border-bottom: 1px solid $main-color;
+
+      &::before {
+        bottom: 26px;
+
+        width: 62px;
+        height: 62px;
+
+        background-image: url('../images/services/checked.svg');
+      }
+    }
+  }
+
+  &__item-title {
+    margin-bottom: 25px;
+
+    @include font(14px, 700, 20px);
+  }
+
+  &__item-desc {
+    @include font(14px, 400, 20px);
+  }
+
+  &__item-title,
+  &__item-desc {
+    @include mq('tablet') {
+      max-width: 420px;
+    }
+
+    @include mq('desktop') {
+      max-width: 780px;
+    }
+  }
+}
+
+.how-works.service-process {
+  padding: 40px 0;
+}

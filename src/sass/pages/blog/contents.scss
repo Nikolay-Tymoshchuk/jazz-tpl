@@ -1,0 +1,61 @@
+.contents {
+  // padding-top: 60px;
+  font-family: $secondary-font;
+  @include font(14px, 750, 20px);
+  color: $main-color;
+
+  // @include mq(tablet) {
+  //   padding-top: 38px;
+  // }
+
+  &__wrapper {
+    padding-top: 34px;
+    padding-bottom: 34px;
+    padding-left: 20px;
+    padding-right: 15px;
+
+    background-color: $bg-color-dark-grey;
+
+    @include mq(tablet) {
+      padding-bottom: 29px;
+      padding-left: 56px;
+      padding-right: 56px;
+    }
+    @include mq(desktop) {
+      padding-left: 67px;
+      padding-right: 67px;
+    }
+  }
+  &__title {
+    margin-bottom: 15px;
+    text-align: start;
+    &::after {
+      content: '';
+      display: block;
+      margin-top: 10px;
+      height: 1px;
+      width: 100%;
+      background-color: $main-color;
+    }
+  }
+
+  &__list {
+    @include mq(tablet) {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+    @include mq(desktop) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+  &__link {
+    cursor: pointer;
+    color: $main-color;
+  }
+}

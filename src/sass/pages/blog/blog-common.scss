@@ -1,0 +1,148 @@
+.blog {
+  font-family: $main-font;
+  @include font(14px, 400, 20px);
+  color: $main-color;
+
+  &__content-wrapper {
+    padding-top: 41px;
+    @include mq(tablet) {
+      padding-top: 19px;
+    }
+    @include mq(desktop) {
+      display: grid;
+      grid-template-columns: 72px 750px 262px;
+      grid-template-rows: auto;
+      grid-column-gap: 30px;
+    }
+  }
+  &__content {
+    .bim-aside {
+      @include mq(desktop) {
+        display: none;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: $secondary-font;
+    @include font(20px, 750, 20px);
+  }
+
+  &__item-title {
+    margin-bottom: 10px;
+    text-align: start;
+    font-family: $secondary-font;
+    @include font(14px, 750, 16px);
+  }
+
+  &__list {
+    margin-bottom: 20px;
+    &--bottom {
+      margin-bottom: 60px;
+      @include mq(tablet) {
+        margin-bottom: 76px;
+      }
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__item-arrow {
+    position: relative;
+    padding-left: 20px;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      display: inline-block;
+      left: 0;
+      top: 4px;
+      width: 10px;
+      height: 9px;
+      background-repeat: no-repeat;
+      background-image: url('../images/blog/arrow-right.svg');
+    }
+  }
+
+  &__figure-title {
+    font-family: $secondary-font;
+    @include font(20px, 750, 22px);
+
+    &--mb25 {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__title-normal {
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: $secondary-font;
+    @include font(20px, 500, 20px);
+  }
+
+  &__figcaption-title {
+    margin-bottom: 0;
+  }
+
+  &__text-strong {
+    @include font(14px, 700, 17px);
+  }
+
+  &__text-cursive {
+    font-style: italic;
+  }
+
+  &__text-underline {
+    text-decoration: underline;
+  }
+  &__text-center {
+    text-align: center;
+  }
+  &__text-start {
+    text-align: start;
+  }
+  &__text-link {
+    display: inline;
+    color: #747474;
+  }
+
+  &__image {
+    width: 100%;
+    margin-bottom: 38px;
+  }
+  &__description {
+    margin-bottom: 38px;
+  }
+}
+
+.image-center {
+  margin: 0 auto;
+}
+
+.blog-section {
+  padding-top: 19px;
+  padding-bottom: 19px;
+  &__bottom {
+    padding-bottom: 41px;
+    @include mq(tablet) {
+      padding-bottom: 57px;
+    }
+  }
+
+  p {
+    &:not(:last-child) {
+      margin-bottom: 17px;
+    }
+  }
+  & p.blog-section__description {
+    margin-bottom: 38px;
+  }
+}

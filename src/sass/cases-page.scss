@@ -1,0 +1,26 @@
+@import './utils/modern-normalize.min';
+@import './utils/slick';
+@import './utils/photoswipe.min';
+@import './utils/fonts';
+@import './utils/mixins';
+@import './utils/variables';
+
+@import './base/common';
+@import './base/container';
+
+@import './components/header';
+@import './components/logo';
+@import './components/banner';
+@import './components/modal-window';
+@import './components/case-challenge';
+@import './components/slider-points';
+@import './components/case-process';
+@import './components/case-solution';
+@import './components/case-conclusion';
+@import './components/faq';
+@import './components/faq-contact';
+@import './components/cases';
+@import './components/footer';
+
+@import './pages/case-studies/studies';
+@import './pages/case-studies/cards-case';

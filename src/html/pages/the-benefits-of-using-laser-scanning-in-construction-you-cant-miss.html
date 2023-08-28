@@ -1,0 +1,43 @@
+{% set page = articles[4] %}
+{% set service = services[3]%}
+{% extends
+"layout.html" %}
+{% block content %}
+  {% include 'blog/hero.html' %}
+
+  <div class="container">
+    <div class="blog__content-wrapper">
+      <aside class="sidebar blog-section">
+        <div class="sidebar__wrapper">
+          {% include 'blog/components/social-aside.html' %}
+        </div>
+      </aside>
+
+      <div class="blog__content">
+        {% include 'blog/benefits-of-using-laser-scanning/contents.html' %}{%
+      include 'blog/benefits-of-using-laser-scanning/introduction.html' %}
+        {%
+      include 'blog/benefits-of-using-laser-scanning/what.html' %}
+        {% include
+      'blog/components/modeling-services.html' %}
+        {% include
+      'blog/benefits-of-using-laser-scanning/benefits.html' %}
+        {% include
+      'blog/benefits-of-using-laser-scanning/workflow.html' %}
+        {% include
+      'blog/blog-footer.html' %}
+        {% include
+      'blog/components/bim-aside-content.html' %}
+      </div>
+      <aside class="sidebar blog-section">
+        {% include 'blog/components/author.html' %}
+        <div class="sidebar__wrapper">
+          {% include 'blog/components/bim-aside-content.html' %}
+        </div>
+      </aside>
+    </div>
+  </div>
+  {% include 'sections/faq-contact.html' %}
+  {% include
+'blog/components/cards-article.html' %}
+{% endblock %}

@@ -1,0 +1,90 @@
+.service-projects {
+  padding: 25px 0;
+  color: $main-color;
+
+  @include mq('tablet') {
+    padding-top: 35px;
+    padding-bottom: 45px;
+  }
+
+  @include mq('desktop') {
+    padding-top: 65px;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+
+    font-family: $secondary-font;
+    @include font(20px, 700, 22px);
+  }
+
+  &__desc {
+    margin-bottom: 50px;
+
+    @include font(14px, 400, 20px);
+
+    @include mq('tablet') {
+      max-width: 600px;
+      margin-bottom: 55px;
+    }
+
+    @include mq('desktop') {
+      margin-bottom: 70px;
+    }
+
+    &--center {
+      text-align: center;
+      margin: 50px auto 0;
+
+      @include mq('tablet') {
+        max-width: 700px;
+        margin: 55px auto 0;
+      }
+
+      @include mq('desktop') {
+        margin: 70px auto 0;
+      }
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+
+    @include mq('tablet', max) {
+      // width: 320px;
+      // height: 210px;
+    }
+
+    @include mq('tablet', min) {
+      // min-width: 680px;
+      // height: 380px;
+    }
+
+    @include mq('desktop', min) {
+      // min-width: 1120px;
+      // height: 620px;
+    }
+
+    .slick-dots {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-top: 40px;
+
+      & li:not(:last-child) {
+        margin-right: 35px;
+      }
+    }
+  }
+
+  &__image-link {
+    display: block;
+  }
+  &__image {
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,52 @@
+.services-contact {
+  padding: 25px 0;
+
+  &__block {
+    padding: 50px 20px;
+
+    text-align: center;
+
+    background-color: $bg-color-grey;
+  }
+
+  &__title,
+  &__text {
+    margin: 0 auto 38px;
+  }
+
+  &__title {
+    font-family: $secondary-font;
+    @include font(20px, 700, 22px);
+    color: $main-color;
+    text-transform: unset;
+  }
+
+  &__text {
+    @include font(14px, 400, 20px);
+  }
+}
+
+@include mq('tablet') {
+  .services-contact {
+    &__block {
+      padding: 40px 20px;
+    }
+
+    &__title,
+    &__text {
+      max-width: 560px;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@include mq('desktop') {
+  .services-contact {
+    padding: 40px 0;
+
+    &__title,
+    &__text {
+      max-width: 680px;
+    }
+  }
+}

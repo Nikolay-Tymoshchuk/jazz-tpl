@@ -1,0 +1,33 @@
+{% set page = articles[8] %} {% set service = services[0]%} {% extends
+"layout.html" %} {% block content %} {% include 'blog/hero.html' %}
+
+<div class="container">
+  <div class="blog__content-wrapper">
+    <aside class="sidebar blog-section">
+      <div class="sidebar__wrapper">
+        {% include 'blog/components/social-aside.html' %}
+      </div>
+    </aside>
+
+    <div class="blog__content">
+      {% include 'blog/outsourcing/contents.html' %} {% include
+      'blog/outsourcing/introduction.html' %} {% include
+      'blog/outsourcing/in-house.html' %} {% include
+      'blog/components/modeling-services.html' %} {% include
+      'blog/outsourcing/outsource.html' %} {% include
+      'blog/components/subscription.html' %} {% include
+      'blog/outsourcing/why.html' %} {% include 'blog/outsourcing/takeaway.html'
+      %} {% include 'blog/blog-footer.html' %} {% include
+      'blog/components/bim-aside-content.html' %}
+    </div>
+    <aside class="sidebar blog-section">
+      {% include 'blog/components/author.html' %}
+      <div class="sidebar__wrapper">
+        {% include 'blog/components/bim-aside-content.html' %}
+      </div>
+    </aside>
+  </div>
+</div>
+
+{% include 'sections/faq-contact.html' %} {% include
+'blog/components/cards-article.html' %} {% endblock %}

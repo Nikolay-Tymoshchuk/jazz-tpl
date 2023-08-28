@@ -1,0 +1,33 @@
+<ul class="cases__list">
+  {% for item in cases_list %}
+  <li class="cases__list-item">
+    <a class="cases__list-item-link {{item.class}}" href="{{item.link}}">
+      <div class="cases__list-content case-studies__list-content">
+        <h3 class="cases__list-title">{{item.title}}</h3>
+        <p class="cases__list-text">
+          {{item.text}}
+          <svg>
+            <use href="./images/sprite.svg#right-arrow"></use>
+          </svg>
+        </p>
+      </div>
+      <div class="cases__list-imgcont">
+        <picture>
+          <source
+            type="image/webp"
+            srcset="../images/cases/{{item.img}}.webp"
+          />
+          <img
+            class="cases__list-image"
+            alt="{{item.img_alt}}"
+            width="550"
+            height="300"
+            loading="lazy"
+            src="../images/cases/{{item.img}}.jpeg"
+          />
+        </picture>
+      </div>
+    </a>
+  </li>
+  {% endfor %}
+</ul>

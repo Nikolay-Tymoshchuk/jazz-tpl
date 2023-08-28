@@ -1,0 +1,25 @@
+{% for id in page.author_id %} {% set authorid = authors[id] %}
+<div class="blog blog-footer">
+  <div class="blog-footer__wrapper">
+    <h2 class="blog-footer__title blog__figure-title">
+      Other articles of this author
+    </h2>
+    <ul class="blog__list">
+      {% for post in articles %} {% if post.author_id.includes(id) %} {% if
+      post.id !== page.id %}
+
+      <li class="blog__item-arrow">
+        <a
+          href="./{{ post.title | lower | replace(' ', '-') | replace(':', '' ) | replace('’', '' )| replace(',', '' ) }}.html"
+          class="blog-footer__link"
+          >{{ post.title }}</a
+        >
+      </li>
+      {% endif %}{% endif %} {% endfor %}
+    </ul>
+  </div>
+
+  {% set author = authorid %} {% include 'blog/components/author.html' %}
+</div>
+
+{% endfor %}

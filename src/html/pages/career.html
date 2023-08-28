@@ -1,0 +1,111 @@
+{% set page = pages.career %} {% extends "layout.html" %} {% block content %}
+
+<section class="revit revit--modeling" id="hero">
+  <div class="container">
+    <div class="banner banner--hero">
+      <h1 class="vacancies__title">Want to join our team?</h1>
+      <p class="vacancies__text">
+        We are actively expanding our team and are looking for the same
+        enthusiasts, like us, to work on worldwide projects. Drop a request via
+        trp@powerkh.com and let's shape new worlds together.
+      </p>
+
+      <button class="banner__button" type="button" data-modal="contact-modal">
+        Send Request
+        <svg>
+          <use href="./images/sprite.svg#right-arrow"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="revit vacancies">
+  <div class="container">
+    <div class="vacancies__description">
+      <h2 class="vacancies__title">Want to join our team?</h2>
+      <p>
+        Powerkh is a digital design consultancy which offers BIM, computational
+        design, structural detailing and digital fabrication expertise. We work
+        with project owners, architects, contractors, developers and engineers
+        to improve the way buildings are designed, built, and operated through
+        the use of digital design tools.
+      </p>
+    </div>
+    <ul class="vacancies__list">
+      <li class="vacancies__item">
+        <h3 data-title>BIM / VDC Engineer</h3>
+        <span>Kharkiv</span>
+
+        <h4>Hiring specification:</h4>
+        <ul>
+          <li>Autodesk Revit</li>
+          <li>Pre-Intermediate English</li>
+          <li>Solid organizational and time-management skills</li>
+          <li>Higher education</li>
+          <li>Work experience of 1 years+</li>
+        </ul>
+
+        <h4>Areas of responsibility:</h4>
+        <ul>
+          <li>Develop models for specific design purposes</li>
+          <li>Create discipline specific BIM content</li>
+          <li>Develop accurate construction drawings</li>
+          <li>Coordinate design documentation</li>
+        </ul>
+
+        <button
+          data-button
+          class="banner__button"
+          type="button"
+          data-modal="contact-modal"
+        >
+          Send Request
+          <svg>
+            <use href="./images/sprite.svg#right-arrow"></use>
+          </svg>
+        </button>
+      </li>
+
+      <li class="vacancies__item">
+        <h3 data-title>Structural Engineer</h3>
+        <span>Kharkiv</span>
+
+        <h4>Hiring specification:</h4>
+        <ul>
+          <li>Autodesk Revit</li>
+          <li>Autodesk Robot</li>
+          <li>Pre-Intermediate English</li>
+          <li>Analytical mind and problem-solving aptitude</li>
+          <li>Solid organizational and time-management skills</li>
+          <li>Master's degree in structural engineering</li>
+          <li>Work experience of 2 years+</li>
+        </ul>
+
+        <h4>Areas of responsibility:</h4>
+        <ul>
+          <li>Planning documentation preparing</li>
+          <li>Develop structural models</li>
+          <li>Perform structural analyses</li>
+          <li>Develop accurate construction drawings</li>
+          <li>Coordinate design documentation</li>
+          <li>Project administration at the development stage</li>
+        </ul>
+
+        <button
+          data-button
+          class="banner__button"
+          type="button"
+          data-modal="contact-modal"
+        >
+          Send Request
+          <svg>
+            <use href="./images/sprite.svg#right-arrow"></use>
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </div>
+</section>
+
+{% endblock %}

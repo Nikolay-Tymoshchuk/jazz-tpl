@@ -1,0 +1,278 @@
+.footer {
+  & > .container {
+    padding-bottom: 36px;
+    padding-top: 30px;
+  }
+
+  &__inner {
+    margin-bottom: 24px;
+  }
+
+  &__list-wrapper {
+    margin-bottom: 20px;
+  }
+
+  &__nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 80px;
+    margin: -3px 0;
+  }
+
+  &__nav-list-item {
+    margin: 3px 0;
+  }
+
+  &__nav-link {
+    font-family: $main-font;
+    @include font(14px, 400, 20px);
+    text-transform: capitalize;
+    color: $main-color;
+  }
+
+  &__services-list {
+    margin-top: 42px;
+  }
+
+  &__services-list-item {
+    &:not(:last-child) {
+      margin-bottom: 6px;
+    }
+  }
+
+  &__services-list-title {
+    font-family: $secondary-font;
+    @include font(14px, 700, 16px);
+    color: $main-color;
+    line-height: 1.6;
+  }
+
+  &__services-list-link {
+    font-family: $main-font;
+    @include font(14px, 400, 20px);
+    color: $main-color;
+  }
+
+  &__social-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__contact-link {
+    position: relative;
+
+    &::before {
+      display: block;
+      width: 65%;
+      height: 2px;
+
+      content: '';
+      position: absolute;
+      bottom: 3px;
+      left: 0;
+
+      background-color: #000000;
+      transform: scaleX(0);
+      transition: transform 250ms linear;
+    }
+
+    &:hover,
+    &:focus {
+      &::before {
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  &__up-link {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+
+    position: relative;
+
+    font-family: $secondary-font;
+    @include font(14px, 700, 16px);
+    color: $main-color;
+
+    &-icon {
+      margin-top: 4px;
+    }
+
+    &::before {
+      display: block;
+      width: 100%;
+      height: 2px;
+
+      content: '';
+      position: absolute;
+      bottom: 50%;
+      left: 0;
+
+      background-color: #000000;
+      transform: scaleX(0);
+      transition: transform 250ms linear;
+    }
+
+    &:hover,
+    &:focus {
+      &::before {
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  &__social-icon {
+    transition: fill 250ms linear;
+
+    .footer__social-link:hover &,
+    .footer__social-link:focus & {
+      fill: rgba(0, 0, 0, 0.6);
+    }
+  }
+
+  &__social-list {
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+  }
+
+  &__social-list-item:not(:last-child) {
+    margin-right: 32px;
+  }
+
+  &__desc {
+    font-family: $secondary-font;
+    @include font(14px, 700, 16px);
+    color: $main-color;
+    text-align: center;
+  }
+}
+
+@include mq('tablet') {
+  .footer {
+    &__inner {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 36px;
+    }
+
+    &__list-wrapper {
+      display: flex;
+      align-items: baseline;
+    }
+
+    &__nav-list {
+      width: 170px;
+      height: 100%;
+      align-content: space-between;
+      margin-right: 20px;
+    }
+
+    &__nav-link,
+    &__services-list-link {
+      &::after {
+        display: block;
+        width: 100%;
+        height: 2px;
+        content: '';
+
+        background-color: #000000;
+        transform: scaleX(0);
+        transition: transform 250ms linear;
+      }
+
+      &:hover,
+      &:focus {
+        &::after {
+          transform: scaleX(1);
+        }
+      }
+    }
+
+    &__services-list {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      flex-grow: 1;
+      height: 100%;
+      margin-top: 0;
+    }
+
+    &__services-list-item:not(:last-child) {
+      margin-bottom: 6px;
+    }
+
+    &__social-wrapper {
+      align-items: flex-end;
+    }
+
+    &__up-link {
+      flex-direction: row;
+
+      &::before {
+        width: 40%;
+        bottom: -3px;
+      }
+    }
+
+    &__social-list {
+      padding-right: 0;
+    }
+
+    &__up-link-icon {
+      margin-top: 0;
+      margin-left: 10px;
+    }
+
+    // &__desc {
+    //   text-align: start;
+    // }
+  }
+}
+
+@include mq('desktop') {
+  .footer {
+    &__inner {
+      display: flex;
+    }
+
+    &__list-wrapper {
+      height: 90px;
+      justify-content: space-between;
+      flex-direction: row;
+      margin-bottom: 0;
+    }
+
+    &__nav-list {
+      width: 200px;
+      margin-right: 134px;
+    }
+
+    &__services-list {
+      flex-grow: 0;
+      width: 554px;
+    }
+
+    &__social-wrapper {
+      margin-left: auto;
+      align-items: flex-end;
+    }
+
+    &__social-list {
+      padding-right: 0;
+    }
+
+    &__up-link-icon {
+      margin-top: 0;
+      margin-left: 10px;
+    }
+
+    &__desc {
+      text-align: start;
+    }
+  }
+}
