@@ -1,0 +1,1694 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico" />
+
+<title>How BIM Works</title>
+<link rel="canonical" href="https://www.powerkh.com/how-bim-works.html" />
+<meta name="description" content="BIM helps AEC professionals to greatly decrease the effort and time needed to accomplish construction projects. But how does BIM work, and what is the BIM process?" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.powerkh.com/how-bim-works.html" />
+<meta
+  property="og:image"
+  content="https://www.powerkh.com/images/blog/hero/hero4-og.jpg"
+/>
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="" />
+<meta name="twitter:title" content="How BIM Works | Powerkh" />
+<meta name="twitter:description" content="BIM helps AEC professionals to greatly decrease the effort and time needed to accomplish construction projects. But how does BIM work, and what is the BIM process?" />
+<meta name="twitter:image:src" content="./images/blog/hero/hero4-twitter.jpg" />
+<meta property="og:image:type" content="image/jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:site_name" content="" />
+<meta property="og:title" content="How BIM Works | Powerkh" />
+<meta property="og:description" content="BIM helps AEC professionals to greatly decrease the effort and time needed to accomplish construction projects. But how does BIM work, and what is the BIM process?" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/default-skin.css"
+/>
+<link rel=" stylesheet" href="css/blog-page.css" />
+<!-- Google Tag Manager -->
+<script>(function (w, d, s, l, i) {
+    w[l] = w[l] || []; w[l].push({
+      'gtm.start':
+        new Date().getTime(), event: 'gtm.js'
+    }); var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+  })(window, document, 'script', 'dataLayer', 'GTM-NS7B7PB');
+</script>
+<!-- End Google Tag Manager -->
+
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NS7B7PB" height="0" width="0"
+    style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --> 
+<div id="scroll-point"></div>
+
+<header class="header" id="header">
+  <div class="container">
+    <nav class="navigation">
+      <a href="https://nikolay-tymoshchuk.github.io/jazz-tpl/" class="logo" aria-label="logotype">
+        <svg class="logo-svg" width="54" height="43">
+          <use href="./images/sprite.svg#logo"></use>
+        </svg>
+      </a>
+
+      <ul class="navigation__list">
+        <li class="navigation__list-item navigation__list-item--services">
+          <button type="button" class="navigation__list-link navigation__list-button">
+            Services
+          </button>
+          <ul class="navigation__submenu">
+            <li class="navigation__list-item">
+              <a href="./bim-modeling.html" class="navigation__list-link">BIM Modeling</a>
+            </li>
+            <li class="navigation__list-item">
+              <a href="./bim-coordination.html" class="navigation__list-link">BIM Coordination</a>
+            </li>
+            <li class="navigation__list-item">
+              <a href="./bim-content-creation.html" class="navigation__list-link">BIM Content</a>
+            </li>
+            <li class="navigation__list-item">
+              <a href="./scan-to-bim.html" class="navigation__list-link">Scan to BIM</a>
+            </li>
+            <li class="navigation__list-item">
+              <a href="./bim-automation.html" class="navigation__list-link">BIM Automation</a>
+            </li>
+            <li class="navigation__list-item">
+              <a href="./bim-prefabrication.html" class="navigation__list-link">Prefabrication & Fabrication</a>
+            </li>
+            <li class="navigation__list-item">
+              <a href="./structural-detailing.html" class="navigation__list-link">Structural detailing</a>
+            </li>
+            <!-- <li class="navigation__list-item">
+              <a href="./architectural-rendering.html" class="navigation__list-link">Architectural Rendering</a>
+            </li> -->
+          </ul>
+        </li>
+
+        <li class="navigation__list-item">
+          <a href="./case-studies.html" class="navigation__list-link">Case Studies</a>
+        </li>
+
+        <li class="navigation__list-item navigation__list-item--blog">
+          <a href="./blog.html" class="navigation__list-link navigation__list-button">
+            Blog
+          </a>
+        </li>
+
+        <li class="navigation__list-item navigation__list-item--about">
+          <a href="./about-us.html" class="navigation__list-link">About</a>
+        </li>
+
+        <li class="navigation__list-item navigation__list-item--contacts">
+          <button class="contact-btn" type="button" data-modal="contact-modal">
+            Contact Us
+          </button>
+        </li>
+      </ul>
+    </nav>
+
+    <button class="burger" type="button" aria-expanded="false" data-menu-button>
+      <span class="burger__item">Open navigation</span>
+    </button>
+  </div>
+
+  <div class="modal-menu" data-menu>
+    <ul class="modal-menu__navigation">
+      <li class="modal-menu__navigation-item">
+        <a href="https://nikolay-tymoshchuk.github.io/jazz-tpl/" class="modal-menu__navigation-link">Home</a>
+      </li>
+
+      <li class="modal-menu__navigation-item modal-menu__navigation-item--services">
+        <p class="modal-menu__navigation-link modal-menu__navigation-link--services">
+          Services
+        </p>
+        <ul class="modal-menu__submenu">
+          <li class="modal-menu__navigation-item">
+            <a href="./bim-modeling.html" class="modal-menu__navigation-link navigation__list-link">BIM Modeling</a>
+          </li>
+          <li class="modal-menu__navigation-item">
+            <a href="./bim-coordination.html" class="modal-menu__navigation-link navigation__list-link">BIM
+              Coordination</a>
+          </li>
+          <li class="modal-menu__navigation-item">
+            <a href="./bim-content-creation.html" class="modal-menu__navigation-link navigation__list-link">BIM
+              Content</a>
+          </li>
+          <li class="modal-menu__navigation-item">
+            <a href="./scan-to-bim.html" class="modal-menu__navigation-link navigation__list-link">Scan to BIM</a>
+          </li>
+          <li class="modal-menu__navigation-item">
+            <a href="./bim-automation.html" class="modal-menu__navigation-link navigation__list-link">BIM Automation</a>
+          </li>
+          <li class="modal-menu__navigation-item">
+            <a href="./bim-prefabrication.html" class="modal-menu__navigation-link navigation__list-link">Prefabrication
+              & Fabrication</a>
+          </li>
+          <li class="modal-menu__navigation-item">
+            <a href="./structural-detailing.html" class="modal-menu__navigation-link navigation__list-link">Structural
+              detailing</a>
+          </li>
+          <!-- <li class="modal-menu__navigation-item">
+            <a
+              href="./architectural-rendering.html"
+              class="modal-menu__navigation-link navigation__list-link"
+              >Architectural Rendering</a
+            >
+          </li> -->
+        </ul>
+      </li>
+
+      <li class="modal-menu__navigation-item">
+        <a href="./case-studies.html" class="modal-menu__navigation-link navigation__list-link">Case Studies</a>
+      </li>
+
+      <li class="modal-menu__navigation-item">
+        <a href="./blog.html" class="modal-menu__navigation-link navigation__list-link">
+          Blog
+        </a>
+      </li>
+
+      <li class="modal-menu__navigation-item">
+        <a href="./about-us.html" class="modal-menu__navigation-link navigation__list-link">About</a>
+      </li>
+
+      <li class="modal-menu__navigation-item">
+        <a href="./career.html" class="modal-menu__navigation-link navigation__list-link">Career</a>
+      </li>
+
+      <li class="modal-menu__navigation-item">
+        <a href="./contacts.html" class="modal-menu__navigation-link navigation__list-link">Contacts</a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+  <main>
+    <div class="modal" id="contact-modal">
+  <div class="container">
+    <div class="modal__content modal-js">
+      <button class="close modal__btn">
+        <svg class="modal__btn--svg" width="20" height="20">
+          <use href="./images/sprite.svg#cancel"></use>
+        </svg>
+      </button>
+
+      <p class="modal__title">Have any questions? Contact us!</p>
+
+      <form
+        class="contact-form"
+        id="contactForm"
+        name="modal-contact"
+        data-form
+        novalidate
+      >
+        <div class="contact-form__content">
+          <div class="contact-form__group modal__input-underline">
+            <input
+              class="contact-form__input contact-form__form-input"
+              type="text"
+              name="name"
+              required
+            />
+            <label class="contact-form__modal-label"
+              >How can we call you?</label
+            >
+          </div>
+
+          <div class="contact-form__group modal__input-underline">
+            <input
+              class="contact-form__input contact-form__form-input"
+              type="text"
+              name="email-or-phone"
+              data-required
+              required
+            />
+            <label class="contact-form__modal-label"
+              >Phone or E-mail&ast;</label
+            >
+          </div>
+
+          <input class="hidden" type="text" name="Career" hidden />
+
+          <span class="error" aria-live="polite"></span>
+        </div>
+
+        <button
+          class="contact-form__btn banner__button"
+          type="submit"
+          value="Submit"
+          aria-label="Submit"
+          id="submit"
+        >
+          Send
+          <svg width="34" height="34">
+            <use href="./images/sprite.svg#right-arrow"></use>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+  <section class="blog blog-hero blog-hero-4">
+  <div class="container">
+    <h1 class="blog-hero__title">
+      How BIM Works: What Is BIM and BIM Process
+    </h1>
+  </div>
+</section>
+
+
+<div class="container">
+  <div class="blog__content-wrapper ">
+    <aside class=" sidebar blog-section">
+      <div class="sidebar__wrapper">
+         
+<!-- Load Facebook SDK for JavaScript -->
+<script>
+  (function(d, s, id) {
+    var js,
+      fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0';
+    fjs.parentNode.insertBefore(js, fjs);
+  })(document, 'script', 'facebook-jssdk');
+</script>
+
+<div class="social-aside">
+  <h2 class="blog__figure-title social-aside__title">Share:</h2>
+  <ul class="social-aside__list">
+    <li class="social-aside__item">
+      <div class="fb-share-button" data-href="https://www.powerkh.com/how-bim-works.html" data-size="large">
+        <a
+          class="fb-xfbml-parse-ignore social-aside__link"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Link to Facebook"
+          href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.powerkh.com%2Fhow-bim-works.html&amp;src=sdkpreparse"
+        >
+          <svg class="social-aside__icon" width="30" height="30">
+            <use href="./images/sprite.svg#facebook"></use>
+          </svg>
+        </a>
+      </div>
+    </li>
+    <li class="social-aside__item">
+      <a
+        href="https://www.linkedin.com/sharing/share-offsite/?&url=https://www.powerkh.com/how-bim-works.html"
+        class="social-aside__link"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Link to Linkedin"
+      >
+        <svg class="social-aside__icon" width="25" height="25">
+          <use href="./images/sprite.svg#linkedin"></use>
+        </svg>
+      </a>
+    </li>
+  </ul>
+</div>
+
+      </div>
+    </aside>
+    <div class="blog__content">
+      <section class="blog-section contents">
+
+    <div class="contents__wrapper">
+        <h2 class="blog__title contents__title">Contents</h2>
+        <ul class="contents__list">
+            <li class="contents__item">
+                <a href="#how-bim-works1"  class="contents__link navigation__list-link">Intro</a>
+            </li>
+            <li class="contents__item">
+                <a href="#how-bim-works2" class="contents__link navigation__list-link">What is BIM&quest;</a>
+            </li>
+            <li class="contents__item">
+                <a href="#how-bim-works3" class="contents__link navigation__list-link">What are the BIM dimensions&quest;</a>
+            </li>
+            <li class="contents__item">
+                <a href="#how-bim-works4" class="contents__link navigation__list-link">Pros and cons</a>
+            </li>
+            <li class="contents__item">
+                <a href="#how-bim-works5" class="contents__link navigation__list-link">BIM Usage by Architecture, Engineering, and
+                    Construction teams
+                </a>
+            </li>
+            <li class="contents__item">
+                <a href="#how-bim-works6" class="contents__link navigation__list-link">BIM Process Explained</a>
+            </li>
+            <li class="contents__item">
+                <a href="#how-bim-works7" class="contents__link navigation__list-link">How to speed up the BIM process adoption</a>
+            </li>
+            <li class="contents__item">
+                <a href="#how-bim-works8" class="contents__link navigation__list-link">Conclusion</a>
+            </li>
+        </ul>
+
+    </div>
+</section> <section class="blog blog-section introduction" id="how-bim-works1">
+    
+<div class="author">
+  <picture>
+    <source
+      srcset="./images/team/ESU-sm.webp 1x, ./images/team/ESU-md.webp 2x"
+      media="(min-width: 280px)"
+      type="image/webp"
+    />
+    <source
+      srcset="./images/team/ESU-md.jpeg"
+      media="(min-width: 280px)"
+      type="image/jpeg"
+    />
+    <img
+      class="blog__image author__image"
+      src="./images/team/ESU-sm.jpg"
+      loading="lazy"
+      alt="Photo of Yevhen Surzhan"
+      width="360"
+      height="475"
+    />
+  </picture>
+  <div class="author__info">
+    <h2 class="blog__figure-title author__title">Yevhen Surzhan</h2>
+    <p class="author__description">COO & Co-founder</p>
+    <ul class="author__social-list">
+      <li class="author__social-item">
+        <a
+          href="https://www.linkedin.com/in/yevhen-surzhan/"
+          class="author__social-link"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Link to Linkedin"
+        >
+          <svg class="author__social-icon" width="24" height="24">
+            <use href="./images/sprite.svg#linkedin"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="author__social-item">
+        <a
+          href="mailto:esu@powerkh.com"
+          class="author__social-link"
+          aria-label="Send e-mail"
+        >
+          <svg class="author__social-icon" width="31" height="24">
+            <use href="./images/sprite.svg#email"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+    <div class="introduction__description">
+        <p>
+            The Building Information Modeling or BIM process has been around since the
+            1970s, but it became pervasive 15 or so years ago. With the evolution of
+            cloud infrastructure and Сomputer-Aided Design &lpar;CAD&rpar;, the
+            architecture, engineering, and construction &lpar;AEC&rpar; professionals
+            saw considerable improvements in their project workflows.
+        </p>
+        <p>
+            Today, the BIM design process is supported by government contracts and
+            large AEC companies across the globe, which further spurs its
+            industry-wide adoption. However, many AEC businesses still consider BIM
+            modeling to be a tool for the rich only, which is not true.
+        </p>
+        <p>
+            This article aims to have the BIM process explained, showcase how to speed
+            up the BIM process in your company, and highlight potential roadblocks
+            that negatively impact the BIM process.
+        </p>
+    </div>
+</section> <section class="blog blog-section" id="how-bim-works2">
+    <h2 class="blog__title">What is BIM&#63;</h2>
+    <p class="blog-section__description">
+        The Building Information Modeling process allows using intelligent 3D models to facilitate cooperation between
+        stakeholders and all the parties involved in the design, fabrication, construction, and operation of buildings
+        and other
+        architectural objects. Through cost-efficient document coordination and management, as well as building of
+        interactive
+        simulations, BIM enables time-effective collaboration for AEC professionals, speeds up the project delivery, and
+        reduces
+        its maintenance costs.
+    </p>
+    <picture>
+        <source srcset="
+        ./images/blog/how-bim-works/what-lg.webp    1x,
+        ./images/blog/how-bim-works/what-lg@2x.webp 2x
+      " media="(min-width: 375px)" type="image/webp" />
+        <source srcset="
+        ./images/blog/how-bim-works/what-lg.jpg    1x,
+        ./images/blog/how-bim-works/what-lg@2x.jpg 2x
+      " media="(min-width: 375px)" type="image/jpeg" />
+
+        <source srcset="
+        ./images/blog/how-bim-works/what-sm.webp    1x,
+        ./images/blog/how-bim-works/what-sm@2x.webp 2x
+      " media="(max-width: 374px)" type="image/webp" />
+        <source srcset="./images/blog/how-bim-works/what-sm@2x.jpg" media="(max-width: 374px)" type="image/jpeg" />
+
+        <img class="blog__image" src="./images/blog/how-bim-works/what-sm.jpg" alt="the working process" width="280"
+            height="157" loading="lazy" />
+    </picture>
+
+    <p class="blog-section__description">
+        But how does BIM work in real life, where does it start, and what are the stages involved?
+
+    </p>
+    <p>The process begins with the high-level planning of the upcoming construction or infrastructure object. The
+        stakeholders
+        describe what exactly has to be built, what systems there should be, and how they should interact with the
+        existing
+        real-world elements around them.
+    </p>
+    <p>For example, a building must include multiple components:</p>
+
+    <ul class="blog__list">
+        <li class="blog__item-arrow">
+            Energy systems
+
+        </li>
+        <li class="blog__item-arrow">
+            Plumbing
+        </li>
+        <li class="blog__item-arrow">
+            Ventilation
+        </li>
+        <li class="blog__item-arrow">
+            Heating and cooling
+        </li>
+        <li class="blog__item-arrow">
+            Elevators
+        </li>
+        <li class="blog__item-arrow">
+            (sometimes) Solar panel or wind turbine systems
+        </li>
+        <li class="blog__item-arrow">
+            Security systems, etc.
+        </li>
+
+    </ul>
+
+    <p>
+        Each of these systems should be represented with a set of interconnected schemes and documents so that updates
+        in one
+        system design could be checked against other systems to avoid costly clashes during construction.
+
+    </p>
+    <p>
+        Based on the input received and some 2D drawings and documents, the BIM specialists design architectural and
+        structural
+        models of the object. These 3D models provide an overview of how various object components interact with each
+        other.
+        This allows to quickly resolve any clashes. For example, it helps determine the best ways to position
+        ventilation tubes
+        and ensure the plumbing pipes don’t go through the walls or other structural elements.
+
+    </p>
+    <p>
+        As a result of the BIM process, the customer receives a set of interactive 3D models and documents covering all
+        the
+        steps of constructing and operating the building, from factory fabrication of various elements to ongoing
+        facility
+        maintenance.
+
+    </p>
+
+</section> <section class="blog " id="how-bim-works3">
+
+    <h3 class="blog__item-title">What are the BIM dimensions?</h3>
+    <p>There are four main types of BIM dimensions:</p>
+    <ul class="blog__list">
+        <li class="blog__item-arrow">
+            3D, encompassing 3D-generated documents and drawings
+
+        </li>
+        <li class="blog__item-arrow">
+            4D, coupling them with time management
+        </li>
+        <li class="blog__item-arrow">
+            5D, adding cost estimates and related data to the mix
+        </li>
+        <li class="blog__item-arrow">
+            6D, covering the object lifecycle management
+        </li>
+
+
+    </ul>
+    <p>The BIM design process imports the real-world point cloud data to build 3D models of structural components of a
+        future
+        building. But it goes far beyond delivering blueprints only. It covers the whole project lifecycle, from
+        planning to
+        construction to maintenance.</p>
+</section> <section class="services-contact">
+  <div class="services-contact__block">
+    <h2 class="services-contact__title">BIM Modeling Services</h2>
+
+    <p class="services-contact__text">
+      Looking for a way to improve your design and manage your construction effectively? Powerkh - a trusted BIM & VDC services provider with extensive engineering experience and a portfolio of 200+ successful BIM & VDC projects.
+    </p>
+
+    <a
+      href="./bim-modeling.html"
+      class="faq__contact-btn contact-btn services-contact__btn"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Link to BIM Modeling Services"
+      >Read more</a
+    >
+  </div>
+</section>
+ <section class="blog blog-section" id="how-bim-works4">
+    <h2 class="blog__title">Pros and cons of the BIM process</h2>
+    <p>
+        BIM tools make the information shared between different AEC stakeholders
+        more uniform and easily accessible in the cloud and from mobile devices.
+        They also allow real-time commenting and collaborating on the project. Let’s
+        now list the benefits and hidden reefs of the BIM implementation process.
+    </p>
+    <h3 class="blog__item-title">BIM Pros&colon;</h3>
+    <ul class="blog__list">
+        <li class="blog__item-arrow">
+            <span class="blog__text-strong">Easier object planning and design.</span>
+            With BIM, you can have a complete visualization of a future building or
+            infrastructure object. You can see how its systems interact with each
+            other long before dozers start clearing the construction site or tube
+            fittings are fabricated at the factory.
+        </li>
+        <li class="blog__item-arrow">
+            <span class="blog__text-strong">Fewer clashes and reworks</span>
+
+            By combining the blueprints and 3D models of yet-to-be-built systems, BIM
+            highlights the clashes and allows resolving them. This is a guarantee
+            against costly reworks during construction.
+        </li>
+        <li class="blog__item-arrow">
+            <span class="blog__text-strong">Lower expenses.</span>
+
+            From calculating the exact quantity of construction materials needed and
+            up to providing valuable data for future maintenance, BIM helps minimize
+            project costs.
+        </li>
+        <li class="blog__item-arrow">
+            <span class="blog__text-strong">Prefab support.</span>
+            BIM helps cut the project delivery times by 50&percnt; at least, as it combines
+            prefabrication of structural components at the factory with final
+            fabrication on the construction site.
+        </li>
+        <li class="blog__item-arrow">
+            <span class="blog__text-strong">Repeatability.</span>
+            Great engineering decisions and 3D models of structural components form a
+            library of ready solutions that can be easily reused in future projects.
+        </li>
+    </ul>
+
+    <h3 class="blog__item-title">BIM Cons&colon;</h3>
+    <ul class="blog__list">
+        <li class="blog__item-arrow">
+            <span class="blog__text-strong">Incompatibility.</span>
+            BIM software is not yet widespread, and there is always a chance some of
+            your partners or subcontractors might not be able to use the BIM 3D models
+            and documents provided. Well, this is easily solved by discussing the
+            project in advance.
+        </li>
+        <li class="blog__item-arrow">
+            <span class="blog__text-strong">Licensing costs</span>
+            BIM toolkit is quite expensive to run, as licensing can amount to more
+            than &dollar;5,000 a year per user. However, this is an acceptable cost for
+            saving thousands of dollars in reworks.
+        </li>
+        <li class="blog__item-arrow">
+            <span class="blog__text-strong">Lack of expertise.</span>
+            While BIM models and documents are very easy to read, they are pretty hard
+            to produce. There is a distinct lack of BIM expertise throughout the AEC
+            industry, so building an in-house BIM team might be quite challenging.
+            This is solved through outsourcing BIM tasks to a reliable partner &lpar;which
+            also removes the need to pay the licensing fees&rpar;.
+        </li>
+    </ul>
+
+    <p>
+        As you can see, there are several important BIM advantages and only a few
+        BIM shortcomings that can be quite easily overcome. Let’s now take a look at
+        how BIM facilitates construction workflows.
+    </p>
+</section> <section class="blog blog-section blog-section__bottom" id="how-bim-works5">
+    <h2 class="blog__title">BIM usage by architecture, engineering, and construction teams</h2>
+    <p>
+        One of the key challenges of the AEC industry in the past was the need to inform all the parties involved about
+        any
+        roadblocks encountered at any stage of the process. As a result, too much time was lost.
+
+    </p>
+    <p>
+        For example, on the construction site, a foreman could not have all the blueprints at hand at all times. If a
+        question
+        came up when he was on the 23rd floor of a building, he had to spend 20 minutes going back to the trailer to
+        consult the
+        drawings. Even worse, if there was an error in drawings or a clash between different systems, this could be
+        resolved
+        only by the design and engineering team, and the work on that task had to be halted till the updated blueprints
+        arrived.
+
+    </p>
+    <p class="blog-section__description">
+        BIM reduces toil and improves collaboration between all the AEC parties by providing centralized real-time cloud
+        access
+        to all the project drawings and documents.
+
+    </p>
+    <picture>
+        <source srcset="
+        ./images/blog/how-bim-works/usage-lg.webp    1x,
+        ./images/blog/how-bim-works/usage-lg@2x.webp 2x
+      " media="(min-width: 375px)" type="image/webp" />
+        <source srcset="
+        ./images/blog/how-bim-works/usage-lg.jpg    1x,
+        ./images/blog/how-bim-works/usage-lg@2x.jpg 2x
+      " media="(min-width: 375px)" type="image/jpeg" />
+
+        <source srcset="
+        ./images/blog/how-bim-works/usage-sm.webp    1x,
+        ./images/blog/how-bim-works/usage-sm@2x.webp 2x
+      " media="(max-width: 374px)" type="image/webp" />
+        <source srcset="./images/blog/how-bim-works/usage-sm@2x.jpg" media="(max-width: 374px)" type="image/jpeg" />
+
+        <img class="blog__image" src="./images/blog/how-bim-works/usage-sm.jpg" alt="the working process" width="280"
+            height="157" loading="lazy" />
+    </picture>
+
+    <p>
+        Most importantly, if there is any update mid-project, the BIM team can quickly implement it, and the changes
+        will
+        instantly propagate through all the linked models. Thus, the project stakeholders, designers, architects, and
+        engineering crews always have access to the common data environment, which greatly speeds up the BIM
+        construction
+        process.
+
+    </p>
+
+
+</section> 
+      <section class="blog blog-section" >
+    
+
+<div class="blog__case-studies">
+  <h2 class="blog__figure-title blog__figure-title--mb25">Our Case Studies</h2>
+  <div class="blog__case-studies-thumb">
+    <button class="blog__arrow blog__arrow--prev" type="button" aria-label="Arrow Prev">
+      <svg class="blog__arrow--svg" width="24" height="24">
+        <use href="./images/sprite.svg#arrow-prev"></use>
+      </svg>
+    </button>
+
+    <div class="blog__case-studies-wrapper" id="js-blog-slider">
+      
+      <div class="slider__item">
+        <a class="cases__list-item-link cases__list-item-link--1" 
+        href="./formwork-design-case.html" target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Link to Formwork design automation">
+          <p class="cases__list-title">Formwork design automation</p>
+          <p class="cases__list-text">
+            Our client from <br>
+            California, USA
+          </p>
+        </a>
+      </div>
+      
+      <div class="slider__item">
+        <a class="cases__list-item-link cases__list-item-link--2" 
+        href="./suspended-ceiling-case.html" target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Link to Suspend ceiling design automation">
+          <p class="cases__list-title">Suspend ceiling design automation</p>
+          <p class="cases__list-text">
+            Our client from <br>
+           New York, USA
+          </p>
+        </a>
+      </div>
+      
+      <div class="slider__item">
+        <a class="cases__list-item-link cases__list-item-link--4" 
+        href="./wall-framing-design-case.html" target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Link to Wall framing design automation">
+          <p class="cases__list-title">Wall framing design automation</p>
+          <p class="cases__list-text">
+            Our client from <br>
+            California, USA
+          </p>
+        </a>
+      </div>
+      
+
+    </div>
+
+    <button class="blog__arrow blog__arrow--next" type="button" aria-label="Arrow next">
+      <svg class="blog__arrow--svg" width="24" height="24">
+        <use href="./images/sprite.svg#arrow-next"></use>
+      </svg>
+    </button>
+  </div>
+</div>
+
+    <h2 class="blog__title"id="how-bim-works6" >BIM process explained</h2>
+    <p>
+        The AEC professionals must comply with requirements like ISO 19650 or
+        similar country-specific regulations. In short, this means that while
+        planning the built assets, the customer has to outline the Employer's
+        Information Requirements. This ensures that all the appropriate information
+        required to design, construct, and operate any built assets is timely
+        delivered to all parties in a suitable format.
+    </p>
+    <p>
+        The “suitable format” definition depends on the degree of the BIM maturity
+        of any given party:
+    </p>
+    <ul class="blog__list">
+        <li class="blog__item-arrow">
+            Level 0 BIM refers to unmanaged sets of CAD documents.
+        </li>
+        <li class="blog__item-arrow">
+            Level 1 BIM introduces managed 2D and 3D models.
+        </li>
+        <li class="blog__item-arrow">
+            Level 2 BIM stands for developing collaborative 3D environments with
+            shared data but created in various discipline models. AEC professionals
+            worldwide are now adopting this stage. Level 2 BIM compliance is required
+            by an ever-increasing number of government BIM mandates.
+        </li>
+        <li class="blog__item-arrow">
+            Level 3 BIM is not properly defined yet, but it is expected to provide
+            centralized access to a single cloud-based collaborative project model
+            covering all stages, from asset design to construction sequencing,
+            operational costs, and facility management data.
+        </li>
+    </ul>
+
+    <picture>
+        <source srcset="
+        ./images/blog/how-bim-works/explained-lg.webp    1x,
+        ./images/blog/how-bim-works/explained-lg@2x.webp 2x
+      " media="(min-width: 375px)" type="image/webp" />
+        <source srcset="
+        ./images/blog/how-bim-works/explained-lg.jpg    1x,
+        ./images/blog/how-bim-works/explained-lg@2x.jpg 2x
+      " media="(min-width: 375px)" type="image/jpeg" />
+
+        <source srcset="
+        ./images/blog/how-bim-works/explained-sm.webp    1x,
+        ./images/blog/how-bim-works/explained-sm@2x.webp 2x
+      " media="(max-width: 374px)" type="image/webp" />
+        <source srcset="./images/blog/how-bim-works/explained-sm@2x.jpg" media="(max-width: 374px)" type="image/jpeg" />
+
+        <img class="blog__image" src="./images/blog/how-bim-works/explained-sm.jpg" alt="4 levels of BIM maturity"
+            width="280" height="157" loading="lazy" />
+    </picture>
+
+    <p>
+        Thus, every AEC organization willing to work with government contracts must comply with Level 2 BIM
+        requirements. This
+        might prove difficult due to the challenges described above. Government contracts and regulatory requirements
+        left
+        aside, BIM implementation lays the ground for engaging in large-scale construction projects and opens new
+        business
+        opportunities.
+
+    </p>
+
+    <p>
+        Moving on to BIM stages, there are four of them:
+
+    </p>
+    <ul class="blog__list">
+        <li class="blog__item-arrow">
+            <span class="blog__text-strong">Predesign.</span>
+            An architect prepares a schematic 3D model of the future built asset in Revit based on the 2D drawings
+            imported. This
+            doubles as a presentation for the customer. After the walkthrough of the rendered model, the customer can
+            provide
+            feedback on the design or request to add some tweaks.
+
+        </li>
+        <li class="blog__item-arrow">
+            <span class="blog__text-strong">Schematic design.</span>
+            At this stage, the 4D (scheduling) and 5D (cost) considerations are added to the project. Adding cost
+            estimates to the
+            project will help track the construction efficiency later down the track. Scan to BIM services guarantee
+            that precise
+            models are built from point cloud data. The models are built in the way the real building will be
+            constructed, thus
+            ensuring the right sequencing of the operations. This stage produces models for all key structural
+            components,
+            ventilation, heating, elevators, MEP systems, etc.
+
+        </li>
+        <li class="blog__item-arrow">
+            <span class="blog__text-strong">Detailed design.</span>
+            This is a stage of interference check and clash resolution. It is important to establish precise element
+            coordination
+            and ownership at this stage and determine which discipline originally modeled this or that element. The
+            Model Element
+            Author (MEA) has ownership of the elements they created, so if there are any collaborative updates on the
+            elements used
+            in linked models, the MEA decides where to propagate the changes. One of the most essential aspects of BIM
+            is the
+            ability to model every element just once and then update it simultaneously in all the linked models in a
+            particular
+            project.
+
+        </li>
+        <li class="blog__item-arrow">
+            <span class="blog__text-strong">Construction.</span>
+            Throughout this phase, the results of the BIM design process come to fruition. Thanks to detailed
+            walkthroughs and
+            renderings, the customer is always on the same page with the AEC team. Design models from the BIM team are
+            now replaced
+            with models from subcontractors who run their own interference checks in the field. Should any design
+            clashes still
+            occur, they can be reported and tracked till resolution using BIM software like Navisworks. Due to
+            scheduling, most
+            construction elements should be prefabricated, and on-site fabrication must accelerate.
+        </li>
+
+    </ul>
+    <p>As a result of the BIM workflow process, a centralized data environment is created, and the customer saves time
+        and
+        money on design and blueprinting. The prefabrication and fabrication processes go without costly reworks, as all
+        major
+        issues are ironed out in models. The BIM construction process ensures visibility at every stage thanks to
+        scheduling and
+        cost monitoring. The library of models and elements used in a specific project can be stored and easily reused
+        in other
+        projects, saving costs in the long term. Finally, the customer gains real-world facility management data
+        invaluable for
+        further operations of this asset.</p>
+</section> <section class="blog blog-section" id="how-bim-works7">
+  <h2 class="blog__title">How to speed up the BIM process adoption</h2>
+  <p class="blog-section__description">
+    Despite all the positive outcomes and benefits of BIM adoption, the BIM implementation process still comes with
+    significant challenges. The main roadblocks that negatively impact the BIM process are contractors’
+    unwillingness to
+    work with the BIM tools and a lack of BIM expertise in the AEC organizations. One of the reasons why contractors
+    might
+    not want to work with BIM is their bad habit of padding their cost estimates. Replacing the contractor might
+    help here.
+  </p>
+
+
+  <picture>
+    <source srcset="
+        ./images/blog/how-bim-works/how-lg.webp    1x,
+        ./images/blog/how-bim-works/how-lg@2x.webp 2x
+      " media="(min-width: 375px)" type="image/webp" />
+    <source srcset="
+        ./images/blog/how-bim-works/how-lg.jpg    1x,
+        ./images/blog/how-bim-works/how-lg@2x.jpg 2x
+      " media="(min-width: 375px)" type="image/jpeg" />
+
+    <source srcset="
+        ./images/blog/how-bim-works/how-sm.webp    1x,
+        ./images/blog/how-bim-works/how-sm@2x.webp 2x
+      " media="(max-width: 374px)" type="image/webp" />
+    <source srcset="./images/blog/how-bim-works/how-sm@2x.jpg" media="(max-width: 374px)" type="image/jpeg" />
+
+    <img class="blog__image" src="./images/blog/how-bim-works/how-sm.jpg" alt="the working process" width="280"
+      height="157" loading="lazy" />
+  </picture>
+
+  <p>
+    The lack of BIM skills in-house is harder to correct, so many companies decide to opt for external help. When
+    considering BIM outsourcing vs in-house team, the AEC companies discover they can work in synergy with BIM
+    service
+    providers. This greatly empowers their project capabilities, reduces long-term expenses, and ensures timely
+    project
+    completion and high NPS scores. So, all you have to do to overcome this roadblock is find a reliable BIM
+    partner.
+
+
+  </p>
+
+
+</section> <section class="services-contact">
+  <div class="services-contact__block">
+    <h2 class="services-contact__title subscription">
+      Never miss a new blog post from us!
+    </h2>
+    <form class="contact-form subscribe-form" id="subscribeForm">
+      <input
+        class="subscribe-form__field"
+        type="email"
+        name="email"
+        placeholder="Your Email"
+      />
+      <button class="contact-btn subscribe-form__btn" type="submit">
+        subscribe today
+      </button>
+    </form>
+  </div>
+</section>
+ <section class="blog blog-section" id="how-bim-works8">
+  <h2 class="blog__title">Conclusion</h2>
+  <p>
+    We hope you now have a working understanding of what BIM is and how the BIM process works. We have outlined the
+    stages
+    of the BIM design process and described the challenges one might face along the way and how to overcome them.
+
+  </p>
+
+
+
+  <p>
+    Powerkh is a reputed BIM & VDC services provider that has successfully completed 200+ BIM projects in 11 countries
+    since
+    its establishment in 2016. We can help you benefit from instant access to our BIM expertise and have your projects
+    delivered on time and on budget. Should you have any more questions - contact us, we will be glad to help!
+
+
+  </p>
+
+
+</section>  
+<div class="blog blog-footer">
+  <div class="blog-footer__wrapper">
+    <h2 class="blog-footer__title blog__figure-title">
+      Other articles of this author
+    </h2>
+    <ul class="blog__list">
+        
+
+      <li class="blog__item-arrow">
+        <a
+          href="./enhancing-productivity-in-bim-projects-best-tips-&-strategies.html"
+          class="blog-footer__link"
+          >Enhancing Productivity in BIM Projects: Best Tips & Strategies</a
+        >
+      </li>
+         
+
+      <li class="blog__item-arrow">
+        <a
+          href="./boosting-productivity-for-scan-to-bim-projects.html"
+          class="blog-footer__link"
+          >Boosting productivity for Scan to BIM Projects</a
+        >
+      </li>
+                  
+
+      <li class="blog__item-arrow">
+        <a
+          href="./choosing-best-bim-software-for-your-project-in-2021.html"
+          class="blog-footer__link"
+          >Choosing Best BIM Software for Your Project in 2021</a
+        >
+      </li>
+             
+
+      <li class="blog__item-arrow">
+        <a
+          href="./introduction-to-virtual-design-and-construction.html"
+          class="blog-footer__link"
+          >Introduction to Virtual Design and Construction</a
+        >
+      </li>
+           
+
+      <li class="blog__item-arrow">
+        <a
+          href="./how-to-hire-a-bim-team.html"
+          class="blog-footer__link"
+          >How to Hire a BIM Team</a
+        >
+      </li>
+       
+    </ul>
+  </div>
+
+   
+<div class="author">
+  <picture>
+    <source
+      srcset="./images/team/ESU-sm.webp 1x, ./images/team/ESU-md.webp 2x"
+      media="(min-width: 280px)"
+      type="image/webp"
+    />
+    <source
+      srcset="./images/team/ESU-md.jpeg"
+      media="(min-width: 280px)"
+      type="image/jpeg"
+    />
+    <img
+      class="blog__image author__image"
+      src="./images/team/ESU-sm.jpg"
+      loading="lazy"
+      alt="Photo of Yevhen Surzhan"
+      width="360"
+      height="475"
+    />
+  </picture>
+  <div class="author__info">
+    <h2 class="blog__figure-title author__title">Yevhen Surzhan</h2>
+    <p class="author__description">COO & Co-founder</p>
+    <ul class="author__social-list">
+      <li class="author__social-item">
+        <a
+          href="https://www.linkedin.com/in/yevhen-surzhan/"
+          class="author__social-link"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Link to Linkedin"
+        >
+          <svg class="author__social-icon" width="24" height="24">
+            <use href="./images/sprite.svg#linkedin"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="author__social-item">
+        <a
+          href="mailto:esu@powerkh.com"
+          class="author__social-link"
+          aria-label="Send e-mail"
+        >
+          <svg class="author__social-icon" width="31" height="24">
+            <use href="./images/sprite.svg#email"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+</div>
+
+
+ <div class="bim-aside bim-aside--bg-1 ">
+  <h2 class="blog__figure-title bim-aside__title ">BIM Modeling Services</h2>
+  <div class="bim-aside__wrapper ">
+    <a
+      href="./bim-modeling.html"
+      class="contact-btn"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Link to BIM Modeling Services"
+      >Learn more</a
+    >
+  </div>
+</div>
+
+    </div>
+
+    <aside class="sidebar blog-section ">
+      
+<div class="author">
+  <picture>
+    <source
+      srcset="./images/team/ESU-sm.webp 1x, ./images/team/ESU-md.webp 2x"
+      media="(min-width: 280px)"
+      type="image/webp"
+    />
+    <source
+      srcset="./images/team/ESU-md.jpeg"
+      media="(min-width: 280px)"
+      type="image/jpeg"
+    />
+    <img
+      class="blog__image author__image"
+      src="./images/team/ESU-sm.jpg"
+      loading="lazy"
+      alt="Photo of Yevhen Surzhan"
+      width="360"
+      height="475"
+    />
+  </picture>
+  <div class="author__info">
+    <h2 class="blog__figure-title author__title">Yevhen Surzhan</h2>
+    <p class="author__description">COO & Co-founder</p>
+    <ul class="author__social-list">
+      <li class="author__social-item">
+        <a
+          href="https://www.linkedin.com/in/yevhen-surzhan/"
+          class="author__social-link"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Link to Linkedin"
+        >
+          <svg class="author__social-icon" width="24" height="24">
+            <use href="./images/sprite.svg#linkedin"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="author__social-item">
+        <a
+          href="mailto:esu@powerkh.com"
+          class="author__social-link"
+          aria-label="Send e-mail"
+        >
+          <svg class="author__social-icon" width="31" height="24">
+            <use href="./images/sprite.svg#email"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+      <div class="sidebar__wrapper ">
+        <div class="bim-aside bim-aside--bg-1 ">
+  <h2 class="blog__figure-title bim-aside__title ">BIM Modeling Services</h2>
+  <div class="bim-aside__wrapper ">
+    <a
+      href="./bim-modeling.html"
+      class="contact-btn"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Link to BIM Modeling Services"
+      >Learn more</a
+    >
+  </div>
+</div>
+
+      </div>
+    </aside>
+  </div>
+</div>
+
+<section class="faq__contact">
+  <div class="container">
+    <div class="faq__contact-block">
+      <p class="faq__contact-title">Have a BIM Project? Talk To Us.</p>
+      <button class="faq__contact-btn contact-btn" type="button" data-modal="contact-modal">Contact Us</button>
+    </div>
+  </div>
+</section>  
+<section class="cards-case cases">
+  <div class="container">
+    <ul class="cases__list">
+      
+      <li class="cases__list-item">
+        <a
+          href="./enhancing-productivity-in-bim-projects-best-tips-&-strategies.html"
+          class="cases__list-item-link item-link"
+        >
+          <div class="cases__list-content blog__list-content">
+            <h3 class="cases__list-title">Enhancing Productivity in BIM Projects: Best Tips & Strategies</h3>
+
+            
+            <p class="cases__list-text">
+              Yevhen Surzhan
+              <svg width="58" height="56" class="blog-arrow">
+                <use href="./images/sprite.svg#right-arrow"></use>
+              </svg>
+            </p>
+            
+            <p class="cases__list-text">
+              Tetiana Rapina
+              <svg width="58" height="56" class="blog-arrow">
+                <use href="./images/sprite.svg#right-arrow"></use>
+              </svg>
+            </p>
+            
+          </div>
+          <div class="cases__list-imagecont">
+            <img
+              class="cases__list-image"
+              src="./images/blog/hero/hero9.jpg"
+              alt="Enhancing Productivity in BIM Projects: Best Tips & Strategies"
+              width="360"
+              height="218"
+            />
+          </div>
+        </a>
+      </li>
+      
+      <li class="cases__list-item">
+        <a
+          href="./boosting-productivity-for-scan-to-bim-projects.html"
+          class="cases__list-item-link item-link"
+        >
+          <div class="cases__list-content blog__list-content">
+            <h3 class="cases__list-title">Boosting productivity for Scan to BIM Projects</h3>
+
+            
+            <p class="cases__list-text">
+              Yevhen Surzhan
+              <svg width="58" height="56" class="blog-arrow">
+                <use href="./images/sprite.svg#right-arrow"></use>
+              </svg>
+            </p>
+            
+            <p class="cases__list-text">
+              Tetiana Rapina
+              <svg width="58" height="56" class="blog-arrow">
+                <use href="./images/sprite.svg#right-arrow"></use>
+              </svg>
+            </p>
+            
+          </div>
+          <div class="cases__list-imagecont">
+            <img
+              class="cases__list-image"
+              src="./images/blog/hero/hero2.jpg"
+              alt="Boosting productivity for Scan to BIM Projects"
+              width="360"
+              height="218"
+            />
+          </div>
+        </a>
+      </li>
+      
+      <li class="cases__list-item">
+        <a
+          href="./7-benefits-of-bim-services-in-construction.html"
+          class="cases__list-item-link item-link"
+        >
+          <div class="cases__list-content blog__list-content">
+            <h3 class="cases__list-title">7 Benefits of BIM Services in Construction</h3>
+
+            
+            <p class="cases__list-text">
+              Kostya Rapina
+              <svg width="58" height="56" >
+                <use href="./images/sprite.svg#right-arrow"></use>
+              </svg>
+            </p>
+            
+          </div>
+          <div class="cases__list-imagecont">
+            <img
+              class="cases__list-image"
+              src="./images/blog/hero/hero3.jpg"
+              alt="7 Benefits of BIM Services in Construction"
+              width="360"
+              height="218"
+            />
+          </div>
+        </a>
+      </li>
+      
+      <li class="cases__list-item">
+        <a
+          href="./how-bim-works.html"
+          class="cases__list-item-link item-link"
+        >
+          <div class="cases__list-content blog__list-content">
+            <h3 class="cases__list-title">How BIM Works</h3>
+
+            
+            <p class="cases__list-text">
+              Yevhen Surzhan
+              <svg width="58" height="56" >
+                <use href="./images/sprite.svg#right-arrow"></use>
+              </svg>
+            </p>
+            
+          </div>
+          <div class="cases__list-imagecont">
+            <img
+              class="cases__list-image"
+              src="./images/blog/hero/hero4.jpg"
+              alt="How BIM Works"
+              width="360"
+              height="218"
+            />
+          </div>
+        </a>
+      </li>
+      
+      <li class="cases__list-item">
+        <a
+          href="./the-benefits-of-using-laser-scanning-in-construction-you-cant-miss.html"
+          class="cases__list-item-link item-link"
+        >
+          <div class="cases__list-content blog__list-content">
+            <h3 class="cases__list-title">The Benefits of Using Laser Scanning in Construction You Can’t Miss</h3>
+
+            
+            <p class="cases__list-text">
+              Kostya Rapina
+              <svg width="58" height="56" >
+                <use href="./images/sprite.svg#right-arrow"></use>
+              </svg>
+            </p>
+            
+          </div>
+          <div class="cases__list-imagecont">
+            <img
+              class="cases__list-image"
+              src="./images/blog/hero/hero5.jpg"
+              alt="The Benefits of Using Laser Scanning in Construction You Can’t Miss"
+              width="360"
+              height="218"
+            />
+          </div>
+        </a>
+      </li>
+      
+      <li class="cases__list-item">
+        <a
+          href="./top-30-architectural-rendering-companies.html"
+          class="cases__list-item-link item-link"
+        >
+          <div class="cases__list-content blog__list-content">
+            <h3 class="cases__list-title">Top 30 Architectural Rendering Companies</h3>
+
+            
+            <p class="cases__list-text">
+              Tetiana Rapina
+              <svg width="58" height="56" >
+                <use href="./images/sprite.svg#right-arrow"></use>
+              </svg>
+            </p>
+            
+          </div>
+          <div class="cases__list-imagecont">
+            <img
+              class="cases__list-image"
+              src="./images/blog/hero/hero6.jpg"
+              alt="Top 30 Architectural Rendering Companies"
+              width="360"
+              height="218"
+            />
+          </div>
+        </a>
+      </li>
+      
+      <li class="cases__list-item">
+        <a
+          href="./choosing-best-bim-software-for-your-project-in-2021.html"
+          class="cases__list-item-link item-link"
+        >
+          <div class="cases__list-content blog__list-content">
+            <h3 class="cases__list-title">Choosing Best BIM Software for Your Project in 2021</h3>
+
+            
+            <p class="cases__list-text">
+              Yevhen Surzhan
+              <svg width="58" height="56" >
+                <use href="./images/sprite.svg#right-arrow"></use>
+              </svg>
+            </p>
+            
+          </div>
+          <div class="cases__list-imagecont">
+            <img
+              class="cases__list-image"
+              src="./images/blog/hero/hero7.jpg"
+              alt="Choosing Best BIM Software for Your Project in 2021"
+              width="360"
+              height="218"
+            />
+          </div>
+        </a>
+      </li>
+      
+      <li class="cases__list-item">
+        <a
+          href="./as-built-drawings-101-all-you-need-to-know.html"
+          class="cases__list-item-link item-link"
+        >
+          <div class="cases__list-content blog__list-content">
+            <h3 class="cases__list-title">As-Built Drawings 101: All You Need to Know</h3>
+
+            
+            <p class="cases__list-text">
+              Kostya Rapina
+              <svg width="58" height="56" >
+                <use href="./images/sprite.svg#right-arrow"></use>
+              </svg>
+            </p>
+            
+          </div>
+          <div class="cases__list-imagecont">
+            <img
+              class="cases__list-image"
+              src="./images/blog/hero/hero8.jpg"
+              alt="As-Built Drawings 101: All You Need to Know"
+              width="360"
+              height="218"
+            />
+          </div>
+        </a>
+      </li>
+      
+      <li class="cases__list-item">
+        <a
+          href="./bim-outsourcing-vs-in-house-teams.html"
+          class="cases__list-item-link item-link"
+        >
+          <div class="cases__list-content blog__list-content">
+            <h3 class="cases__list-title">BIM Outsourcing vs in-House Teams</h3>
+
+            
+            <p class="cases__list-text">
+              Kostya Rapina
+              <svg width="58" height="56" >
+                <use href="./images/sprite.svg#right-arrow"></use>
+              </svg>
+            </p>
+            
+          </div>
+          <div class="cases__list-imagecont">
+            <img
+              class="cases__list-image"
+              src="./images/blog/hero/hero1.jpg"
+              alt="BIM Outsourcing vs in-House Teams"
+              width="360"
+              height="218"
+            />
+          </div>
+        </a>
+      </li>
+      
+      <li class="cases__list-item">
+        <a
+          href="./introduction-to-virtual-design-and-construction.html"
+          class="cases__list-item-link item-link"
+        >
+          <div class="cases__list-content blog__list-content">
+            <h3 class="cases__list-title">Introduction to Virtual Design and Construction</h3>
+
+            
+            <p class="cases__list-text">
+              Yevhen Surzhan
+              <svg width="58" height="56" >
+                <use href="./images/sprite.svg#right-arrow"></use>
+              </svg>
+            </p>
+            
+          </div>
+          <div class="cases__list-imagecont">
+            <img
+              class="cases__list-image"
+              src="./images/blog/hero/hero10.jpg"
+              alt="Introduction to Virtual Design and Construction"
+              width="360"
+              height="218"
+            />
+          </div>
+        </a>
+      </li>
+      
+      <li class="cases__list-item">
+        <a
+          href="./construction-rfi-template-best-practices.html"
+          class="cases__list-item-link item-link"
+        >
+          <div class="cases__list-content blog__list-content">
+            <h3 class="cases__list-title">Construction RFI: Template, Best Practices</h3>
+
+            
+            <p class="cases__list-text">
+              Kostya Rapina
+              <svg width="58" height="56" >
+                <use href="./images/sprite.svg#right-arrow"></use>
+              </svg>
+            </p>
+            
+          </div>
+          <div class="cases__list-imagecont">
+            <img
+              class="cases__list-image"
+              src="./images/blog/hero/hero11.jpg"
+              alt="Construction RFI: Template, Best Practices"
+              width="360"
+              height="218"
+            />
+          </div>
+        </a>
+      </li>
+      
+      <li class="cases__list-item">
+        <a
+          href="./how-to-hire-a-bim-team.html"
+          class="cases__list-item-link item-link"
+        >
+          <div class="cases__list-content blog__list-content">
+            <h3 class="cases__list-title">How to Hire a BIM Team</h3>
+
+            
+            <p class="cases__list-text">
+              Yevhen Surzhan
+              <svg width="58" height="56" >
+                <use href="./images/sprite.svg#right-arrow"></use>
+              </svg>
+            </p>
+            
+          </div>
+          <div class="cases__list-imagecont">
+            <img
+              class="cases__list-image"
+              src="./images/blog/hero/hero12.jpg"
+              alt="How to Hire a BIM Team"
+              width="360"
+              height="218"
+            />
+          </div>
+        </a>
+      </li>
+      
+    </ul>
+
+    <button class="more-btn">
+      <svg class="more-btn--icon">
+        <use href="./images/sprite.svg#load-more"></use>
+      </svg>
+      More cases
+    </button>
+  </div>
+</section>
+ 
+  </main>
+
+  <footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__list-wrapper">
+        <ul class="footer__nav-list">
+          <li class="footer__nav-list-item">
+            <a href="https://nikolay-tymoshchuk.github.io/jazz-tpl/" class="footer__nav-link">Home</a>
+          </li>
+          <li class="footer__nav-list-item">
+            <a href="./case-studies.html" class="footer__nav-link">Case Studies</a>
+          </li>
+          <li class="footer__nav-list-item">
+            <a href="./blog.html" class="footer__nav-link">Blog</a>
+          </li>
+          <li class="footer__nav-list-item">
+            <a href="./about-us.html" class="footer__nav-link">About</a>
+          </li>
+          <li class="footer__nav-list-item">
+            <a href="./career.html" class="footer__nav-link">Career</a>
+          </li>
+          <li class="footer__nav-list-item">
+            <a href="./contacts.html" class="footer__nav-link">Contacts</a>
+          </li>
+        </ul>
+
+        <ul class="footer__services-list">
+          <li class="footer__services-list-item">
+            <p class="footer__services-list-title">Services:</p>
+          </li>
+          <li class="footer__services-list-item">
+            <a href="./bim-modeling.html" class="footer__services-list-link">BIM Modeling</a>
+          </li>
+          <li class="footer__services-list-item">
+            <a href="./bim-coordination.html" class="footer__services-list-link">BIM Coordination</a>
+          </li>
+          <li class="footer__services-list-item">
+            <a href="./bim-content-creation.html" class="footer__services-list-link">BIM Content</a>
+          </li>
+          <li class="footer__services-list-item">
+            <a href="./scan-to-bim.html" class="footer__services-list-link">Scan-to-BIM</a>
+          </li>
+          <li class="footer__services-list-item">
+            <a href="./bim-automation.html" class="footer__services-list-link">BIM Automation</a>
+          </li>
+          <li class="footer__services-list-item">
+            <a href="./bim-prefabrication.html" class="footer__services-list-link">Prefabrication & Fabrication</a>
+          </li>
+          <li class="footer__services-list-item">
+            <a href="./structural-detailing.html" class="footer__services-list-link">Structural detailing</a>
+          </li>
+          <!-- <li class="footer__services-list-item">
+            <a href="./architectural-rendering.html" class="footer__services-list-link">Architectural Rendering</a>
+          </li> -->
+        </ul>
+      </div>
+
+      <div class="footer__social-wrapper">
+        <a href="#scroll-point" class="footer__up-link">
+          Up
+          <svg class="footer__up-link-icon" width="14" height="13">
+            <use href="./images/spri  te.svg#up-arrow"></use>
+          </svg>
+        </a>
+
+        <ul class="footer__social-list">
+          <li class="footer__social-list-item">
+            <a href="https://www.instagram.com/powerkh_com/" class="footer__social-link" target="_blank"
+              rel="noopener noreferrer" aria-label="Link to Instagram">
+              <svg class="footer__social-icon" width="32" height="32">
+                <use href="./images/sprite.svg#instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__social-list-item">
+            <a href="https://www.facebook.com/Powerkh-100153471390616/" class="footer__social-link" target="_blank"
+              rel="noopener noreferrer" aria-label="Link to Facebook">
+              <svg class="footer__social-icon" width="30" height="30">
+                <use href="./images/sprite.svg#facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__social-list-item">
+            <a href="https://www.linkedin.com/company/powerkh/about/" class="footer__social-link" target="_blank"
+              rel="noopener noreferrer" aria-label="Link to Linkedin">
+              <svg class="footer__social-icon" width="25" height="25">
+                <use href="./images/sprite.svg#linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="footer__desc">Powerkh &minus; BIM & VDC solution provider</p>
+  </div>
+</footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./js/menu.js"></script>
+  <script src="./js/modal.js"></script>
+  <script src="./js/mail.js"></script>
+  <script src="./js/form-validation.js"></script>
+  <script src="./js/activeLink.js"></script>
+  <script src="./js/multi-animated-counter.js"></script>
+  <script src="./js/scroll.js"></script>
+  <script src="./js/hideCase.js"></script>
+
+  <!-- Slick-slider -->
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="./js/slick-slider.js"></script>
+
+  <!-- Photoswipe -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+  <script src="./js/photoswipe.js"></script>
+</body>
+
+</html>

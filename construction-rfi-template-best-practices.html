@@ -1,0 +1,1814 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico" />
+
+<title>Construction RFI: Template, Best Practices</title>
+<link rel="canonical" href="https://www.powerkh.com/construction-rfi-template-best-practices.html" />
+<meta name="description" content="Everything you need to know about RFI in construction" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.powerkh.com/construction-rfi-template-best-practices.html" />
+<meta
+  property="og:image"
+  content="https://www.powerkh.com/images/blog/hero/hero11-og.jpg"
+/>
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="" />
+<meta name="twitter:title" content="Construction RFI: Template, Best Practices | Powerkh" />
+<meta name="twitter:description" content="Everything you need to know about RFI in construction" />
+<meta name="twitter:image:src" content="./images/blog/hero/hero11-twitter.jpg" />
+<meta property="og:image:type" content="image/jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:site_name" content="" />
+<meta property="og:title" content="Construction RFI: Template, Best Practices | Powerkh" />
+<meta property="og:description" content="Everything you need to know about RFI in construction" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/default-skin.css"
+/>
+<link rel=" stylesheet" href="css/blog-page.css" />
+<!-- Google Tag Manager -->
+<script>(function (w, d, s, l, i) {
+    w[l] = w[l] || []; w[l].push({
+      'gtm.start':
+        new Date().getTime(), event: 'gtm.js'
+    }); var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+  })(window, document, 'script', 'dataLayer', 'GTM-NS7B7PB');
+</script>
+<!-- End Google Tag Manager -->
+
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NS7B7PB" height="0" width="0"
+    style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --> 
+<div id="scroll-point"></div>
+
+<header class="header" id="header">
+  <div class="container">
+    <nav class="navigation">
+      <a href="https://nikolay-tymoshchuk.github.io/jazz-tpl/" class="logo" aria-label="logotype">
+        <svg class="logo-svg" width="54" height="43">
+          <use href="./images/sprite.svg#logo"></use>
+        </svg>
+      </a>
+
+      <ul class="navigation__list">
+        <li class="navigation__list-item navigation__list-item--services">
+          <button type="button" class="navigation__list-link navigation__list-button">
+            Services
+          </button>
+          <ul class="navigation__submenu">
+            <li class="navigation__list-item">
+              <a href="./bim-modeling.html" class="navigation__list-link">BIM Modeling</a>
+            </li>
+            <li class="navigation__list-item">
+              <a href="./bim-coordination.html" class="navigation__list-link">BIM Coordination</a>
+            </li>
+            <li class="navigation__list-item">
+              <a href="./bim-content-creation.html" class="navigation__list-link">BIM Content</a>
+            </li>
+            <li class="navigation__list-item">
+              <a href="./scan-to-bim.html" class="navigation__list-link">Scan to BIM</a>
+            </li>
+            <li class="navigation__list-item">
+              <a href="./bim-automation.html" class="navigation__list-link">BIM Automation</a>
+            </li>
+            <li class="navigation__list-item">
+              <a href="./bim-prefabrication.html" class="navigation__list-link">Prefabrication & Fabrication</a>
+            </li>
+            <li class="navigation__list-item">
+              <a href="./structural-detailing.html" class="navigation__list-link">Structural detailing</a>
+            </li>
+            <!-- <li class="navigation__list-item">
+              <a href="./architectural-rendering.html" class="navigation__list-link">Architectural Rendering</a>
+            </li> -->
+          </ul>
+        </li>
+
+        <li class="navigation__list-item">
+          <a href="./case-studies.html" class="navigation__list-link">Case Studies</a>
+        </li>
+
+        <li class="navigation__list-item navigation__list-item--blog">
+          <a href="./blog.html" class="navigation__list-link navigation__list-button">
+            Blog
+          </a>
+        </li>
+
+        <li class="navigation__list-item navigation__list-item--about">
+          <a href="./about-us.html" class="navigation__list-link">About</a>
+        </li>
+
+        <li class="navigation__list-item navigation__list-item--contacts">
+          <button class="contact-btn" type="button" data-modal="contact-modal">
+            Contact Us
+          </button>
+        </li>
+      </ul>
+    </nav>
+
+    <button class="burger" type="button" aria-expanded="false" data-menu-button>
+      <span class="burger__item">Open navigation</span>
+    </button>
+  </div>
+
+  <div class="modal-menu" data-menu>
+    <ul class="modal-menu__navigation">
+      <li class="modal-menu__navigation-item">
+        <a href="https://nikolay-tymoshchuk.github.io/jazz-tpl/" class="modal-menu__navigation-link">Home</a>
+      </li>
+
+      <li class="modal-menu__navigation-item modal-menu__navigation-item--services">
+        <p class="modal-menu__navigation-link modal-menu__navigation-link--services">
+          Services
+        </p>
+        <ul class="modal-menu__submenu">
+          <li class="modal-menu__navigation-item">
+            <a href="./bim-modeling.html" class="modal-menu__navigation-link navigation__list-link">BIM Modeling</a>
+          </li>
+          <li class="modal-menu__navigation-item">
+            <a href="./bim-coordination.html" class="modal-menu__navigation-link navigation__list-link">BIM
+              Coordination</a>
+          </li>
+          <li class="modal-menu__navigation-item">
+            <a href="./bim-content-creation.html" class="modal-menu__navigation-link navigation__list-link">BIM
+              Content</a>
+          </li>
+          <li class="modal-menu__navigation-item">
+            <a href="./scan-to-bim.html" class="modal-menu__navigation-link navigation__list-link">Scan to BIM</a>
+          </li>
+          <li class="modal-menu__navigation-item">
+            <a href="./bim-automation.html" class="modal-menu__navigation-link navigation__list-link">BIM Automation</a>
+          </li>
+          <li class="modal-menu__navigation-item">
+            <a href="./bim-prefabrication.html" class="modal-menu__navigation-link navigation__list-link">Prefabrication
+              & Fabrication</a>
+          </li>
+          <li class="modal-menu__navigation-item">
+            <a href="./structural-detailing.html" class="modal-menu__navigation-link navigation__list-link">Structural
+              detailing</a>
+          </li>
+          <!-- <li class="modal-menu__navigation-item">
+            <a
+              href="./architectural-rendering.html"
+              class="modal-menu__navigation-link navigation__list-link"
+              >Architectural Rendering</a
+            >
+          </li> -->
+        </ul>
+      </li>
+
+      <li class="modal-menu__navigation-item">
+        <a href="./case-studies.html" class="modal-menu__navigation-link navigation__list-link">Case Studies</a>
+      </li>
+
+      <li class="modal-menu__navigation-item">
+        <a href="./blog.html" class="modal-menu__navigation-link navigation__list-link">
+          Blog
+        </a>
+      </li>
+
+      <li class="modal-menu__navigation-item">
+        <a href="./about-us.html" class="modal-menu__navigation-link navigation__list-link">About</a>
+      </li>
+
+      <li class="modal-menu__navigation-item">
+        <a href="./career.html" class="modal-menu__navigation-link navigation__list-link">Career</a>
+      </li>
+
+      <li class="modal-menu__navigation-item">
+        <a href="./contacts.html" class="modal-menu__navigation-link navigation__list-link">Contacts</a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+  <main>
+    <div class="modal" id="contact-modal">
+  <div class="container">
+    <div class="modal__content modal-js">
+      <button class="close modal__btn">
+        <svg class="modal__btn--svg" width="20" height="20">
+          <use href="./images/sprite.svg#cancel"></use>
+        </svg>
+      </button>
+
+      <p class="modal__title">Have any questions? Contact us!</p>
+
+      <form
+        class="contact-form"
+        id="contactForm"
+        name="modal-contact"
+        data-form
+        novalidate
+      >
+        <div class="contact-form__content">
+          <div class="contact-form__group modal__input-underline">
+            <input
+              class="contact-form__input contact-form__form-input"
+              type="text"
+              name="name"
+              required
+            />
+            <label class="contact-form__modal-label"
+              >How can we call you?</label
+            >
+          </div>
+
+          <div class="contact-form__group modal__input-underline">
+            <input
+              class="contact-form__input contact-form__form-input"
+              type="text"
+              name="email-or-phone"
+              data-required
+              required
+            />
+            <label class="contact-form__modal-label"
+              >Phone or E-mail&ast;</label
+            >
+          </div>
+
+          <input class="hidden" type="text" name="Career" hidden />
+
+          <span class="error" aria-live="polite"></span>
+        </div>
+
+        <button
+          class="contact-form__btn banner__button"
+          type="submit"
+          value="Submit"
+          aria-label="Submit"
+          id="submit"
+        >
+          Send
+          <svg width="34" height="34">
+            <use href="./images/sprite.svg#right-arrow"></use>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+  <section class="blog blog-hero blog-hero-11">
+  <div class="container">
+    <h1 class="blog-hero__title">
+      Construction RFI: Template, Best Practices
+    </h1>
+  </div>
+</section>
+
+
+<div class="container">
+  <div class="blog__content-wrapper">
+    <aside class="sidebar blog-section">
+      <div class="sidebar__wrapper">
+         
+<!-- Load Facebook SDK for JavaScript -->
+<script>
+  (function(d, s, id) {
+    var js,
+      fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0';
+    fjs.parentNode.insertBefore(js, fjs);
+  })(document, 'script', 'facebook-jssdk');
+</script>
+
+<div class="social-aside">
+  <h2 class="blog__figure-title social-aside__title">Share:</h2>
+  <ul class="social-aside__list">
+    <li class="social-aside__item">
+      <div class="fb-share-button" data-href="https://www.powerkh.com/construction-rfi-template,-best-practices.html" data-size="large">
+        <a
+          class="fb-xfbml-parse-ignore social-aside__link"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Link to Facebook"
+          href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.powerkh.com%2Fconstruction-rfi-template,-best-practices.html&amp;src=sdkpreparse"
+        >
+          <svg class="social-aside__icon" width="30" height="30">
+            <use href="./images/sprite.svg#facebook"></use>
+          </svg>
+        </a>
+      </div>
+    </li>
+    <li class="social-aside__item">
+      <a
+        href="https://www.linkedin.com/sharing/share-offsite/?&url=https://www.powerkh.com/construction-rfi-template,-best-practices.html"
+        class="social-aside__link"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Link to Linkedin"
+      >
+        <svg class="social-aside__icon" width="25" height="25">
+          <use href="./images/sprite.svg#linkedin"></use>
+        </svg>
+      </a>
+    </li>
+  </ul>
+</div>
+
+      </div>
+    </aside>
+
+    <div class="blog__content">
+      <section class="blog-section contents">
+  <div class="contents__wrapper">
+    <h2 class="blog__title contents__title">Contents</h2>
+    <ul class="contents__list">
+      <li class="contents__item">
+        <a
+          href="#construction-vdc1"
+          class="contents__link navigation__list-link"
+          >What is RFI in construction?</a
+        >
+      </li>
+      <li class="contents__item">
+        <a
+          href="#construction-vdc2"
+          class="contents__link navigation__list-link"
+          >How to write a construction RFI</a
+        >
+      </li>
+      <li class="contents__item">
+        <a
+          href="#construction-vdc3"
+          class="contents__link navigation__list-link"
+          >RFI template example</a
+        >
+      </li>
+      <li class="contents__item">
+        <a
+          href="#construction-vdc4"
+          class="contents__link navigation__list-link"
+          >How to respond to construction RFIs efficiently</a
+        >
+      </li>
+    </ul>
+  </div>
+</section>
+ <section class="blog blog-section introduction">
+  
+<div class="author">
+  <picture>
+    <source
+      srcset="./images/team/KRP-sm.webp 1x, ./images/team/KRP-md.webp 2x"
+      media="(min-width: 280px)"
+      type="image/webp"
+    />
+    <source
+      srcset="./images/team/KRP-md.jpeg"
+      media="(min-width: 280px)"
+      type="image/jpeg"
+    />
+    <img
+      class="blog__image author__image"
+      src="./images/team/KRP-sm.jpg"
+      loading="lazy"
+      alt="Photo of Kostya Rapina"
+      width="360"
+      height="475"
+    />
+  </picture>
+  <div class="author__info">
+    <h2 class="blog__figure-title author__title">Kostya Rapina</h2>
+    <p class="author__description">CEO & Co-founder</p>
+    <ul class="author__social-list">
+      <li class="author__social-item">
+        <a
+          href="https://www.linkedin.com/in/rapina/"
+          class="author__social-link"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Link to Linkedin"
+        >
+          <svg class="author__social-icon" width="24" height="24">
+            <use href="./images/sprite.svg#linkedin"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="author__social-item">
+        <a
+          href="mailto:krp@powerkh.com"
+          class="author__social-link"
+          aria-label="Send e-mail"
+        >
+          <svg class="author__social-icon" width="31" height="24">
+            <use href="./images/sprite.svg#email"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+  <div class="introduction__description">
+    <p>
+      As an Architecture, Engineering, and Construction (AEC) specialist, you
+      are likely to be familiar with using RFI in construction. Still, not many
+      architects or contractors actually know the real costs of the suboptimal
+      construction RFI handling workflow. Nearly $860,000 out of every $1million
+      spent on long-term projects is allocated to handling RFI documentation,
+      according to the findings of a
+      <a
+        class="blog__text-link blog__text-underline blog__text-cursive"
+        href="https://www.cmaanet.org/sites/default/files/resource/Impact%20%26%20Control%20of%20RFIs%20on%20Construction%20Projects.pdf"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+        >Navigant Construction forum survey</a
+      >
+      that involved nearly 1,400 projects.
+    </p>
+    <p>
+      Try to wrap your head around the fact that nearly 86% of expenses go not
+      into construction but are spent on the time wasted while multiple
+      stakeholders ping-pong inefficient RFIs back and forth. This is a colossal
+      waste of customer’s resources — but it can be made efficient with the
+      proper project management. Read on to learn all about what RFI is, what it
+      is used for, how to write an RFI construction document, and how to
+      properly respond to it.
+    </p>
+  </div>
+</section>
+ <section class="blog blog-section" id="construction-vdc1">
+  <h2 class="blog__title">What is RFI in construction?</h2>
+  <p>
+    As a rule of thumb, a request for information in construction is a document
+    meant to resolve any ambiguities, fill in the gaps, or clarify any concerns
+    that arise during the construction project. Subcontractors usually issue
+    these RFIs to general contractors or clients to solve a particular issue.
+    The term can also apply to initial inquiries made by the customer before the
+    tender bidding stage to gather some preliminary information on the costs and
+    methods of project delivery by different contractors.
+  </p>
+  <picture>
+    <source
+      srcset="
+        ./images/blog/construction-rfi/building.webp    1x,
+        ./images/blog/construction-rfi/building@2x.webp 2x
+      "
+      media="(min-width: 375px)"
+      type="image/webp"
+    />
+    <source
+      srcset="
+        ./images/blog/construction-rfi/building.jpg    1x,
+        ./images/blog/construction-rfi/building@2x.jpg 2x
+      "
+      media="(min-width: 375px)"
+      type="image/jpeg"
+    />
+
+    <source
+      srcset="
+        ./images/blog/construction-rfi/building-sm.webp 1x,
+        ./images/blog/construction-rfi/building-md.webp 2x
+      "
+      media="(max-width: 374px)"
+      type="image/webp"
+    />
+    <source
+      srcset="./images/blog/construction-rfi/building-md.jpg"
+      media="(max-width: 374px)"
+      type="image/jpeg"
+    />
+
+    <img
+      class="blog__image"
+      src="./images/blog/construction-rfi/building-sm.jpg"
+      alt="team at work"
+      width="280"
+      height="158"
+      loading="lazy"
+    />
+  </picture>
+  <h3 class="blog__item-title">What is it used for?</h3>
+  <p>
+    No designs, construction plans, as-built documentation, or blueprints can
+    predict all the issues that may occur throughout a lengthy construction
+    project. Some materials or equipment might have to be replaced, some system
+    configurations might need to be updated, and there are plenty of other
+    issues that might arise. To avoid costly reworks further down the track,
+    each case should be appropriately highlighted and processed according to a
+    stable workflow.
+  </p>
+  <p>
+    The most common example of RFI in construction takes the form of a request
+    from a subcontractor to a general contractor to provide additional details
+    in situations such as:
+  </p>
+  <ul class="blog__list">
+    <li class="blog__item-arrow">
+      <span class="blog__text-strong">Design clarification.</span> Many changes
+      can occur during the project. Should any part of the design be unclear or
+      contain conflicts with the actual structure, an RFI should be filed.
+    </li>
+    <li class="blog__item-arrow">
+      <span class="blog__text-strong">Substitution of materials.</span>
+      Sometimes the originally intended materials become unexpectedly
+      unavailable, unaffordable, or no longer suitable for the project. It means
+      that it's time to discuss an appropriate replacement.
+    </li>
+    <li class="blog__item-arrow">
+      <span class="blog__text-strong">Construction issues resolution.</span> For
+      various reasons, the planned construction sequence can change, and
+      multiple issues might arise as a result. An RFI helps ensure these changes
+      don’t derail the project.
+    </li>
+    <li class="blog__item-arrow">
+      <span class="blog__text-strong">Contract terms clarificatio.</span> No
+      contract can predict all eventualities. RFI helps sort out the cases when
+      the project budget or timeline must be adjusted.
+    </li>
+  </ul>
+  <p>
+    As you can see, items like construction RFI form a valuable part of overall
+    project documentation and should be handled attentively to ensure smooth
+    project execution.
+  </p>
+  <h3 class="blog__item-title">Why use construction RFI technology</h3>
+  <p>
+    In many cases, unresolved ambiguities or disputes during the planning or
+    design stage result in huge expenses on reworks in the future. Maintaining a
+    healthy and transparent RFI workflow helps keep the discussion structured,
+    and the issues addressed promptly. Time is of the essence in construction,
+    so an
+    <a
+      class="blog__text-link blog__text-underline blog__text-cursive"
+      href="http://www.constructionexec.com/article/reducing-the-cost-and-time-impact-of-rfis"
+      target="_blank"
+      rel="noopener noreferrer nofollow"
+      >average RFI is answered in about a week</a
+    >.
+  </p>
+  <p>
+    However, sometimes an RFI cannot be answered by the contractor and is
+    forwarded to the architect, designers, or the customer’s stakeholders. This
+    results in lots of ping-pong discussions between multiple parties. Using
+    specialized technology to digitally issue and respond to RFIs helps keep all
+    of these discussions traceable and the whole process predictable. Meanwhile,
+    some years ago, more than
+    <a
+      class="blog__text-link blog__text-underline blog__text-cursive"
+      href="https://www.constructionjunkie.com/blog/2015/9/7/the-cost-of-rfis-and-best-practices-for-construction-professionals"
+      target="_blank"
+      rel="noopener noreferrer nofollow"
+      >20% of construction RFI cases remained unanswered)</a
+    >.
+  </p>
+  <p>This is what an approximate RFI process looks like:</p>
+  <ul class="blog__list">
+    <li class="blog__item-arrow">
+      When a subcontractor encounters an issue, they write an RFI and submit it
+      to a contractor to clarify.
+    </li>
+    <li class="blog__item-arrow">
+      If possible, a general contractor tries to provide a precise response to
+      the challenge described in the RFI.
+    </li>
+    <li class="blog__item-arrow">
+      If additional information is required, the RFI is forwarded to the
+      appropriate project participants — designers, architects, engineers, the
+      customer’s stakeholders, etc. If the request needs additional
+      clarification, the RFI can be returned to the subcontractor for more
+      detail.
+    </li>
+    <li class="blog__item-arrow">
+      If the request needs additional clarification, the RFI can be returned to
+      the subcontractor for more detail.
+    </li>
+    <li class="blog__item-arrow">
+      As soon as the RFI receives a clear response from the appropriate person,
+      it is sent back to the subcontractor.
+    </li>
+    <li class="blog__item-arrow">
+      If the response provides all the details needed, the work can continue. If
+      not — rinse, repeat.
+    </li>
+  </ul>
+  <p>
+    Naturally, while a contractor awaits an RFI response and puts the job on
+    hold, the customer loses money. Therefore, having a well-structured RFI
+    process helps ensure all requests and inquiries are seen, heard, and
+    addressed to ensure the project remains on track. This brings us to the next
+    point — how do you ensure the RFI process works well?
+  </p>
+</section>
+ <section class="services-contact">
+  <div class="services-contact__block">
+    <h2 class="services-contact__title">BIM Coordination Services</h2>
+
+    <p class="services-contact__text">
+      Powerkh - a trusted BIM coordination & clash detection solution provider. 10+ highly qualified BIM/VDC experts. Experience in BIM coordination, clash detection, and constructability reviews.
+    </p>
+
+    <a
+      href="./bim-coordination.html"
+      class="faq__contact-btn contact-btn services-contact__btn"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Link to BIM Modeling Services"
+      >Read more</a
+    >
+  </div>
+</section>
+ <section class="blog blog-section" id="construction-vdc2">
+  <h2 class="blog__title">How to write a construction RFI</h2>
+  <p>
+    You want your RFIs to be answered quickly and provide valuable input. To
+    ensure this outcome, they must be structured in a certain way. Here is an
+    example of RFI in construction:
+  </p>
+
+  <ul class="blog__list">
+    <li class="blog__item-arrow">
+      <span class="blog__text-strong">A clear description of a problem.</span>
+      Concisely describe the issue at hand, and keep it short, with one issue
+      per RFI
+    </li>
+    <li class="blog__item-arrow">
+      <span class="blog__text-strong">A suggested solution</span> stemming from
+      the expertise available.
+    </li>
+    <li class="blog__item-arrow">
+      <span class="blog__text-strong">Some context, </span> to leave no chance
+      for uncertainty.
+    </li>
+    <li class="blog__item-arrow">
+      <span class="blog__text-strong">Visuals</span> describing the challenge,
+      if applicable. Photos, designs, or any other information that can help
+      visualize the issue.
+    </li>
+  </ul>
+  <p>
+    Following this pattern, the party issuing an RFI maximizes the chances of
+    receiving a timely, concise, and on-point response.
+  </p>
+
+  <h3 class="blog__item-title">RFI process handling best practices</h3>
+  <ul class="blog__list">
+    <li class="blog__item-arrow">
+      <span class="blog__text-strong">Project name.</span>
+      A contractor company rarely works on a single project at a time. Stating
+      the project name helps to quickly understand what the RFI relates to.
+    </li>
+    <li class="blog__item-arrow">
+      <span class="blog__text-strong">Creation date.</span>
+      This helps keep the timeline consistent and keep track of when this or
+      that issue arose.
+    </li>
+    <li class="blog__item-arrow">
+      <span class="blog__text-strong">The RFI number.</span>
+      These can be chronological or formed according to other rules, and they
+      just have to be unique to help find the data with ease later, should the
+      need arise.
+    </li>
+    <li class="blog__item-arrow">
+      <span class="blog__text-strong">The recipient’s details.</span>
+      An RFI must contain a list of people who should receive it. Not emails,
+      but full names and positions.
+    </li>
+    <li class="blog__item-arrow">
+      <span class="blog__text-strong">The subject name.</span>
+      Clearly state the intent of the RFI. “Please clarify” is not good,
+      “Questions on plumbing” is better, “Issue with fittings on drainage” is
+      best.
+    </li>
+    <li class="blog__item-arrow">
+      <span class="blog__text-strong">RFI details.</span>
+      The reason for submitting this RFI and the details you need to obtain from
+      the response.
+    </li>
+    <li class="blog__item-arrow">
+      <span class="blog__text-strong">Response date.</span>
+      As mentioned above, usually a week after the issuing date, but it can be
+      sooner if there is an emergency.
+    </li>
+    <li class="blog__item-arrow">
+      <span class="blog__text-strong">A reference to documentation.</span>
+      If an issue described in this RFI relates to some other document, state
+      its reference number and format to ease locating the relevant details.
+    </li>
+    <li class="blog__item-arrow">
+      <span class="blog__text-strong">Issuer’s name.</span>
+      This will help the other parties identify who to reply to.
+    </li>
+    <li class="blog__item-arrow">
+      <span class="blog__text-strong">Company details.</span>
+      This will also help narrow down the search among many RFIs.
+    </li>
+    <li class="blog__item-arrow">
+      <span class="blog__text-strong">Response date.</span>
+      Note this when the RFI issuer has received a response.
+    </li>
+  </ul>
+  <p>
+    As these details are the same in every construction RFI form, preparing an
+    RFI template to use in your projects makes perfect sense.
+  </p>
+</section>
+ 
+
+<div class="blog__case-studies">
+  <h2 class="blog__figure-title blog__figure-title--mb25">Our Case Studies</h2>
+  <div class="blog__case-studies-thumb">
+    <button class="blog__arrow blog__arrow--prev" type="button" aria-label="Arrow Prev">
+      <svg class="blog__arrow--svg" width="24" height="24">
+        <use href="./images/sprite.svg#arrow-prev"></use>
+      </svg>
+    </button>
+
+    <div class="blog__case-studies-wrapper" id="js-blog-slider">
+      
+      <div class="slider__item">
+        <a class="cases__list-item-link cases__list-item-link--1" 
+        href="./formwork-design-case.html" target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Link to Formwork design automation">
+          <p class="cases__list-title">Formwork design automation</p>
+          <p class="cases__list-text">
+            Our client from <br>
+            California, USA
+          </p>
+        </a>
+      </div>
+      
+      <div class="slider__item">
+        <a class="cases__list-item-link cases__list-item-link--2" 
+        href="./suspended-ceiling-case.html" target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Link to Suspend ceiling design automation">
+          <p class="cases__list-title">Suspend ceiling design automation</p>
+          <p class="cases__list-text">
+            Our client from <br>
+           New York, USA
+          </p>
+        </a>
+      </div>
+      
+      <div class="slider__item">
+        <a class="cases__list-item-link cases__list-item-link--4" 
+        href="./wall-framing-design-case.html" target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Link to Wall framing design automation">
+          <p class="cases__list-title">Wall framing design automation</p>
+          <p class="cases__list-text">
+            Our client from <br>
+            California, USA
+          </p>
+        </a>
+      </div>
+      
+
+    </div>
+
+    <button class="blog__arrow blog__arrow--next" type="button" aria-label="Arrow next">
+      <svg class="blog__arrow--svg" width="24" height="24">
+        <use href="./images/sprite.svg#arrow-next"></use>
+      </svg>
+    </button>
+  </div>
+</div>
+ <section class="blog blog-section" id="construction-vdc3">
+  <h2 class="blog__title">RFI template example</h2>
+  <picture>
+    <source
+      srcset="
+        ./images/blog/construction-rfi/rfi-template.webp    1x,
+        ./images/blog/construction-rfi/rfi-template@2x.webp 2x
+      "
+      media="(min-width: 375px)"
+      type="image/webp"
+    />
+    <source
+      srcset="
+        ./images/blog/construction-rfi/rfi-template.jpg    1x,
+        ./images/blog/construction-rfi/rfi-template@2x.jpg 2x
+      "
+      media="(min-width: 375px)"
+      type="image/jpeg"
+    />
+
+    <source
+      srcset="
+        ./images/blog/construction-rfi/rfi-template-sm.webp 1x,
+        ./images/blog/construction-rfi/rfi-template-md.webp 2x
+      "
+      media="(max-width: 374px)"
+      type="image/webp"
+    />
+    <source
+      srcset="./images/blog/construction-rfi/rfi-template-md.jpg"
+      media="(max-width: 374px)"
+      type="image/jpeg"
+    />
+
+    <img
+      class="blog__image"
+      src="./images/blog/construction-rfi/rfi-template-sm.jpg"
+      alt="RFI template example"
+      width="280"
+      height="158"
+      loading="lazy"
+    />
+  </picture>
+  <p>
+    Feel free to use this fillable
+    <a
+      class="blog__text-link blog__text-underline blog__text-cursive"
+      href="https://docs.google.com/document/d/1kj7FrTKN0zcJosgZ6OdNn-oy35-aRsIiM6eAF8OH43Y/edit"
+      target="_blank"
+      rel="noopener noreferrer nofollow"
+      >RFI template</a
+    >
+    (a Google doc without editing rights, so please make a copy). Save it in a
+    PDF format if you need it, so it’s easier to email it if your company does
+    not yet have specialized RFI management software in place. It also makes
+    sense to have a Google spreadsheet (or an Excel file) for an
+    <a
+      class="blog__text-link blog__text-underline blog__text-cursive"
+      href="https://docs.google.com/spreadsheets/d/1e3Il0fUksQ8_UP17F-coQBnCKoby2rIHRvE8arX2jds/edit?usp=sharing"
+      target="_blank"
+      rel="noopener noreferrer nofollow"
+      >RFI handling log</a
+    >
+    to ensure consistency and traceability for the efficient handling of every
+    RFI. The link above showcases the stages of every RFI request:
+  </p>
+
+  <ul class="blog__list">
+    <li class="blog__item-arrow">
+      <span class="blog__text-strong">Open.</span>
+      RFI request added, changes pending.
+    </li>
+    <li class="blog__item-arrow">
+      <span class="blog__text-strong">Closed.</span> RFI request closed as
+      changes were done.
+    </li>
+    <li class="blog__item-arrow">
+      <span class="blog__text-strong">Returned.</span> RFI request returned to
+      the issuer for additional clarification
+    </li>
+    <li class="blog__item-arrow">
+      <span class="blog__text-strong">Not valid.</span> The RFI request lost its
+      validity and was closed.
+    </li>
+  </ul>
+  <p>
+    This can also be done using any project management system like Procore,
+    Bim360, Trello or Asana, Jira or Youtrack — wherever you can assign tasks to
+    a certain person, attach files to them and track the status of every task.
+  </p>
+  <p>
+    <span class="blog__text-strong">Keep track of RFI implementation.</span>
+    Otherwise, there is a risk of missing critical updates or the process
+    getting clogged by dozens and hundreds of unresolved requests. As handling
+    RFI documentation requires the attention of all the people involved, the
+    progress is best tracked during BIM coordination meetings.
+  </p>
+
+  <h3 class="blog__item-title">RFI process handling best practices</h3>
+  <ul class="blog__list">
+    <li class="blog__item-arrow">
+      <span class="blog__text-strong">Project name.</span>
+      A contractor company rarely works on a single project at a time. Stating
+      the project name helps to quickly understand what the RFI relates to.
+    </li>
+    <li class="blog__item-arrow">
+      <span class="blog__text-strong">Creation date.</span>
+      This helps keep the timeline consistent and keep track of when this or
+      that issue arose.
+    </li>
+    <li class="blog__item-arrow">
+      <span class="blog__text-strong">The RFI number.</span>
+      These can be chronological or formed according to other rules, and they
+      just have to be unique to help find the data with ease later, should the
+      need arise.
+    </li>
+    <li class="blog__item-arrow">
+      <span class="blog__text-strong">The recipient’s details.</span>
+      An RFI must contain a list of people who should receive it. Not emails,
+      but full names and positions.
+    </li>
+    <li class="blog__item-arrow">
+      <span class="blog__text-strong">The subject name.</span>
+      Clearly state the intent of the RFI. “Please clarify” is not good,
+      “Questions on plumbing” is better, “Issue with fittings on drainage” is
+      best.
+    </li>
+    <li class="blog__item-arrow">
+      <span class="blog__text-strong">RFI details.</span>
+      The reason for submitting this RFI and the details you need to obtain from
+      the response.
+    </li>
+    <li class="blog__item-arrow">
+      <span class="blog__text-strong">Response date.</span>
+      As mentioned above, usually a week after the issuing date, but it can be
+      sooner if there is an emergency.
+    </li>
+    <li class="blog__item-arrow">
+      <span class="blog__text-strong">A reference to documentation.</span>
+      If an issue described in this RFI relates to some other document, state
+      its reference number and format to ease locating the relevant details.
+    </li>
+    <li class="blog__item-arrow">
+      <span class="blog__text-strong">Issuer’s name.</span>
+      This will help the other parties identify who to reply to.
+    </li>
+    <li class="blog__item-arrow">
+      <span class="blog__text-strong">Company details.</span>
+      This will also help narrow down the search among many RFIs.
+    </li>
+    <li class="blog__item-arrow">
+      <span class="blog__text-strong">Response date.</span>
+      Note this when the RFI issuer has received a response.
+    </li>
+  </ul>
+  <p>
+    As these details are the same in every construction RFI form, preparing an
+    RFI template to use in your projects makes perfect sense.
+  </p>
+
+  <h3 class="blog__item-title">
+    BIM coordination meetings — a great tool for keeping your work flowing
+  </h3>
+  <picture>
+    <source
+      srcset="
+        ./images/blog/construction-rfi/team.webp    1x,
+        ./images/blog/construction-rfi/team@2x.webp 2x
+      "
+      media="(min-width: 375px)"
+      type="image/webp"
+    />
+    <source
+      srcset="
+        ./images/blog/construction-rfi/team.jpg    1x,
+        ./images/blog/construction-rfi/team@2x.jpg 2x
+      "
+      media="(min-width: 375px)"
+      type="image/jpeg"
+    />
+
+    <source
+      srcset="
+        ./images/blog/construction-rfi/team-sm.webp 1x,
+        ./images/blog/construction-rfi/team-md.webp 2x
+      "
+      media="(max-width: 374px)"
+      type="image/webp"
+    />
+    <source
+      srcset="./images/blog/construction-rfi/team-md.jpg"
+      media="(max-width: 374px)"
+      type="image/jpeg"
+    />
+
+    <img
+      class="blog__image"
+      src="./images/blog/construction-rfi/team-sm.jpg"
+      alt="RFI template example"
+      width="280"
+      height="158"
+      loading="lazy"
+    />
+  </picture>
+  <p>
+    Such meetings should be held once a week to keep track of the RFI resolution
+    process. When people have a steady schedule of meetings, know the limits of
+    their involvement, and see actual value from the process, things are getting
+    done much more smoothly. There is an excellent rundown of
+    <a
+      class="blog__text-link blog__text-underline blog__text-cursive"
+      href="https://bimtrack.co/blog/blog-posts/50-tips-for-better-bim-coordination-meetings-the-definitive-list"
+      target="_blank"
+      rel="noopener noreferrer nofollow"
+      >50 tips for making BIM coordination meetings work</a
+    >, and we provide a brief overview below.
+  </p>
+  <ul class="blog__list">
+    <li class="blog__item-arrow">
+      <span class="blog__text-strong">Start with coordination.</span>
+      Assign a suitable time for all the participants, let them introduce
+      themselves, devote some time to showing how the software works and lay the
+      ground rules for the process from the start.
+    </li>
+    <li class="blog__item-arrow">
+      <span class="blog__text-strong"
+        >Good preparation is half the success.</span
+      >
+      Assign issues automatically to each team and notify everyone of the
+      upcoming clash detection date. Sort the issues by date and resolve the
+      most urgent first. Create a coordination report and send it in advance, so
+      people arrive ready and meetings get more done in less time.
+    </li>
+    <li class="blog__item-arrow">
+      <span class="blog__text-strong">Get executive buy-in.</span>
+      Clearly communicate the value of BIM coordination to the owner. Their
+      weight and influence will help get the rest of the stakeholders on board.
+      Clearly communicate timing, boundaries, and expectations.
+    </li>
+    <li class="blog__item-arrow">
+      <span class="blog__text-strong">Follow some best practices.</span>
+      Get only the people needed at that project stage to attend the meeting.
+      The more of them have on-site experience, the better. Always keep track of
+      interim deadlines and congratulate each team on every achievement, big or
+      small. People tend to dedicate more effort when they get gratification,
+      not only address issues during BIM coordination meetings.
+    </li>
+    <li class="blog__item-arrow">
+      <span class="blog__text-strong">Prioritize ruthlessly.</span>
+      Only the issues that demand the cooperation of several teams should be on
+      the agenda. If a challenge, no matter how big, entirely falls under the
+      responsibility of a single team — delegate it to them and hold them
+      accountable for its timely delivery. Only if major roadblocks appear that
+      need involvement from other teams should such cases be added to the agenda
+      — or people will soon get bored to death listening to matters that do not
+      concern them in any way.
+    </li>
+  </ul>
+  <p>
+    There is no carved-in-stone formula for a BIM coordination meeting, so you
+    should constantly analyze what works and what does not — and adjust the
+    process accordingly. Only this way you’ll be able to handle construction
+    RFIs efficiently.
+  </p>
+</section>
+ <section class="blog blog-section" id="construction-vdc4">
+  <h2 class="blog__title">How to respond to construction RFIs efficiently</h2>
+
+  <p>
+    It’s quite easy to get overwhelmed with hundreds of RFIs waiting for a
+    response. Thus, it’s better to follow some simple tips to ensure you handle
+    RFIs correctly:
+  </p>
+
+  <ul class="blog__list">
+    <li class="blog__item-arrow">
+      <span class="blog__text-strong">Log the RFIs.</span>
+      RFI request added, changes pending.
+    </li>
+    <li class="blog__item-arrow">
+      <span class="blog__text-strong">Analyze the issues diligently.</span> It
+      is a far too common situation when an RFI needs to be resubmitted by the
+      contractor, as the initial response was not detailed enough. Take your
+      time and ensure you understand the construction RFI’s needs in full the
+      first time.
+    </li>
+    <li class="blog__item-arrow">
+      <span class="blog__text-strong"
+        >Consult with other parties if needed.</span
+      >
+      It is better to spend some time discussing the issue with the architects
+      or engineers if it is outside the scope of your duties.
+    </li>
+    <li class="blog__item-arrow">
+      <span class="blog__text-strong">Answer in detail.</span> Once again, the
+      more time you spend forming an on-point answer, the lower the chance that
+      this RFI is resubmitted again, and the project suffers losses. Respond to
+      the issue fully, and the RFIs will be solved for good.
+    </li>
+  </ul>
+  <p>
+    These four steps might seem simple and obvious, yet it takes quite some
+    effort to implement them and make your team follow them systematically.
+  </p>
+</section>
+ <section class="services-contact">
+  <div class="services-contact__block">
+    <h2 class="services-contact__title subscription">
+      Never miss a new blog post from us!
+    </h2>
+    <form class="contact-form subscribe-form" id="subscribeForm">
+      <input
+        class="subscribe-form__field"
+        type="email"
+        name="email"
+        placeholder="Your Email"
+      />
+      <button class="contact-btn subscribe-form__btn" type="submit">
+        subscribe today
+      </button>
+    </form>
+  </div>
+</section>
+ <div class="blog blog-section">
+  <h2 class="blog__title">Conclusion</h2>
+  <p>
+    Using RFI in construction is essential if you want to ensure your projects
+    always progress with minimum disruptions. The sooner you implement the RFI
+    process into your workflows, the less effort and time will be spent on
+    disputes, misunderstandings, and reworks.
+  </p>
+  <p>
+    This article showcases what an RFI in construction consists of, why you
+    should use it, how to create one and how to ensure RFI documentation is
+    handled most efficiently. If you have any more questions on improving the
+    process of RFI management in your company —
+    <a
+      class="blog__text-link blog__text-underline blog__text-cursive"
+      href="https://www.powerkh.com/contacts.html"
+      target="_blank"
+      rel="noopener noreferrer nofollow"
+      >give us a call</a
+    >, Powerkh is ready to assist!
+  </p>
+</div>
+  
+<div class="blog blog-footer">
+  <div class="blog-footer__wrapper">
+    <h2 class="blog-footer__title blog__figure-title">
+      Other articles of this author
+    </h2>
+    <ul class="blog__list">
+            
+
+      <li class="blog__item-arrow">
+        <a
+          href="./7-benefits-of-bim-services-in-construction.html"
+          class="blog-footer__link"
+          >7 Benefits of BIM Services in Construction</a
+        >
+      </li>
+           
+
+      <li class="blog__item-arrow">
+        <a
+          href="./the-benefits-of-using-laser-scanning-in-construction-you-cant-miss.html"
+          class="blog-footer__link"
+          >The Benefits of Using Laser Scanning in Construction You Can’t Miss</a
+        >
+      </li>
+             
+
+      <li class="blog__item-arrow">
+        <a
+          href="./as-built-drawings-101-all-you-need-to-know.html"
+          class="blog-footer__link"
+          >As-Built Drawings 101: All You Need to Know</a
+        >
+      </li>
+         
+
+      <li class="blog__item-arrow">
+        <a
+          href="./bim-outsourcing-vs-in-house-teams.html"
+          class="blog-footer__link"
+          >BIM Outsourcing vs in-House Teams</a
+        >
+      </li>
+              
+    </ul>
+  </div>
+
+   
+<div class="author">
+  <picture>
+    <source
+      srcset="./images/team/KRP-sm.webp 1x, ./images/team/KRP-md.webp 2x"
+      media="(min-width: 280px)"
+      type="image/webp"
+    />
+    <source
+      srcset="./images/team/KRP-md.jpeg"
+      media="(min-width: 280px)"
+      type="image/jpeg"
+    />
+    <img
+      class="blog__image author__image"
+      src="./images/team/KRP-sm.jpg"
+      loading="lazy"
+      alt="Photo of Kostya Rapina"
+      width="360"
+      height="475"
+    />
+  </picture>
+  <div class="author__info">
+    <h2 class="blog__figure-title author__title">Kostya Rapina</h2>
+    <p class="author__description">CEO & Co-founder</p>
+    <ul class="author__social-list">
+      <li class="author__social-item">
+        <a
+          href="https://www.linkedin.com/in/rapina/"
+          class="author__social-link"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Link to Linkedin"
+        >
+          <svg class="author__social-icon" width="24" height="24">
+            <use href="./images/sprite.svg#linkedin"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="author__social-item">
+        <a
+          href="mailto:krp@powerkh.com"
+          class="author__social-link"
+          aria-label="Send e-mail"
+        >
+          <svg class="author__social-icon" width="31" height="24">
+            <use href="./images/sprite.svg#email"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+</div>
+
+
+
+    </div>
+    <aside class="sidebar blog-section">
+      
+<div class="author">
+  <picture>
+    <source
+      srcset="./images/team/KRP-sm.webp 1x, ./images/team/KRP-md.webp 2x"
+      media="(min-width: 280px)"
+      type="image/webp"
+    />
+    <source
+      srcset="./images/team/KRP-md.jpeg"
+      media="(min-width: 280px)"
+      type="image/jpeg"
+    />
+    <img
+      class="blog__image author__image"
+      src="./images/team/KRP-sm.jpg"
+      loading="lazy"
+      alt="Photo of Kostya Rapina"
+      width="360"
+      height="475"
+    />
+  </picture>
+  <div class="author__info">
+    <h2 class="blog__figure-title author__title">Kostya Rapina</h2>
+    <p class="author__description">CEO & Co-founder</p>
+    <ul class="author__social-list">
+      <li class="author__social-item">
+        <a
+          href="https://www.linkedin.com/in/rapina/"
+          class="author__social-link"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Link to Linkedin"
+        >
+          <svg class="author__social-icon" width="24" height="24">
+            <use href="./images/sprite.svg#linkedin"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="author__social-item">
+        <a
+          href="mailto:krp@powerkh.com"
+          class="author__social-link"
+          aria-label="Send e-mail"
+        >
+          <svg class="author__social-icon" width="31" height="24">
+            <use href="./images/sprite.svg#email"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+      <div class="sidebar__wrapper">
+        <div class="bim-aside bim-aside--bg-2 ">
+  <h2 class="blog__figure-title bim-aside__title ">BIM Coordination Services</h2>
+  <div class="bim-aside__wrapper ">
+    <a
+      href="./bim-coordination.html"
+      class="contact-btn"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Link to BIM Coordination Services"
+      >Learn more</a
+    >
+  </div>
+</div>
+
+      </div>
+    </aside>
+  </div>
+</div>
+
+<section class="faq__contact">
+  <div class="container">
+    <div class="faq__contact-block">
+      <p class="faq__contact-title">Have a BIM Project? Talk To Us.</p>
+      <button class="faq__contact-btn contact-btn" type="button" data-modal="contact-modal">Contact Us</button>
+    </div>
+  </div>
+</section>  
+<section class="cards-case cases">
+  <div class="container">
+    <ul class="cases__list">
+      
+      <li class="cases__list-item">
+        <a
+          href="./enhancing-productivity-in-bim-projects-best-tips-&-strategies.html"
+          class="cases__list-item-link item-link"
+        >
+          <div class="cases__list-content blog__list-content">
+            <h3 class="cases__list-title">Enhancing Productivity in BIM Projects: Best Tips & Strategies</h3>
+
+            
+            <p class="cases__list-text">
+              Yevhen Surzhan
+              <svg width="58" height="56" class="blog-arrow">
+                <use href="./images/sprite.svg#right-arrow"></use>
+              </svg>
+            </p>
+            
+            <p class="cases__list-text">
+              Tetiana Rapina
+              <svg width="58" height="56" class="blog-arrow">
+                <use href="./images/sprite.svg#right-arrow"></use>
+              </svg>
+            </p>
+            
+          </div>
+          <div class="cases__list-imagecont">
+            <img
+              class="cases__list-image"
+              src="./images/blog/hero/hero9.jpg"
+              alt="Enhancing Productivity in BIM Projects: Best Tips & Strategies"
+              width="360"
+              height="218"
+            />
+          </div>
+        </a>
+      </li>
+      
+      <li class="cases__list-item">
+        <a
+          href="./boosting-productivity-for-scan-to-bim-projects.html"
+          class="cases__list-item-link item-link"
+        >
+          <div class="cases__list-content blog__list-content">
+            <h3 class="cases__list-title">Boosting productivity for Scan to BIM Projects</h3>
+
+            
+            <p class="cases__list-text">
+              Yevhen Surzhan
+              <svg width="58" height="56" class="blog-arrow">
+                <use href="./images/sprite.svg#right-arrow"></use>
+              </svg>
+            </p>
+            
+            <p class="cases__list-text">
+              Tetiana Rapina
+              <svg width="58" height="56" class="blog-arrow">
+                <use href="./images/sprite.svg#right-arrow"></use>
+              </svg>
+            </p>
+            
+          </div>
+          <div class="cases__list-imagecont">
+            <img
+              class="cases__list-image"
+              src="./images/blog/hero/hero2.jpg"
+              alt="Boosting productivity for Scan to BIM Projects"
+              width="360"
+              height="218"
+            />
+          </div>
+        </a>
+      </li>
+      
+      <li class="cases__list-item">
+        <a
+          href="./7-benefits-of-bim-services-in-construction.html"
+          class="cases__list-item-link item-link"
+        >
+          <div class="cases__list-content blog__list-content">
+            <h3 class="cases__list-title">7 Benefits of BIM Services in Construction</h3>
+
+            
+            <p class="cases__list-text">
+              Kostya Rapina
+              <svg width="58" height="56" >
+                <use href="./images/sprite.svg#right-arrow"></use>
+              </svg>
+            </p>
+            
+          </div>
+          <div class="cases__list-imagecont">
+            <img
+              class="cases__list-image"
+              src="./images/blog/hero/hero3.jpg"
+              alt="7 Benefits of BIM Services in Construction"
+              width="360"
+              height="218"
+            />
+          </div>
+        </a>
+      </li>
+      
+      <li class="cases__list-item">
+        <a
+          href="./how-bim-works.html"
+          class="cases__list-item-link item-link"
+        >
+          <div class="cases__list-content blog__list-content">
+            <h3 class="cases__list-title">How BIM Works</h3>
+
+            
+            <p class="cases__list-text">
+              Yevhen Surzhan
+              <svg width="58" height="56" >
+                <use href="./images/sprite.svg#right-arrow"></use>
+              </svg>
+            </p>
+            
+          </div>
+          <div class="cases__list-imagecont">
+            <img
+              class="cases__list-image"
+              src="./images/blog/hero/hero4.jpg"
+              alt="How BIM Works"
+              width="360"
+              height="218"
+            />
+          </div>
+        </a>
+      </li>
+      
+      <li class="cases__list-item">
+        <a
+          href="./the-benefits-of-using-laser-scanning-in-construction-you-cant-miss.html"
+          class="cases__list-item-link item-link"
+        >
+          <div class="cases__list-content blog__list-content">
+            <h3 class="cases__list-title">The Benefits of Using Laser Scanning in Construction You Can’t Miss</h3>
+
+            
+            <p class="cases__list-text">
+              Kostya Rapina
+              <svg width="58" height="56" >
+                <use href="./images/sprite.svg#right-arrow"></use>
+              </svg>
+            </p>
+            
+          </div>
+          <div class="cases__list-imagecont">
+            <img
+              class="cases__list-image"
+              src="./images/blog/hero/hero5.jpg"
+              alt="The Benefits of Using Laser Scanning in Construction You Can’t Miss"
+              width="360"
+              height="218"
+            />
+          </div>
+        </a>
+      </li>
+      
+      <li class="cases__list-item">
+        <a
+          href="./top-30-architectural-rendering-companies.html"
+          class="cases__list-item-link item-link"
+        >
+          <div class="cases__list-content blog__list-content">
+            <h3 class="cases__list-title">Top 30 Architectural Rendering Companies</h3>
+
+            
+            <p class="cases__list-text">
+              Tetiana Rapina
+              <svg width="58" height="56" >
+                <use href="./images/sprite.svg#right-arrow"></use>
+              </svg>
+            </p>
+            
+          </div>
+          <div class="cases__list-imagecont">
+            <img
+              class="cases__list-image"
+              src="./images/blog/hero/hero6.jpg"
+              alt="Top 30 Architectural Rendering Companies"
+              width="360"
+              height="218"
+            />
+          </div>
+        </a>
+      </li>
+      
+      <li class="cases__list-item">
+        <a
+          href="./choosing-best-bim-software-for-your-project-in-2021.html"
+          class="cases__list-item-link item-link"
+        >
+          <div class="cases__list-content blog__list-content">
+            <h3 class="cases__list-title">Choosing Best BIM Software for Your Project in 2021</h3>
+
+            
+            <p class="cases__list-text">
+              Yevhen Surzhan
+              <svg width="58" height="56" >
+                <use href="./images/sprite.svg#right-arrow"></use>
+              </svg>
+            </p>
+            
+          </div>
+          <div class="cases__list-imagecont">
+            <img
+              class="cases__list-image"
+              src="./images/blog/hero/hero7.jpg"
+              alt="Choosing Best BIM Software for Your Project in 2021"
+              width="360"
+              height="218"
+            />
+          </div>
+        </a>
+      </li>
+      
+      <li class="cases__list-item">
+        <a
+          href="./as-built-drawings-101-all-you-need-to-know.html"
+          class="cases__list-item-link item-link"
+        >
+          <div class="cases__list-content blog__list-content">
+            <h3 class="cases__list-title">As-Built Drawings 101: All You Need to Know</h3>
+
+            
+            <p class="cases__list-text">
+              Kostya Rapina
+              <svg width="58" height="56" >
+                <use href="./images/sprite.svg#right-arrow"></use>
+              </svg>
+            </p>
+            
+          </div>
+          <div class="cases__list-imagecont">
+            <img
+              class="cases__list-image"
+              src="./images/blog/hero/hero8.jpg"
+              alt="As-Built Drawings 101: All You Need to Know"
+              width="360"
+              height="218"
+            />
+          </div>
+        </a>
+      </li>
+      
+      <li class="cases__list-item">
+        <a
+          href="./bim-outsourcing-vs-in-house-teams.html"
+          class="cases__list-item-link item-link"
+        >
+          <div class="cases__list-content blog__list-content">
+            <h3 class="cases__list-title">BIM Outsourcing vs in-House Teams</h3>
+
+            
+            <p class="cases__list-text">
+              Kostya Rapina
+              <svg width="58" height="56" >
+                <use href="./images/sprite.svg#right-arrow"></use>
+              </svg>
+            </p>
+            
+          </div>
+          <div class="cases__list-imagecont">
+            <img
+              class="cases__list-image"
+              src="./images/blog/hero/hero1.jpg"
+              alt="BIM Outsourcing vs in-House Teams"
+              width="360"
+              height="218"
+            />
+          </div>
+        </a>
+      </li>
+      
+      <li class="cases__list-item">
+        <a
+          href="./introduction-to-virtual-design-and-construction.html"
+          class="cases__list-item-link item-link"
+        >
+          <div class="cases__list-content blog__list-content">
+            <h3 class="cases__list-title">Introduction to Virtual Design and Construction</h3>
+
+            
+            <p class="cases__list-text">
+              Yevhen Surzhan
+              <svg width="58" height="56" >
+                <use href="./images/sprite.svg#right-arrow"></use>
+              </svg>
+            </p>
+            
+          </div>
+          <div class="cases__list-imagecont">
+            <img
+              class="cases__list-image"
+              src="./images/blog/hero/hero10.jpg"
+              alt="Introduction to Virtual Design and Construction"
+              width="360"
+              height="218"
+            />
+          </div>
+        </a>
+      </li>
+      
+      <li class="cases__list-item">
+        <a
+          href="./construction-rfi-template-best-practices.html"
+          class="cases__list-item-link item-link"
+        >
+          <div class="cases__list-content blog__list-content">
+            <h3 class="cases__list-title">Construction RFI: Template, Best Practices</h3>
+
+            
+            <p class="cases__list-text">
+              Kostya Rapina
+              <svg width="58" height="56" >
+                <use href="./images/sprite.svg#right-arrow"></use>
+              </svg>
+            </p>
+            
+          </div>
+          <div class="cases__list-imagecont">
+            <img
+              class="cases__list-image"
+              src="./images/blog/hero/hero11.jpg"
+              alt="Construction RFI: Template, Best Practices"
+              width="360"
+              height="218"
+            />
+          </div>
+        </a>
+      </li>
+      
+      <li class="cases__list-item">
+        <a
+          href="./how-to-hire-a-bim-team.html"
+          class="cases__list-item-link item-link"
+        >
+          <div class="cases__list-content blog__list-content">
+            <h3 class="cases__list-title">How to Hire a BIM Team</h3>
+
+            
+            <p class="cases__list-text">
+              Yevhen Surzhan
+              <svg width="58" height="56" >
+                <use href="./images/sprite.svg#right-arrow"></use>
+              </svg>
+            </p>
+            
+          </div>
+          <div class="cases__list-imagecont">
+            <img
+              class="cases__list-image"
+              src="./images/blog/hero/hero12.jpg"
+              alt="How to Hire a BIM Team"
+              width="360"
+              height="218"
+            />
+          </div>
+        </a>
+      </li>
+      
+    </ul>
+
+    <button class="more-btn">
+      <svg class="more-btn--icon">
+        <use href="./images/sprite.svg#load-more"></use>
+      </svg>
+      More cases
+    </button>
+  </div>
+</section>
+ 
+  </main>
+
+  <footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__list-wrapper">
+        <ul class="footer__nav-list">
+          <li class="footer__nav-list-item">
+            <a href="https://nikolay-tymoshchuk.github.io/jazz-tpl/" class="footer__nav-link">Home</a>
+          </li>
+          <li class="footer__nav-list-item">
+            <a href="./case-studies.html" class="footer__nav-link">Case Studies</a>
+          </li>
+          <li class="footer__nav-list-item">
+            <a href="./blog.html" class="footer__nav-link">Blog</a>
+          </li>
+          <li class="footer__nav-list-item">
+            <a href="./about-us.html" class="footer__nav-link">About</a>
+          </li>
+          <li class="footer__nav-list-item">
+            <a href="./career.html" class="footer__nav-link">Career</a>
+          </li>
+          <li class="footer__nav-list-item">
+            <a href="./contacts.html" class="footer__nav-link">Contacts</a>
+          </li>
+        </ul>
+
+        <ul class="footer__services-list">
+          <li class="footer__services-list-item">
+            <p class="footer__services-list-title">Services:</p>
+          </li>
+          <li class="footer__services-list-item">
+            <a href="./bim-modeling.html" class="footer__services-list-link">BIM Modeling</a>
+          </li>
+          <li class="footer__services-list-item">
+            <a href="./bim-coordination.html" class="footer__services-list-link">BIM Coordination</a>
+          </li>
+          <li class="footer__services-list-item">
+            <a href="./bim-content-creation.html" class="footer__services-list-link">BIM Content</a>
+          </li>
+          <li class="footer__services-list-item">
+            <a href="./scan-to-bim.html" class="footer__services-list-link">Scan-to-BIM</a>
+          </li>
+          <li class="footer__services-list-item">
+            <a href="./bim-automation.html" class="footer__services-list-link">BIM Automation</a>
+          </li>
+          <li class="footer__services-list-item">
+            <a href="./bim-prefabrication.html" class="footer__services-list-link">Prefabrication & Fabrication</a>
+          </li>
+          <li class="footer__services-list-item">
+            <a href="./structural-detailing.html" class="footer__services-list-link">Structural detailing</a>
+          </li>
+          <!-- <li class="footer__services-list-item">
+            <a href="./architectural-rendering.html" class="footer__services-list-link">Architectural Rendering</a>
+          </li> -->
+        </ul>
+      </div>
+
+      <div class="footer__social-wrapper">
+        <a href="#scroll-point" class="footer__up-link">
+          Up
+          <svg class="footer__up-link-icon" width="14" height="13">
+            <use href="./images/spri  te.svg#up-arrow"></use>
+          </svg>
+        </a>
+
+        <ul class="footer__social-list">
+          <li class="footer__social-list-item">
+            <a href="https://www.instagram.com/powerkh_com/" class="footer__social-link" target="_blank"
+              rel="noopener noreferrer" aria-label="Link to Instagram">
+              <svg class="footer__social-icon" width="32" height="32">
+                <use href="./images/sprite.svg#instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__social-list-item">
+            <a href="https://www.facebook.com/Powerkh-100153471390616/" class="footer__social-link" target="_blank"
+              rel="noopener noreferrer" aria-label="Link to Facebook">
+              <svg class="footer__social-icon" width="30" height="30">
+                <use href="./images/sprite.svg#facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__social-list-item">
+            <a href="https://www.linkedin.com/company/powerkh/about/" class="footer__social-link" target="_blank"
+              rel="noopener noreferrer" aria-label="Link to Linkedin">
+              <svg class="footer__social-icon" width="25" height="25">
+                <use href="./images/sprite.svg#linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="footer__desc">Powerkh &minus; BIM & VDC solution provider</p>
+  </div>
+</footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./js/menu.js"></script>
+  <script src="./js/modal.js"></script>
+  <script src="./js/mail.js"></script>
+  <script src="./js/form-validation.js"></script>
+  <script src="./js/activeLink.js"></script>
+  <script src="./js/multi-animated-counter.js"></script>
+  <script src="./js/scroll.js"></script>
+  <script src="./js/hideCase.js"></script>
+
+  <!-- Slick-slider -->
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="./js/slick-slider.js"></script>
+
+  <!-- Photoswipe -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+  <script src="./js/photoswipe.js"></script>
+</body>
+
+</html>
